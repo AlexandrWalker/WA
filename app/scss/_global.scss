@@ -1,0 +1,430 @@
+/*body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #EBEBF530;
+  border-radius: 20px;
+  border: 0px solid red;
+}*/
+
+/* 62.5% это 10px из 16px, который стоит по умолчанию у браузеров */
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  color: var(--white);
+  background: var(--black);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  max-width: 1520px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 100%;
+  letter-spacing: 0.03em;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+p {}
+
+.btn {
+  --button-padding-x: 1.5rem;
+  --button-padding-y: 0.5rem;
+  --button-font-size: 1.4rem;
+  --button-color: var(--white);
+  --button-bgcolor: var(--primary);
+  --button-border-width: 0.1rem;
+  --button-border-color: var(--primary);
+  --button-border-radius: 0.4rem;
+  --button-hover-bgcolor: var(--primary-90);
+  --button-hover-border-color: transparent;
+  --button-disabled-opacity: 0.5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  min-height: 4rem;
+  font-weight: 800;
+  line-height: 143%;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border: inset var(--button-border-width) solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bgcolor);
+  color: var(--button-color);
+  font-size: var(--button-font-size);
+}
+
+.btn:hover {
+  background-color: var(--button-hover-bgcolor);
+  border-color: var(--button-hover-border-color);
+}
+
+.btn:disabled {
+  opacity: var(--button-disabled-opacity);
+}
+
+.btn--red {
+  --button-padding-x: 1.5rem;
+  --button-padding-y: 0.9rem;
+  --button-font-size: 1.4rem;
+  --button-color: var(--white);
+  --button-bgcolor: var(--primary);
+  --button-border-width: 0.1rem;
+  --button-border-color: var(--primary);
+  --button-border-radius: 0.4rem;
+  --button-hover-bgcolor: var(--primary-90);
+  --button-hover-border-color: transparent;
+
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border: inset var(--button-border-width) solid var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bgcolor);
+  color: var(--button-color);
+  font-size: var(--button-font-size);
+}
+
+.btn--red:hover {
+  background-color: var(--button-hover-bgcolor);
+  border-color: var(--button-hover-border-color);
+}
+
+.btn--blue {
+  --button-padding-x: 1rem;
+  --button-padding-y: 0.5rem;
+  --button-font-size: 1.2rem;
+  --button-bgcolor: var(--blue);
+  --button-border-color: var(--blue);
+  --button-border-radius: 0.5rem;
+  --button-hover-bgcolor: var(--blue-90);
+}
+
+.btn--outline {
+  --button-padding-x: 1rem;
+  --button-padding-y: 0.5rem;
+  --button-font-size: 1rem;
+  --button-color: var(--white);
+  --button-bgcolor: transparent;
+  --button-border-color: var(--border-c);
+  --button-border-radius: 0.5rem;
+  --button-hover-bgcolor: var(--border-c);
+}
+
+.btn--icon {
+  --button-padding-x: unset;
+  --button-padding-y: unset;
+  --button-font-size: 1.8rem;
+  --button-color: var(--white-60);
+  --button-bgcolor: transparent;
+  --button-border-width: 0.1rem;
+  --button-border-color: transparent;
+  --button-border-radius: 0.4rem;
+  --button-hover-bgcolor: transparent;
+  --button-hover-border-color: transparent;
+
+  width: 2.4rem;
+  height: 2.4rem;
+  min-height: 2.4rem;
+  line-height: 1;
+  font-weight: 400;
+  flex-shrink: 0;
+
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: cover;
+  }
+}
+
+/* inputs */
+input[type=text] {
+  width: 100%;
+  min-height: 4rem;
+  // padding: 0.8rem;
+  border-radius: var(--border-r-7);
+  background: var(--white-main-05);
+  border: inset 0.1rem solid var(--bg);
+  box-shadow: inset 0px 0px 11.1px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(0.42rem);
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.333;
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.6);
+  color: var(--white-main-60);
+}
+
+/* search */
+.search {
+
+  &__form {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    &-input {
+      padding: 0.8rem 3.6rem;
+      position: relative;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      display: block;
+      font-size: 1.7rem;
+    }
+
+    &-btn {
+      display: block;
+      width: 2.4rem;
+      height: 2.4rem;
+      position: absolute;
+      top: 50%;
+      right: 0.8rem;
+      transform: translateY(-50%);
+      background: transparent;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: transparent;
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: cover;
+  }
+
+}
+
+/* switch theme */
+.switch {
+
+  &__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.3rem;
+    width: fit-content;
+    height: 4rem;
+    padding: 0.2rem;
+    background-color: var(--bg);
+    border-radius: var(--border-r-7);
+    position: relative;
+    z-index: 1;
+
+    &-item {
+      width: calc(4rem - 0.4rem);
+      height: calc(4rem - 0.4rem);
+      border-radius: var(--border-r-6);
+      background-color: var(--black);
+      z-index: 4;
+      font-size: 1.9rem;
+      line-height: 1;
+      text-align: center;
+      align-content: center;
+      font-size: 1.9rem;
+      transition: all .2s linear;
+    }
+  }
+
+  .switch__btn-circle {
+    left: 4.5rem;
+  }
+
+  .light-mode {
+    background-color: var(--black);
+
+    .icon-sun::before {
+      text-shadow: unset;
+    }
+  }
+
+  .dark-mode {
+    background-color: var(--primary);
+
+    .icon-moon::before {
+      text-shadow: 0px 0px 5.4px rgba(255, 255, 255, 0.75);
+    }
+  }
+
+}
+
+.light-mode {
+  background-color: var(--primary);
+
+  .icon-sun::before {
+    text-shadow: 0px 0px 5.4px rgba(255, 255, 255, 0.75);
+  }
+}
+
+.dark-mode {
+  background-color: var(--black);
+
+  .icon-moon::before {
+    text-shadow: none;
+  }
+}
+
+/* panel */
+.panel {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 0 1rem;
+  background-color: var(--bg);
+  border-radius: var(--border-r-7);
+  width: fit-content;
+  height: 4rem;
+
+  &__wrap {
+    width: 4rem;
+    height: 100%;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 1.9rem;
+
+    &-img {
+      width: auto;
+      height: 1.9rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.title {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.text {
+  font-size: 3.4rem;
+  line-height: 1.2;
+}
+
+.burger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  position: relative;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 0.12rem;
+    border-radius: 0.06rem;
+    background-color: var(--white);
+    transition: all 0.2s ease;
+    position: absolute;
+    top: calc(50% - .35rem);
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 0.12rem;
+    border-radius: 0.06rem;
+    background-color: var(--white);
+    transition: all 0.2s ease;
+    position: absolute;
+    top: calc(50% + .35rem);
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+
+  &.active {
+
+    &::before {
+      top: 50%;
+      transform: translate(50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      top: 50%;
+      transform: translate(50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.loupe {
+  display: none;
+}

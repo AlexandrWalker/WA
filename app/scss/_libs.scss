@@ -1,0 +1,78 @@
+/* libs styles */
+.swiper-pagination {
+  padding: 1.7rem 2.6rem;
+  background-color: var(--black-main-60);
+  backdrop-filter: blur(4.2px);
+  border-radius: 98rem;
+  font-size: 0;
+  line-height: unset;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 3.4rem;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.6;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--black-main-60);
+  width: 3.6rem;
+  // transition: width 0.1s linear;
+  position: relative;
+}
+
+.swiper-pagination-bullet-active::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 0.3rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: var(--primary);
+  animation-name: timeline;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 1rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+  margin: 0 1rem 0 0;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+  margin: 0 0 0 1rem;
+}
+
+@keyframes timeline {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
