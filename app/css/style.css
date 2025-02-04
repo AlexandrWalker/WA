@@ -747,7 +747,7 @@ input[type=text] {
 
 .hero {
   overflow: hidden;
-  background-image: url(./../../images/hero/bg-desktop.webp);
+  background-image: url(./../images/hero/bg-desktop.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -861,7 +861,7 @@ input[type=text] {
   padding: 1.6rem 2.5rem;
   position: relative;
   height: 6rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(./../../images/bg-2.webp);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(./../images/bg-2.webp);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -1009,7 +1009,7 @@ input[type=text] {
   }
   /* hero */
   .hero {
-    background-image: url(./../../images/hero/bg-mob.webp);
+    background-image: url(./../images/hero/bg-mob.webp);
   }
   /* catalog */
   .catalog__items {
