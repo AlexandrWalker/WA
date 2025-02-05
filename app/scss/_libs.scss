@@ -1,8 +1,7 @@
 /* libs styles */
 .swiper-pagination {
-  padding: 1.7rem 2.6rem;
-  background-color: var(--black-main-60);
-  backdrop-filter: blur(4.2px);
+  padding: 0;
+  background-color: transparent;
   border-radius: 98rem;
   font-size: 0;
   line-height: unset;
@@ -15,21 +14,21 @@
   width: fit-content;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 3.4rem;
+  bottom: 1.5rem;
 }
 
 .swiper-pagination-bullet {
-  opacity: 0.6;
+  opacity: 1;
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 0.3rem;
   overflow: hidden;
+  background-color: var(--white-60);
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--black-main-60);
+  background: var(--white-60);
   width: 3.6rem;
-  // transition: width 0.1s linear;
   position: relative;
 }
 
@@ -54,17 +53,17 @@
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
-  margin: 0 1rem 0 0;
+  margin: 0 0.5rem 0 0;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0.5rem;
 }
 
 @keyframes timeline {

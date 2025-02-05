@@ -90,6 +90,7 @@ function building() {
     '!app/pages/*.html',
 
     'app/css/style.css',
+    'app/css/icomoon-style.css',
 
     'app/js/*.js',
     '!app/js/main.min.js',
@@ -100,6 +101,7 @@ function building() {
     '!app/images/src/*.*',
     
     'app/fonts/*.*',
+    'app/fonts/icomoon/*.*',
 
     'app/libs/**/*.*',
     'app/libs/*.*',
