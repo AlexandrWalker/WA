@@ -34,6 +34,10 @@
     height: 4rem;
   }
 
+  .header .btn--red {
+    --button-font-size: 1.2rem;
+  }
+
   .header input[type=text] {
     height: 4rem;
   }
@@ -97,6 +101,32 @@
   .catalog__item-title {
     font-size: 1.6rem;
   }
+
+  /* trade-in */
+  .trade-in__inner {
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
+
+  .trade-in__content {
+    width: calc(50% - 1rem);
+    padding: 4rem 1rem;
+    gap: 2rem;
+  }
+
+  .trade-in__title {
+    font-size: 2.4rem;
+  }
+
+  .trade-in__text {
+    font-size: 1.2rem;
+    max-width: 43rem;
+  }
+
+  .trade-in__block {
+    width: calc(50% - 1rem);
+    height: auto;
+  }
 }
 
 @media (max-width: 1440px) and (min-width: 992px) {
@@ -109,7 +139,7 @@
   .header__logo {
     width: 7.265rem;
   }
-  
+
   .hero__title {
     margin-bottom: 2rem;
   }
@@ -117,6 +147,10 @@
   .hero__subtitle {
     font-size: 2.4rem;
     margin-bottom: 3rem;
+  }
+
+  .trade-in__block {
+    padding: 1.6rem 2.5rem;
   }
 }
 
@@ -286,6 +320,35 @@
 
   .catalog__item-img {
     height: clamp(5rem, 6vw, 9.8rem);
+  }
+
+  /* trade-in */
+  .trade-in__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .trade-in__block-text {
+    order: -1;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .trade-in__block-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 5rem;
+    background-image: url(./../images/icons/play-yt.svg);
+    background-repeat: no-repeat;
+    background-size: 7rem 5rem;
+    background-position: center;
+    margin: 0 auto;
+  }
+
+  .trade-in__block-icon {
+    display: none;
   }
 
   /* footer */

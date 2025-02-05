@@ -335,7 +335,7 @@ h1 {
 .btn--red {
   --button-padding-x: 1rem;
   --button-padding-y: 0.5rem;
-  --button-font-size: 1rem;
+  --button-font-size: 1.4rem;
   --button-color: var(--white);
   --button-bgcolor: var(--primary);
   --button-border-width: 0.1rem;
@@ -770,6 +770,9 @@ input[type=text] {
 .header .btn {
   height: 3rem;
 }
+.header .btn--red {
+  --button-font-size: 1rem;
+}
 .header input[type=text] {
   height: 3rem;
 }
@@ -886,7 +889,6 @@ input[type=text] {
 .hero__btn {
   padding: 1.2rem 2.2rem;
   border-radius: var(--border-r-7);
-  font-size: 1.2rem;
 }
 .hero__pic {
   width: 47.87%;
@@ -947,12 +949,17 @@ input[type=text] {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem 3rem;
+  padding: 2rem 1.5rem 1.5rem;
   border-radius: var(--border-r-13);
   background-color: var(--bg);
   text-align: center;
 }
+.trade-in__title {
+  font-size: 2rem;
+  color: var(--white);
+}
 .trade-in__text {
+  font-size: 1.2rem;
   color: var(--white-60);
 }
 .trade-in__block {
@@ -961,9 +968,9 @@ input[type=text] {
   gap: 2rem;
   border-radius: var(--border-r-13);
   background-color: var(--bg);
-  padding: 1.6rem 2.5rem;
+  padding: 2rem;
   position: relative;
-  height: 6rem;
+  height: auto;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(./../images/bg-2.webp);
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -972,17 +979,27 @@ input[type=text] {
 .trade-in__block-btn {
   width: 1.6rem;
 }
+.trade-in__block-icon {
+  width: 18px;
+  fill: var(--coral);
+}
 .trade-in__block-text {
+  font-size: 1.2rem;
   font-weight: 800;
   width: 50%;
 }
-.trade-in__block-img {
+.trade-in__block-pic {
   position: absolute;
   top: 0.4rem;
   right: 4.8rem;
   bottom: 0;
-  object-fit: cover;
+  height: calc(100% - 0.4rem);
   flex-shrink: 0;
+}
+.trade-in__block-img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1441px) {
@@ -1013,6 +1030,9 @@ input[type=text] {
   }
   .header .btn {
     height: 4rem;
+  }
+  .header .btn--red {
+    --button-font-size: 1.2rem;
   }
   .header input[type=text] {
     height: 4rem;
@@ -1064,6 +1084,27 @@ input[type=text] {
   .catalog__item-title {
     font-size: 1.6rem;
   }
+  /* trade-in */
+  .trade-in__inner {
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
+  .trade-in__content {
+    width: calc(50% - 1rem);
+    padding: 4rem 1rem;
+    gap: 2rem;
+  }
+  .trade-in__title {
+    font-size: 2.4rem;
+  }
+  .trade-in__text {
+    font-size: 1.2rem;
+    max-width: 43rem;
+  }
+  .trade-in__block {
+    width: calc(50% - 1rem);
+    height: auto;
+  }
 }
 @media (max-width: 1440px) and (min-width: 992px) {
   .hero__title {
@@ -1080,6 +1121,9 @@ input[type=text] {
   .hero__subtitle {
     font-size: 2.4rem;
     margin-bottom: 3rem;
+  }
+  .trade-in__block {
+    padding: 1.6rem 2.5rem;
   }
 }
 @media (max-width: 991px) and (min-width: 601px) {
@@ -1215,6 +1259,31 @@ input[type=text] {
   }
   .catalog__item-img {
     height: clamp(5rem, 6vw, 9.8rem);
+  }
+  /* trade-in */
+  .trade-in__block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .trade-in__block-text {
+    order: -1;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+  .trade-in__block-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 5rem;
+    background-image: url(./../images/icons/play-yt.svg);
+    background-repeat: no-repeat;
+    background-size: 7rem 5rem;
+    background-position: center;
+    margin: 0 auto;
+  }
+  .trade-in__block-icon {
+    display: none;
   }
   /* footer */
   .footer__bottom {
