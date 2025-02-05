@@ -480,6 +480,9 @@ input[type=text] {
   z-index: 1;
 }
 .switch__btn-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2.8rem;
   height: 2.8rem;
   border-radius: var(--border-r-6);
