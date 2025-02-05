@@ -62,5 +62,56 @@
         clickable: true
       },
     });
+
+    if ((window.innerWidth <= 600) || (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
+      /**
+           * Инициализирует аккордеоны на странице.
+           * Обрабатывает переключение видимости элементов и кнопки закрытия.
+           */
+
+      // Получаем все контейнеры аккордеонов на странице
+      document.querySelectorAll('.accordion').forEach((accordionContainer) => {
+        const closeBtn = accordionContainer.querySelector('.accordion__close');
+
+        /**
+         * Обновляет видимость кнопки закрытия в зависимости от состояния аккордеона.
+         */
+        const updateCloseBtnVisibility = () => {
+          if (!closeBtn) return;
+          closeBtn.classList.toggle(
+            'visible',
+            accordionContainer.querySelector('.accordion__item--active'),
+          );
+        };
+
+        // Обработчик клика по элементам аккордеона
+        accordionContainer.addEventListener('click', (event) => {
+          const btn = event.target.closest('.accordion__item-btn');
+          if (btn) {
+            btn.closest('.accordion__item').classList.toggle('accordion__item--active');
+            updateCloseBtnVisibility();
+          }
+        });
+
+        // Обработчик клика по кнопке закрытия
+        closeBtn?.addEventListener('click', () => {
+          accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+            item.classList.remove('accordion__item--active');
+          });
+          updateCloseBtnVisibility();
+        });
+
+        // Изначально обновляем видимость кнопки при загрузке страницы
+        updateCloseBtnVisibility();
+
+        // Открываем все блоки  секции преимущества на мобильном
+        var mobile = document.querySelectorAll(".advantages__item-js");
+        mobile.forEach((el) => {
+          el.classList.toggle("accordion__item--active");
+        });
+
+      });
+    }
+
   });
 })();
