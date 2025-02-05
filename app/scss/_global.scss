@@ -102,7 +102,7 @@ p {}
   transition: all 0.2s ease;
 
   padding: var(--button-padding-y) var(--button-padding-x);
-  border: inset var(--button-border-width) solid var(--button-border-color);
+  border: var(--button-border-width) solid var(--button-border-color);
   border-radius: var(--button-border-radius);
   background-color: var(--button-bgcolor);
   color: var(--button-color);
@@ -131,7 +131,7 @@ p {}
   --button-hover-border-color: transparent;
 
   padding: var(--button-padding-y) var(--button-padding-x);
-  border: inset var(--button-border-width) solid var(--button-border-color);
+  border: var(--button-border-width) solid var(--button-border-color);
   border-radius: var(--button-border-radius);
   background-color: var(--button-bgcolor);
   color: var(--button-color);

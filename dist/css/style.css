@@ -316,7 +316,7 @@ h1 {
   white-space: nowrap;
   transition: all 0.2s ease;
   padding: var(--button-padding-y) var(--button-padding-x);
-  border: inset var(--button-border-width) solid var(--button-border-color);
+  border: var(--button-border-width) solid var(--button-border-color);
   border-radius: var(--button-border-radius);
   background-color: var(--button-bgcolor);
   color: var(--button-color);
@@ -344,7 +344,7 @@ h1 {
   --button-hover-bgcolor: var(--primary-90);
   --button-hover-border-color: transparent;
   padding: var(--button-padding-y) var(--button-padding-x);
-  border: inset var(--button-border-width) solid var(--button-border-color);
+  border: var(--button-border-width) solid var(--button-border-color);
   border-radius: var(--button-border-radius);
   background-color: var(--button-bgcolor);
   color: var(--button-color);
@@ -1011,6 +1011,12 @@ input[type=text] {
   .header__logo {
     width: 9.2rem;
   }
+  .header .btn {
+    height: 4rem;
+  }
+  .header input[type=text] {
+    height: 4rem;
+  }
   .header__geo-link {
     font-size: 1.4rem;
     gap: 0.8rem;
@@ -1134,12 +1140,6 @@ input[type=text] {
   }
   .header__btn {
     display: flex;
-  }
-  .header .btn {
-    height: 4rem;
-  }
-  .header input[type=text] {
-    height: 4rem;
   }
   .switch__btn {
     display: flex;

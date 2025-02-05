@@ -30,6 +30,14 @@
     width: 9.2rem;
   }
 
+  .header .btn {
+    height: 4rem;
+  }
+
+  .header input[type=text] {
+    height: 4rem;
+  }
+
   .header__geo-link {
     font-size: 1.4rem;
     gap: 0.8rem;
@@ -184,14 +192,6 @@
 
   .header__btn {
     display: flex;
-  }
-
-  .header .btn {
-    height: 4rem;
-  }
-
-  .header input[type=text] {
-    height: 4rem;
   }
 
   .switch__btn {
