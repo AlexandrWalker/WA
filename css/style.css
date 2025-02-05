@@ -1135,6 +1135,12 @@ input[type=text] {
   .header__btn {
     display: flex;
   }
+  .header .btn {
+    height: 4rem;
+  }
+  .header input[type=text] {
+    height: 4rem;
+  }
   .switch__btn {
     display: flex;
   }
