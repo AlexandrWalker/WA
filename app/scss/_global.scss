@@ -16,6 +16,8 @@ body::-webkit-scrollbar-thumb {
 html {
   overflow-x: hidden;
   font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -92,7 +94,7 @@ p {}
   justify-content: center;
   align-items: center;
   width: fit-content;
-  min-height: 4rem;
+  height: 4rem;
   font-weight: 800;
   line-height: 143%;
   text-align: center;
@@ -168,7 +170,7 @@ p {}
 .btn--icon {
   --button-padding-x: unset;
   --button-padding-y: unset;
-  --button-font-size: 1.8rem;
+  --button-font-size: 2.4rem;
   --button-color: var(--white-60);
   --button-bgcolor: transparent;
   --button-border-width: 0.1rem;
@@ -194,7 +196,7 @@ p {}
 /* inputs */
 input[type=text] {
   width: 100%;
-  min-height: 4rem;
+  height: 4rem;
   padding: 0.8rem 3.4rem;
   border-radius: var(--border-r-7);
   background: var(--white-main-05);
@@ -383,15 +385,16 @@ input[type=text] {
   align-items: center;
   flex-direction: column;
   gap: 0.7rem;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  padding: 1.5rem;
   position: relative;
   background-color: transparent;
 
   &::before {
     content: "";
     display: block;
-    width: 1.5rem;
+    width: 1.4rem;
     height: 0.12rem;
     border-radius: 0.06rem;
     background-color: var(--white);
@@ -405,7 +408,7 @@ input[type=text] {
   &::after {
     content: "";
     display: block;
-    width: 1.5rem;
+    width: 1.4rem;
     height: 0.12rem;
     border-radius: 0.06rem;
     background-color: var(--white);
@@ -435,7 +438,9 @@ input[type=text] {
 }
 
 /* accordion */
-.accordion__item {}
+.accordion__item {
+  overflow: hidden;
+}
 
 .accordion__item:last-of-type {}
 
@@ -451,7 +456,6 @@ input[type=text] {
   max-width: 100%;
   padding: 0 2rem;
   transition: 0.3s ease;
-  max-height: 0;
 }
 
 .accordion__item-body p {
@@ -462,7 +466,6 @@ input[type=text] {
 .accordion__item--active .accordion__item-body {
   grid-template-rows: 1fr;
   padding: 1rem 2rem;
-  max-height: 100%;
 }
 
 .accordion__item-content {

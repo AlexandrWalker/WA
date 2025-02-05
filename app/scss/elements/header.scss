@@ -2,7 +2,6 @@
 
   &__top {
     background-color: var(--black);
-    padding: 1.2rem 0;
   }
 
   &__bottom {
@@ -13,6 +12,14 @@
     .header__container {
       overflow-x: auto;
       padding: 0;
+      gap: 3rem;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+      }
     }
   }
 
@@ -21,11 +28,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 0 1.8rem;
+    padding: 0.1rem 0.1rem 0.1rem 1.8rem;
   }
 
   &__logo {
-    width: 7.265rem;
+    width: 6.2rem;
     flex-shrink: 0;
 
     &-img {
@@ -92,11 +99,11 @@
   }
 
   .btn {
-    min-height: 3rem;
+    height: 3rem;
   }
 
   input[type=text] {
-    min-height: 3rem;
+    height: 3rem;
   }
 }
 

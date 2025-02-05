@@ -98,6 +98,10 @@
 }
 
 @media (max-width: 1440px) and (min-width: 601px) {
+  .header__logo {
+    width: 7.265rem;
+  }
+  
   .hero__title {
     margin-bottom: 2rem;
   }
@@ -155,21 +159,29 @@
   }
 
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 1rem;
-}
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 1rem;
+  }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
-  margin: 0 1rem 0 0;
-}
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-child,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:first-child {
+    margin: 0 1rem 0 0;
+  }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
-  margin: 0 0 0 1rem;
-}
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
+  .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
+    margin: 0 0 0 1rem;
+  }
 
   /* header */
+  .header__top {
+    padding: 1.2rem 0;
+  }
+
+  .header__container {
+    padding: 0 1.8rem;
+  }
+
   .header__btn {
     display: flex;
   }

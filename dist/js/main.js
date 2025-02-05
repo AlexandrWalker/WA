@@ -63,11 +63,11 @@
       },
     });
 
+    /**
+     * Инициализирует аккордеоны на странице.
+     * Обрабатывает переключение видимости элементов и кнопки закрытия.
+     */
     if ((window.innerWidth <= 600) || (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
-      /**
-           * Инициализирует аккордеоны на странице.
-           * Обрабатывает переключение видимости элементов и кнопки закрытия.
-           */
 
       // Получаем все контейнеры аккордеонов на странице
       document.querySelectorAll('.accordion').forEach((accordionContainer) => {
@@ -88,6 +88,11 @@
         accordionContainer.addEventListener('click', (event) => {
           const btn = event.target.closest('.accordion__item-btn');
           if (btn) {
+
+            active = document.getElementsByClassName('accordion__item--active');
+            if (active.length > 0 && active[0] !== this)
+              active[0].classList.remove('accordion__item--active');
+
             btn.closest('.accordion__item').classList.toggle('accordion__item--active');
             updateCloseBtnVisibility();
           }
