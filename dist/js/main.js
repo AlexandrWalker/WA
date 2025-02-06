@@ -45,7 +45,7 @@
      * Инициализация слайдера swiper.
      */
     var hero__slider = new Swiper(".hero__slider-init", {
-      spacebetween: 30,
+      spaceBetween: 30,
       centeredSlides: true,
       loop: true,
       effect: 'fade',
@@ -60,6 +60,47 @@
       pagination: {
         el: ".swiper-pagination",
         clickable: true
+      },
+    });
+
+    var brand__slider = new Swiper(".brand__slider-init", {
+      spaceBetween: 20,
+      slidesPerView: "auto",
+      // slidesPerView: 9,
+      freeMode: true,
+      loop: true,
+      navigation: {
+        nextEl: ".brand__slider-btn--next",
+        prevEl: ".brand__slider-btn--prev",
+      },
+      // speed: 600,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false
+      // },
+    });
+
+    var offer__slider = new Swiper(".offer__slider-init", {
+      spaceBetween: 10,
+      slidesPerView: 2,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        601: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        769: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1441: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
       },
     });
 
