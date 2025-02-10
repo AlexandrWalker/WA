@@ -194,6 +194,20 @@ p {}
   }
 }
 
+.btn--yt {
+  color: var(--coral);
+  font-size: 1.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.btn--resize {
+  color: var(--white-main);
+  font-size: 1.8rem;
+  line-height: 100%;
+  text-align: center;
+}
+
 /* inputs */
 input[type=text] {
   width: 100%;

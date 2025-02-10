@@ -64,7 +64,7 @@
     });
 
     var brand__slider = new Swiper(".brand__slider-init", {
-      spaceBetween: "auto",
+      spaceBetween: 10,
       slidesPerView: 9,
       freeMode: true,
       loop: true,
