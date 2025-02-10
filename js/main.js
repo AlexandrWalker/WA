@@ -72,11 +72,6 @@
         nextEl: ".brand__slider-btn--next",
         prevEl: ".brand__slider-btn--prev",
       },
-      // speed: 600,
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false
-      // },
     });
 
     var offer__slider = new Swiper(".offer__slider-init", {
@@ -85,7 +80,6 @@
       loop: true,
       freeMode: true,
       zoom: true,
-      // centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -136,56 +130,81 @@
      */
     if ((window.innerWidth <= 600) || (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
 
-      // Получаем все контейнеры аккордеонов на странице
-      document.querySelectorAll('.accordion').forEach((accordionContainer) => {
-        const closeBtn = accordionContainer.querySelector('.accordion__close');
+      // Убираем ссылки для моб. версии
+      var btnItem = document.querySelectorAll('.catalog__item-link');
+      Array.from(btnItem).forEach(function (iItem, i, btnItem) {
+        if (iItem.hasAttribute('href'))
+          iItem.setAttribute('href', 'javascript:void');
+      });
 
-        /**
-         * Обновляет видимость кнопки закрытия в зависимости от состояния аккордеона.
-         */
-        const updateCloseBtnVisibility = () => {
-          if (!closeBtn) return;
-          closeBtn.classList.toggle(
-            'visible',
-            accordionContainer.querySelector('.accordion__item--active'),
-          );
-        };
+      document.querySelectorAll('.catalog__item').forEach((item) => {
+        item.classList.add('accordion__item');
+      });
 
-        // Обработчик клика по элементам аккордеона
-        accordionContainer.addEventListener('click', (event) => {
-          const btn = event.target.closest('.accordion__item-btn');
-          if (btn) {
-            btn.closest('.accordion__item').classList.toggle('accordion__item--active');
-            updateCloseBtnVisibility();
-          }
-        });
+      document.querySelectorAll('.catalog__item-link').forEach((item) => {
+        item.classList.add('accordion__item-btn');
+      });
 
-        // Обработчик клика по кнопке закрытия
-        closeBtn?.addEventListener('click', () => {
-          accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-            item.classList.remove('accordion__item--active');
-          });
-          updateCloseBtnVisibility();
-        });
+      document.querySelectorAll('.catalog__item-icon').forEach((item) => {
+        item.classList.add('accordion__item-btn--icon');
+      });
 
-        // Изначально обновляем видимость кнопки при загрузке страницы
-        updateCloseBtnVisibility();
+      document.querySelectorAll('.catalog__item-body').forEach((item) => {
+        item.classList.add('accordion__item-body');
+      });
 
-        // Открываем все блоки  секции преимущества на мобильном
-        var mobile = document.querySelectorAll(".advantages__item-js");
-        mobile.forEach((el) => {
-          el.classList.toggle("accordion__item--active");
-        });
-
-        // Убираем ссылки для моб. версии
-        var btnItem = document.querySelectorAll('.accordion__item-btn');
-        Array.from(btnItem).forEach(function (iItem, i, btnItem) {
-          if (iItem.hasAttribute('href'))
-            iItem.setAttribute('href', 'javascript:void');
-        });
-
+      document.querySelectorAll('.catalog__item-content').forEach((item) => {
+        item.classList.add('accordion__item-content');
       });
     }
+
+    // Получаем все контейнеры аккордеонов на странице
+    document.querySelectorAll('.accordion').forEach((accordionContainer) => {
+      const closeBtn = accordionContainer.querySelector('.accordion__close');
+
+      /**
+       * Обновляет видимость кнопки закрытия в зависимости от состояния аккордеона.
+       */
+      const updateCloseBtnVisibility = () => {
+        if (!closeBtn) return;
+        closeBtn.classList.toggle(
+          'visible',
+          accordionContainer.querySelector('.accordion__item--active'),
+        );
+      };
+
+      // Обработчик клика по элементам аккордеона
+      accordionContainer.addEventListener('click', (event) => {
+        const btn = event.target.closest('.accordion__item-btn');
+
+        accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+          item.classList.remove('accordion__item--active');
+        });
+
+        if (btn) {
+          btn.closest('.accordion__item').classList.toggle('accordion__item--active');
+          updateCloseBtnVisibility();
+        }
+      });
+
+      // Обработчик клика по кнопке закрытия
+      closeBtn?.addEventListener('click', () => {
+        accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+          item.classList.remove('accordion__item--active');
+        });
+        updateCloseBtnVisibility();
+      });
+
+      // Изначально обновляем видимость кнопки при загрузке страницы
+      updateCloseBtnVisibility();
+
+      // Открываем все блоки  секции преимущества на мобильном
+      var mobile = document.querySelectorAll(".advantages__item-js");
+      mobile.forEach((el) => {
+        el.classList.toggle("accordion__item--active");
+      });
+
+    });
 
   });
 })();
