@@ -247,15 +247,11 @@
 
   /* service */
   .service__content {
-    grid-template-columns: 5.2rem auto;
+    grid-template-columns: 6rem auto;
   }
 
   .service__items {
     grid-template-rows: repeat(1, 8rem);
-  }
-
-  .service__content-icon {
-    height: 4.4rem;
   }
 }
 
@@ -292,6 +288,10 @@
 }
 
 @media screen and (min-width: 992px) {
+
+  .service__content-icon {
+    height: 4.4rem;
+  }
 
   .programm__inner {
     flex-direction: row-reverse;

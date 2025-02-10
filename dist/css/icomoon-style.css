@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'BY';
+  src: url('./../fonts/icomoon/BY.eot?isb6d6');
+  src: url('./../fonts/icomoon/BY.eot?isb6d6#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon/BY.ttf?isb6d6') format('truetype'),
+    url('./../fonts/icomoon/BY.woff?isb6d6') format('woff'),
+    url('./../fonts/icomoon/BY.svg?isb6d6#BY') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'BY' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gis:before {
+  content: "\e900";
+}
+
+.icon-apple:before {
+  content: "\e901";
+}
+
+.icon-basket:before {
+  content: "\e902";
+}
+
+.icon-bg:before {
+  content: "\e903";
+}
+
+.icon-catalogs:before {
+  content: "\e904";
+}
+
+.icon-chevron-right:before {
+  content: "\e905";
+}
+
+.icon-chevron-right-wide:before {
+  content: "\e906";
+}
+
+.icon-cloud:before {
+  content: "\e907";
+}
+
+.icon-connection:before {
+  content: "\e908";
+}
+
+.icon-delivery:before {
+  content: "\e909";
+}
+
+.icon-favorite:before {
+  content: "\e90a";
+}
+
+.icon-favorite-fill:before {
+  content: "\e90b";
+}
+
+.icon-geo:before {
+  content: "\e90c";
+}
+
+.icon-home:before {
+  content: "\e90d";
+}
+
+.icon-install:before {
+  content: "\e90e";
+}
+
+.icon-loupe:before {
+  content: "\e90f";
+}
+
+.icon-minus:before {
+  content: "\e910";
+}
+
+.icon-moon:before {
+  content: "\e911";
+}
+
+.icon-person:before {
+  content: "\e912";
+}
+
+.icon-phone:before {
+  content: "\e913";
+}
+
+.icon-play:before {
+  content: "\e914";
+}
+
+.icon-play-yt .path1:before {
+  content: "\e915";
+  color: rgb(255, 68, 51);
+}
+
+.icon-play-yt .path2:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-plus:before {
+  content: "\e917";
+}
+
+.icon-processing:before {
+  content: "\e918";
+}
+
+.icon-repair:before {
+  content: "\e919";
+}
+
+.icon-resize:before {
+  content: "\e91a";
+}
+
+.icon-sale:before {
+  content: "\e91b";
+}
+
+.icon-share:before {
+  content: "\e91c";
+}
+
+.icon-shine:before {
+  content: "\e91d";
+}
+
+.icon-star:before {
+  content: "\e922";
+}
+
+.icon-sun:before {
+  content: "\e923";
+}

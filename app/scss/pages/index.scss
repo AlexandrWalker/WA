@@ -114,14 +114,13 @@
       align-items: center;
       flex-direction: row;
       gap: 1rem;
-      color: inherit;
+      color: var(--white-60);
 
       i {
         display: block;
         margin: 0 2rem 0 auto;
         transform: rotate(90deg);
         transition: transform 0.2s ease;
-        color: inherit;
       }
     }
   }
@@ -156,6 +155,7 @@
       font-size: 1rem;
       padding: 1rem;
       align-content: center;
+      color: var(--white-60);
 
       &--prev {
         transform: scale(-1, 1);
