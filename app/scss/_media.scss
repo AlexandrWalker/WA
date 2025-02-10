@@ -193,6 +193,81 @@
     width: calc(50% - 1rem);
     height: auto;
   }
+
+  /* fact */
+  .fact__item {
+    width: calc(25% - 1.5rem);
+  }
+
+  .fact__content {
+    gap: 1rem 3rem;
+  }
+
+  .fact__content-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .fact__content-title {
+    font-size: 1.6rem;
+    width: calc(70% - 7rem);
+  }
+
+  .fact__content-text {
+    width: calc(100% - 7rem);
+    margin-left: auto;
+  }
+
+  .block-text {
+    font-size: 1.4rem;
+  }
+
+  .service__content {
+    grid-template-columns: 5.2rem auto;
+  }
+
+  .service__items {
+    grid-template-rows: repeat(1, 8rem);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fact__items {
+    gap: 2rem;
+  }
+
+  .fact__item {
+    width: calc(25% - 1.5rem);
+  }
+
+  .service__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    flex-wrap: nowrap;
+  }
+
+  .service__item {
+    width: auto;
+  }
+
+  .uslugi__items {
+    gap: 2rem;
+  }
+
+  .uslugi__item {
+    width: calc(33.33333% - 1.33333rem);
+  }
+
+  .uslugi__item:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
+    display: block;
+  }
+
+  .uslugi__btn {
+    width: fit-content;
+    min-width: 17.9rem;
+    height: 4rem;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1440px) and (min-width: 992px) {
@@ -207,6 +282,32 @@
 
   .card__name {
     font-size: 1.4rem;
+  }
+
+  .fact__item {
+    width: calc(25% - 1.5rem);
+  }
+
+  .fact__content {
+    gap: 1rem 2rem;
+  }
+
+  .fact__content-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .fact__content-title {
+    font-size: 1.4rem;
+  }
+
+  .fact__content-text {
+    width: calc(100% - 5rem);
+    margin-left: auto;
+  }
+
+  .service__items {
+    grid-template-rows: repeat(1, 7.7rem);
   }
 }
 
@@ -257,6 +358,20 @@
 @media (max-width: 991px) and (min-width: 601px) {
   .title {
     font-size: 4rem;
+  }
+
+  .service__items {
+    grid-template-rows: repeat(3, 7.7rem);
+  }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+  .fact__items {
+    gap: 1rem;
+  }
+
+  .fact__item {
+    width: calc(25% - 0.75rem);
   }
 }
 

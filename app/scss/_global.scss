@@ -385,6 +385,13 @@ input[type=text] {
   font-size: 2rem;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 2rem;
+}
+
+.block-text {
+  font-size: 1.2rem;
+  line-height: 1.16;
+  font-weight: 400;
 }
 
 .burger {
@@ -456,7 +463,9 @@ input[type=text] {
 
 .accordion__item-btn:after {}
 
-.accordion__item--active .accordion__item-btn:after {}
+.accordion__item--active .accordion__item-btn--icon {
+  transform: rotate(-90deg);
+}
 
 .accordion__item-body {
   display: grid;

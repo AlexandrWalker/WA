@@ -65,7 +65,6 @@
 
     var brand__slider = new Swiper(".brand__slider-init", {
       spaceBetween: "auto",
-      // slidesPerView: "auto",
       slidesPerView: 9,
       freeMode: true,
       loop: true,
@@ -84,6 +83,9 @@
       spaceBetween: 10,
       slidesPerView: 2,
       loop: true,
+      freeMode: true,
+      zoom: true,
+      // centeredSlides: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -153,11 +155,6 @@
         accordionContainer.addEventListener('click', (event) => {
           const btn = event.target.closest('.accordion__item-btn');
           if (btn) {
-
-            active = document.getElementsByClassName('accordion__item--active');
-            if (active.length > 0 && active[0] !== this)
-              active[0].classList.remove('accordion__item--active');
-
             btn.closest('.accordion__item').classList.toggle('accordion__item--active');
             updateCloseBtnVisibility();
           }
@@ -178,6 +175,13 @@
         var mobile = document.querySelectorAll(".advantages__item-js");
         mobile.forEach((el) => {
           el.classList.toggle("accordion__item--active");
+        });
+
+        // Убираем ссылки для моб. версии
+        var btnItem = document.querySelectorAll('.accordion__item-btn');
+        Array.from(btnItem).forEach(function (iItem, i, btnItem) {
+          if (iItem.hasAttribute('href'))
+            iItem.setAttribute('href', 'javascript:void');
         });
 
       });
