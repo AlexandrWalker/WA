@@ -253,6 +253,15 @@
   .service__items {
     grid-template-rows: repeat(1, 8rem);
   }
+
+  .faq__item-title {
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+  }
+
+  .faq__item.accordion__item--active .accordion__item-body {
+    padding: 0 3rem 2rem;
+  }
 }
 
 @media screen and (min-width: 1201px) {
@@ -427,6 +436,10 @@
   .service__items {
     grid-template-rows: repeat(1, 7.7rem);
   }
+
+  .faq__item-title {
+    padding: 2rem;
+  }
 }
 
 @media (max-width: 1440px) and (min-width: 601px) {
@@ -510,6 +523,10 @@
 
   .programm__block-text {
     font-size: 1.6rem;
+  }
+
+  .faq__item-title {
+    padding: 1.5rem 2rem;
   }
 }
 
@@ -726,6 +743,10 @@
   }
 
   /* catalog */
+  .catalog__item-body {
+    display: none;
+  }
+
   .catalog__items {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;

@@ -488,6 +488,11 @@ input[type=text] {
   transform: rotate(-90deg);
 }
 
+.accordion__item-btn--icon {
+  transform: rotate(90deg);
+  transition: all 0.2s ease;
+}
+
 .accordion__item-body {
   display: grid;
   grid-template-rows: 0fr;
