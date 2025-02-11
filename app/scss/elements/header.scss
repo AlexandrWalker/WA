@@ -109,6 +109,10 @@
   input[type=text] {
     height: 3rem;
   }
+
+  &__panel {
+    display: none;
+  }
 }
 
 /* navigation */

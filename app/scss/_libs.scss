@@ -14,7 +14,9 @@
   width: fit-content;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1.5rem;
+  position: relative;
+  bottom: 0;
+  margin: 1.7rem 0 0;
 }
 
 .swiper-pagination-bullet {
@@ -46,6 +48,25 @@
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-child,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:last-child {
   margin: 0 0 0 0.5rem;
+}
+
+.hero .swiper-pagination {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 98rem;
+  font-size: 0;
+  line-height: unset;
+}
+
+.hero .swiper-horizontal>.swiper-pagination-bullets,
+.hero .swiper-pagination-bullets.swiper-pagination-horizontal,
+.hero .swiper-pagination-custom,
+.hero .swiper-pagination-fraction {
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 1.5rem;
 }
 
 .hero .swiper-pagination-bullet-active::after {
