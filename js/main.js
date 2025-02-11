@@ -65,7 +65,7 @@
 
     var brand__slider = new Swiper(".brand__slider-init", {
       spaceBetween: 10,
-      slidesPerView: 9,
+      slidesPerView: "auto",
       freeMode: true,
       loop: true,
       navigation: {
@@ -77,9 +77,7 @@
     var offer__slider = new Swiper(".offer__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      loop: true,
-      freeMode: true,
-      zoom: true,
+      // freeMode: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -103,6 +101,7 @@
     var trade_in__slider = new Swiper(".trade-in__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
+      freeMode: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -119,6 +118,27 @@
         },
         1441: {
           slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+
+    var review__slider = new Swiper(".review__slider-init", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      freeMode: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        601: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        991: {
+          slidesPerView: 3,
           spaceBetween: 20,
         },
       },
