@@ -493,13 +493,15 @@
     background-color: var(--bg);
 
     &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 2.9rem;
       height: 2.9rem;
       border-radius: var(--border-r-6);
       background-color: var(--black);
       font-size: 1.5rem;
       text-align: center;
-      align-content: center;
       color: var(--white-60);
     }
 
@@ -676,6 +678,7 @@
       align-items: center;
       gap: 2rem;
       padding: 1rem 2rem;
+      cursor: pointer;
     }
 
     &-text {
@@ -683,9 +686,13 @@
       font-size: 1.2rem;
       line-height: 1.33;
       color: var(--white);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.5s ease;
+      // opacity: 0;
+      // transform: translateY(20px);
+      // transition: all 0.5s ease;
+    }
+
+    .accordion__item-body {
+      padding: 0 3rem;
     }
 
     &.accordion__item--active {
@@ -696,12 +703,13 @@
       }
 
       .accordion__item-body {
-        padding: 0 2rem 2rem;
+        // padding: 0 2rem 2rem;
+        padding: 0 3rem 2rem;
       }
 
       .faq__item-text {
-        opacity: 1;
-        transform: translateY(0);
+        // opacity: 1;
+        // transform: translateY(0);
       }
     }
   }
@@ -828,6 +836,8 @@
       grid-column: 1/3;
       grid-row: 2/3;
       color: inherit;
+      font-size: 1.2rem;
+      line-height: 1.2;
       transition: color 0.2s ease;
 
       &:hover {

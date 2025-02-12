@@ -41,6 +41,8 @@
       }
     })
 
+
+
     /**
      * Инициализация слайдера swiper.
      */
@@ -66,6 +68,7 @@
     var brand__slider = new Swiper(".brand__slider-init", {
       spaceBetween: 10,
       slidesPerView: "auto",
+      // slidesPerView: 9,
       freeMode: true,
       loop: true,
       navigation: {
@@ -78,6 +81,7 @@
       spaceBetween: 10,
       slidesPerView: 2,
       // freeMode: true,
+      grabCursor: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -101,7 +105,8 @@
     var trade_in__slider = new Swiper(".trade-in__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      freeMode: true,
+      // freeMode: true,
+      grabCursor: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -126,7 +131,8 @@
     var review__slider = new Swiper(".review__slider-init", {
       slidesPerView: 1,
       spaceBetween: 10,
-      freeMode: true,
+      // freeMode: true,
+      grabCursor: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -147,7 +153,8 @@
     var info__slider = new Swiper(".info__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      freeMode: true,
+      // freeMode: true,
+      grabCursor: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -160,6 +167,8 @@
         },
       },
     });
+
+
 
     /**
      * Инициализирует аккордеоны для каталога в моб версии.
@@ -195,6 +204,8 @@
       });
     }
 
+
+
     /**
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
@@ -219,11 +230,11 @@
       accordionContainer.addEventListener('click', (event) => {
         const btn = event.target.closest('.accordion__item-btn');
 
-        accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-          item.classList.remove('accordion__item--active');
-        });
-
         if (btn) {
+          // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+          //   item.classList.remove('accordion__item--active');
+          // });
+
           btn.closest('.accordion__item').classList.toggle('accordion__item--active');
           updateCloseBtnVisibility();
         }
@@ -240,13 +251,15 @@
       // Изначально обновляем видимость кнопки при загрузке страницы
       updateCloseBtnVisibility();
 
-      // Открываем все блоки  секции преимущества на мобильном
+      // Открываем все блоки секции преимущества на мобильном
       var mobile = document.querySelectorAll(".advantages__item-js");
       mobile.forEach((el) => {
         el.classList.toggle("accordion__item--active");
       });
 
     });
+
+
 
     /**
      * Управляет переключением вкладок на странице.
