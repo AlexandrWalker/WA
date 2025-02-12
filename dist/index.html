@@ -15,25 +15,24 @@
 
 <body>
   <div class="wrapper">
-
+    <!-- Шапка сайта -->
     <header class="header">
-
       <div class="header__top">
         <div class="container header__container">
-
+          <!-- Кнопка вызова поисковика -->
           <button class="loupe btn btn--icon">
             <i class="icon-loupe"></i>
           </button>
-
+          <!-- Логотип с ссылкой на главную страницу -->
           <a class="header__logo" href="/">
             <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
           </a>
-
+          <!-- Кнопка каталога -->
           <button class="header__btn btn btn--red">
             <i class="header__btn-icon icon-catalogs"></i>
             Каталог
           </button>
-
+          <!-- Форма поиска -->
           <form class="search__form" action="">
             <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
             <i class="search__form-icon icon-shine"></i>
@@ -41,11 +40,11 @@
               <i class="icon-loupe"></i>
             </button>
           </form>
-
+          <!-- Кнопка для бизнеса -->
           <a class="header__btn btn btn--outline" href="/">
             Для бизнеса
           </a>
-
+          <!-- Смена темы -->
           <button class="switch__btn">
             <span class="switch__btn-item light-mode">
               <i class="icon-sun"></i>
@@ -55,7 +54,7 @@
               <i class="icon-moon"></i>
             </span>
           </button>
-
+          <!-- Панель для дэкстопа и моб. версии -->
           <div class="header__panel panel">
             <div class="panel__item">
               <div class="panel__wrap">
@@ -93,23 +92,21 @@
               </div>
             </div>
           </div>
-
+          <!-- Кнопка бургер -->
           <button class="burger">
           </button>
-
         </div>
       </div>
-
       <div class="header__bottom">
         <div class="container header__container">
-
+          <!-- Геопозиция -->
           <div class="header__geo">
             <a class="header__geo-link" href="#!">
               <img class="header__geo-img" src="images/icons/geo.svg" alt="">
               Новосибирск
             </a>
           </div>
-
+          <!-- Навигация по сайту -->
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item">
@@ -179,20 +176,19 @@
               </li>
             </ul>
           </nav>
-
+          <!-- Кнопка телефона -->
           <div class="header__phone">
             <a class="header__phone-link" href="tel:+73832052355">
               <i class="header__phone-icon icon-phone"></i>
               8 (383) 205 23 55
             </a>
           </div>
-
         </div>
       </div>
-
     </header>
+<!-- Содержимое сайта -->
 <main class="main">
-
+  <!-- Первый главный блок -->
   <section class="hero">
     <div class="container hero__container">
       <div class="hero__inner">
@@ -327,7 +323,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Каталог с моб. версией -->
   <section class="catalog">
     <div class="container container__catalog">
       <div class="catalog__inner">
@@ -581,7 +577,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Слайдер с карточками товаров -->
   <section class="offer">
     <div class="container offer__container">
       <div class="offer__inner">
@@ -1102,7 +1098,6 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-
       <div class="programm__inner">
         <div class="programm__content">
           <h2 class="block-title programm__title">
@@ -1133,570 +1128,564 @@
       </div>
     </div>
   </section>
-
+  <!-- Слайдер с карточками трейд-ин товаров -->
   <section class="trade-in">
     <div class="container">
       <div class="trade-in__inner">
+        <h2 class="trade-in__title block-title">
+          Товары принятые по trade-in
+        </h2>
+        <div class="trade-in__slider trade-in__slider-init">
+          <div class="swiper-wrapper">
 
-        <div class="trade-in__inner">
-          <h2 class="trade-in__title block-title">
-            Товары принятые по trade-in
-          </h2>
+            <div class="swiper-slide">
+              <div class="card">
 
-          <div class="trade-in__slider trade-in__slider-init">
-            <div class="swiper-wrapper">
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
 
-              <div class="swiper-slide">
-                <div class="card">
+                <img class="card__img" src="images/card/card-1.svg" alt="">
 
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
                   </button>
 
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="card">
-
-                  <button class="card__fav">
-                    <i class="icon-favorite"></i>
-                  </button>
-
-                  <img class="card__img" src="images/card/card-1.svg" alt="">
-
-                  <div class="card__content">
-
-                    <div class="card__tags">
-                      <span class="card__tags-item">
-                        Trade-in
-                      </span>
-                    </div>
-
-                    <span class="card__name">
-                      Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
-                    </span>
-
-                    <div class="card__price">
-                      <span>₽ </span>
-                      129 990
-                    </div>
-
-                    <div class="card__split">
-                      <div class="card__split-item">
-                        <img class="card__split-img" src="images/icons/split.svg" alt="">
-                        <span>
-                          <span>33 748</span>₽
-                        </span>
-                      </div>
-                      <span>
-                        в Сплит
-                      </span>
-                    </div>
-
-                    <button class="card__btn btn btn--blue">
-                      В корзину
-                    </button>
-
-                  </div>
-                </div>
-              </div>
-
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+
+                <button class="card__fav">
+                  <i class="icon-favorite"></i>
+                </button>
+
+                <img class="card__img" src="images/card/card-1.svg" alt="">
+
+                <div class="card__content">
+
+                  <div class="card__tags">
+                    <span class="card__tags-item">
+                      Trade-in
+                    </span>
+                  </div>
+
+                  <span class="card__name">
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+                  </span>
+
+                  <div class="card__price">
+                    <span>₽ </span>
+                    129 990
+                  </div>
+
+                  <div class="card__split">
+                    <div class="card__split-item">
+                      <img class="card__split-img" src="images/icons/split.svg" alt="">
+                      <span>
+                        <span>33 748</span>₽
+                      </span>
+                    </div>
+                    <span>
+                      в Сплит
+                    </span>
+                  </div>
+
+                  <button class="card__btn btn btn--blue">
+                    В корзину
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
           </div>
-
+          <div class="swiper-pagination"></div>
         </div>
-
       </div>
     </div>
   </section>
-
+  <!-- Блок с фактами и с видео и с фото -->
   <section class="fact">
     <div class="container fact__container">
       <div class="fact__inner">
@@ -1783,14 +1772,13 @@
       </div>
     </div>
   </section>
-
+  <!-- Блок сервиса -->
   <section class="service">
     <div class="container service__container">
       <div class="service__inner">
         <h2 class="service__title block-title">
           Сервисный центр
         </h2>
-
         <div class="service__items">
           <a class="service__item" href="#!">
             <div class="service__content">
@@ -1856,7 +1844,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Блок с услугами -->
   <section class="uslugi">
     <div class="container uslugi__container">
       <div class="uslugi__inner">
@@ -1970,14 +1958,13 @@
       </div>
     </div>
   </section>
-
+  <!-- Слайдер с отзывами -->
   <section class="review">
     <div class="container review__container">
       <div class="review__inner">
         <h2 class="review__title block-title">
           Клиенты о нас
         </h2>
-
         <div class="review__slider review__slider-init">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -2215,14 +2202,13 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-
         <a class="review__btn btn btn--outline" href="#!">
           Больше отзывов
         </a>
       </div>
     </div>
   </section>
-
+  <!-- Аккордеон ответов и вопросов -->
   <section class="faq">
     <div class="container faq__container">
       <div class="faq__inner">
@@ -2309,7 +2295,7 @@
       </div>
     </div>
   </section>
-
+  <!-- Слайдеры внутри табов полезной информации -->
   <section class="info">
     <div class="container info__container">
       <div class="info__inner">
@@ -2955,11 +2941,10 @@
       </div>
     </div>
   </section>
-
+  <!-- Блок с контаками и с картой -->
   <section class="contact">
     <div class="container contact__container">
       <div class="contact__inner">
-
         <div class="contact__body">
           <div class="contact__content">
             <h3 class="contact__title">
@@ -3062,24 +3047,23 @@
             </div>
           </div>
         </div>
-
         <div class="contact__map">
           <img class="contact__map-img" src="./images/map/map.webp" alt="">
         </div>
-
       </div>
     </div>
   </section>
 
 </main>
+<!-- Подвал сайта -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__menu">
 
       </div>
-
       <div class="footer__bottom">
+        <!-- Информация -->
         <div class="footer__bottom-wrap">
           <p class="footer__bottom-text">
             ИП Сергиенко Владислав Валерьевич, ИНН 540551350770, Россия, Новосибирская область, г.Новосибирск, ул.
@@ -3090,7 +3074,7 @@
             РФ
           </p>
         </div>
-
+        <!-- Способы оплаты -->
         <div class="footer__pay">
           <div class="footer__pay-item">
             <img class="footer__pay-img" src="images/pay/mastercard.svg" alt="">
@@ -3108,7 +3092,6 @@
             <img class="footer__pay-img" src="images/pay/sber.svg" alt="">
           </div>
         </div>
-
       </div>
     </div>
   </div>
