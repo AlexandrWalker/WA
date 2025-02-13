@@ -28,8 +28,10 @@
 
   &__pay {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0 1rem;
 
     &-item {
       width: fit-content;

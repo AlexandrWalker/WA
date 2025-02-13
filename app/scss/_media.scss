@@ -299,8 +299,12 @@
     font-size: 1.6rem;
   }
 
-  .faq__item.accordion__item--active .accordion__item-body {
-    // padding: 0 3rem 2rem;
+  .faq__item.accordion__item>.accordion__item-body {
+    padding: 0 12rem 0 3rem;
+  }
+
+  .faq__item.accordion__item--active>.accordion__item-body {
+    padding: 0 12rem 3.5rem 3rem;
   }
 
   /* contact */
@@ -552,6 +556,14 @@
     padding: 2rem;
   }
 
+  .faq__item.accordion__item>.accordion__item-body {
+    padding: 0 10rem 0 2rem;
+  }
+
+  .faq__item.accordion__item--active>.accordion__item-body {
+    padding: 0 10rem 2.5rem 2rem;
+  }
+
   .contact__inner {
     flex-direction: row;
   }
@@ -733,6 +745,14 @@
 
   .faq__item-title {
     padding: 1.5rem 2rem;
+  }
+
+  .faq__item.accordion__item>.accordion__item-body {
+    padding: 0 8.5rem 0 2rem;
+  }
+
+  .faq__item.accordion__item--active>.accordion__item-body {
+    padding: 0 8.5rem 3rem 2rem;
   }
 
   .contact__body {

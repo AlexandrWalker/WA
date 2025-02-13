@@ -2,46 +2,42 @@
   document.addEventListener('DOMContentLoaded', () => {
 
     /**
-     * Смена темы.
+     * Инициализирует аккордеоны для каталога в моб версии.
      */
-    const switchModeBtn = document.querySelectorAll(".switch__btn");
-    const body = document.body;
+    if ((window.innerWidth <= 600) || (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
 
-    switchModeBtn.forEach((el) => {
-      el.onclick = function () {
-        const darkMode = body.classList.toggle("switch");
+      // Убираем ссылки для моб. версии
+      var btnItem = document.querySelectorAll('.catalog__item-link');
+      Array.from(btnItem).forEach(function (iItem, i, btnItem) {
+        if (iItem.hasAttribute('href'))
+          iItem.setAttribute('href', 'javascript:void');
+      });
 
-        if (darkMode) {
-          localStorage.setItem('darkMode', 'dark')
-        } else {
-          localStorage.setItem('darkMode', 'light')
-        }
-      };
-    });
+      // Добавляем классы каталога для преобразования в аккордеон
+      document.querySelectorAll('.catalog__items').forEach((item) => {
+        item.classList.add('accordion');
+      });
 
-    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      body.classList.add("switch");
+      document.querySelectorAll('.catalog__item').forEach((item) => {
+        item.classList.add('accordion__item');
+      });
+
+      document.querySelectorAll('.catalog__item-link').forEach((item) => {
+        item.classList.add('accordion__item-btn');
+      });
+
+      document.querySelectorAll('.catalog__item-icon').forEach((item) => {
+        item.classList.add('accordion__item-icon');
+      });
+
+      document.querySelectorAll('.catalog__item-body').forEach((item) => {
+        item.classList.add('accordion__item-body');
+      });
+
+      document.querySelectorAll('.catalog__item-content').forEach((item) => {
+        item.classList.add('accordion__item-content');
+      });
     }
-
-    if (localStorage.getItem('darkMode') === 'dark') {
-      body.classList.add("switch");
-    } else if (localStorage.getItem("darkMode") === "light") {
-      body.classList.remove("switch");
-    }
-
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (event) => {
-      const newColorScheme = event.matches ? "dark" : 'light';
-
-      if (newColorScheme === 'dark') {
-        body.classList.add("switch");
-        localStorage.setItem('darkMode', 'dark')
-      } else {
-        body.classList.remove("switch");
-        localStorage.setItem('darkMode', 'light')
-      }
-    })
-
-
 
     /**
      * Инициализация слайдера swiper.
@@ -168,142 +164,148 @@
       },
     });
 
-
-
     /**
-     * Инициализирует аккордеоны для каталога в моб версии.
+     * Смена темы.
      */
-    if ((window.innerWidth <= 600) || (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform))) {
+    function switchFunc() {
+      const switchModeBtn = document.querySelectorAll(".switch__btn");
+      const body = document.body;
 
-      // Убираем ссылки для моб. версии
-      var btnItem = document.querySelectorAll('.catalog__item-link');
-      Array.from(btnItem).forEach(function (iItem, i, btnItem) {
-        if (iItem.hasAttribute('href'))
-          iItem.setAttribute('href', 'javascript:void');
+      switchModeBtn.forEach((el) => {
+        el.onclick = function () {
+          const darkMode = body.classList.toggle("switch");
+
+          if (darkMode) {
+            localStorage.setItem('darkMode', 'dark')
+          } else {
+            localStorage.setItem('darkMode', 'light')
+          }
+        };
       });
 
-      // Добавляем классы каталога для преобразования в аккордеон
-      document.querySelectorAll('.catalog__item').forEach((item) => {
-        item.classList.add('accordion__item');
-      });
+      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        body.classList.add("switch");
+      }
 
-      document.querySelectorAll('.catalog__item-link').forEach((item) => {
-        item.classList.add('accordion__item-btn');
-      });
+      if (localStorage.getItem('darkMode') === 'dark') {
+        body.classList.add("switch");
+      } else if (localStorage.getItem("darkMode") === "light") {
+        body.classList.remove("switch");
+      }
 
-      document.querySelectorAll('.catalog__item-icon').forEach((item) => {
-        item.classList.add('accordion__item-btn--icon');
-      });
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', (event) => {
+        const newColorScheme = event.matches ? "dark" : 'light';
 
-      document.querySelectorAll('.catalog__item-body').forEach((item) => {
-        item.classList.add('accordion__item-body');
-      });
-
-      document.querySelectorAll('.catalog__item-content').forEach((item) => {
-        item.classList.add('accordion__item-content');
-      });
-    }
-
-
+        if (newColorScheme === 'dark') {
+          body.classList.add("switch");
+          localStorage.setItem('darkMode', 'dark')
+        } else {
+          body.classList.remove("switch");
+          localStorage.setItem('darkMode', 'light')
+        }
+      })
+    };
 
     /**
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
      */
-
-    // Получаем все контейнеры аккордеонов на странице
-    document.querySelectorAll('.accordion').forEach((accordionContainer) => {
-      const closeBtn = accordionContainer.querySelector('.accordion__close');
-
-      /**
-       * Обновляет видимость кнопки закрытия в зависимости от состояния аккордеона.
-       */
-      const updateCloseBtnVisibility = () => {
-        if (!closeBtn) return;
-        closeBtn.classList.toggle(
-          'visible',
-          accordionContainer.querySelector('.accordion__item--active'),
-        );
-      };
-
-      // Обработчик клика по элементам аккордеона
-      accordionContainer.addEventListener('click', (event) => {
-        const btn = event.target.closest('.accordion__item-btn');
-
-        if (btn) {
-          // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-          //   item.classList.remove('accordion__item--active');
-          // });
-
-          btn.closest('.accordion__item').classList.toggle('accordion__item--active');
-          updateCloseBtnVisibility();
-        }
-      });
-
-      // Обработчик клика по кнопке закрытия
-      closeBtn?.addEventListener('click', () => {
-        accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-          item.classList.remove('accordion__item--active');
+    function accordionFunc() {
+      // Получаем все контейнеры аккордеонов на странице
+      document.querySelectorAll('.accordion').forEach((accordionContainer) => {
+        // Обработчик клика по элементам аккордеона
+        accordionContainer.addEventListener('click', (event) => {
+          const btn = event.target.closest('.accordion__item-btn');
+          if (btn) {
+            btn.closest('.accordion__item').classList.toggle('accordion__item--active');
+            btn.classList.toggle('accordion__item-btn--active');
+          }
         });
-        updateCloseBtnVisibility();
       });
 
-      // Изначально обновляем видимость кнопки при загрузке страницы
-      updateCloseBtnVisibility();
-
-      // Открываем все блоки секции преимущества на мобильном
-      var mobile = document.querySelectorAll(".advantages__item-js");
-      mobile.forEach((el) => {
-        el.classList.toggle("accordion__item--active");
-      });
-
-    });
-
-
+      // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+      //   item.classList.remove('accordion__item--active');
+      // });
+    };
 
     /**
      * Управляет переключением вкладок на странице.
      * Добавляет и удаляет классы активности для кнопок и панелей вкладок.
      * Поддерживает вложенные табы любой глубины и сохраняет активное состояние у вложенных табов при переключении внешних.
      */
-    document.querySelectorAll('.tabs').forEach((tabsContainer) => {
-      tabsContainer.addEventListener('click', (event) => {
-        const tabsBtn = event.target.closest('.tabs__btn');
-        if (!tabsBtn || !tabsContainer.contains(tabsBtn)) return;
+    function tabsFunc() {
+      document.querySelectorAll('.tabs').forEach((tabsContainer) => {
+        tabsContainer.addEventListener('click', (event) => {
+          const tabsBtn = event.target.closest('.tabs__btn');
+          if (!tabsBtn || !tabsContainer.contains(tabsBtn)) return;
 
-        // Останавливаем всплытие, чтобы вложенные табы не влияли на родительские
-        event.stopPropagation();
+          // Останавливаем всплытие, чтобы вложенные табы не влияли на родительские
+          event.stopPropagation();
 
-        // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
-        const currentTabsContainer = tabsBtn.closest('.tabs');
-        if (!currentTabsContainer) return;
+          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
+          const currentTabsContainer = tabsBtn.closest('.tabs');
+          if (!currentTabsContainer) return;
 
-        // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
-        const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__btn'));
-        const tabsPanels = Array.from(currentTabsContainer.querySelectorAll('.tabs__panel'));
+          // Сбрасываем активные состояния кнопок и панелей только внутри текущего уровня
+          const tabsBtns = Array.from(currentTabsContainer.querySelectorAll('.tabs__btn'));
+          const tabsPanels = Array.from(currentTabsContainer.querySelectorAll('.tabs__panel'));
 
-        tabsBtns.forEach((btn) => {
-          if (btn.closest('.tabs') === currentTabsContainer) {
-            btn.classList.remove('tabs__btn--active');
+          tabsBtns.forEach((btn) => {
+            if (btn.closest('.tabs') === currentTabsContainer) {
+              btn.classList.remove('tabs__btn--active');
+            }
+          });
+
+          tabsPanels.forEach((panel) => {
+            if (panel.closest('.tabs') === currentTabsContainer) {
+              panel.classList.remove('tabs__panel--active');
+            }
+          });
+
+          // Устанавливаем активное состояние для выбранной вкладки
+          tabsBtn.classList.add('tabs__btn--active');
+          const targetPanel = currentTabsContainer.querySelector(
+            `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
+          );
+          if (targetPanel) {
+            targetPanel.classList.add('tabs__panel--active');
           }
         });
+      });
+    };
 
-        tabsPanels.forEach((panel) => {
-          if (panel.closest('.tabs') === currentTabsContainer) {
-            panel.classList.remove('tabs__panel--active');
-          }
+    function dropdownFunc() {
+      /**
+       * Обрабатывает поведение выпадающих элементов на странице.
+       * Управляет открытием и закрытием dropdown-меню при клике по триггеру или кнопке закрытия.
+       */
+      const toggleDropdown = (dropdown, isOpen) => {
+        dropdown.classList[isOpen ? 'add' : 'remove']('dropdown--opened');
+      };
+
+      document.querySelectorAll('.dropdown').forEach((dropdown) => {
+        dropdown.addEventListener('click', ({ target }) => {
+          const trigger = target.closest('.dropdown__trigger');
+          const closeBtn = target.closest('.dropdown__close');
+
+          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'), document.body.classList.toggle('no-scroll'));
+          if (closeBtn) toggleDropdown(dropdown, false, document.body.classList.toggle('no-scroll'));
         });
+      });
 
-        // Устанавливаем активное состояние для выбранной вкладки
-        tabsBtn.classList.add('tabs__btn--active');
-        const targetPanel = currentTabsContainer.querySelector(
-          `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
-        );
-        if (targetPanel) {
-          targetPanel.classList.add('tabs__panel--active');
+      document.addEventListener('click', ({ target }) => {
+        if (!target.closest('.dropdown')) {
+          document
+            .querySelectorAll('.dropdown--opened')
+            .forEach((dropdown) => toggleDropdown(dropdown, false));
         }
       });
-    });
+    };
+
+    switchFunc();
+    accordionFunc();
+    tabsFunc();
+    dropdownFunc();
 
   });
 })();

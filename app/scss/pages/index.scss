@@ -91,11 +91,7 @@
   }
 
   &__item {
-    border-radius: var(--border-r-13);
-    background-color: var(--bg);
     position: relative;
-    padding: 0;
-    overflow: hidden;
 
     &-img {
       /*width: fit-content;
@@ -112,23 +108,40 @@
     &-link {
       display: flex;
       align-items: center;
-      flex-direction: row;
-      gap: 1rem;
       color: var(--white-60);
-
-      i {
-        display: block;
-        margin: 0 2rem 0 auto;
-      }
+      border-radius: var(--border-r-13);
+      background-color: var(--bg);
+      padding: 0;
     }
 
     &-body {
       display: none;
+      border-radius: var(--border-r-13);
+      background-color: var(--black-main-30);
 
       &.accordion__item-body {
         display: grid;
+        padding: 0 2rem;
       }
     }
+
+    &-icon {
+      margin: 0 2rem 0 auto;
+    }
+  }
+
+  .accordion__item--active .accordion__item-body {
+    padding: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .accordion__list .accordion__item-body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .accordion__list .accordion__item--active .accordion__item-body {
+    padding: 1.5rem 0 0;
   }
 }
 
@@ -673,12 +686,8 @@
     transition: all 0.2s ease;
 
     &-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
+      width: 100%;
       padding: 1rem 2rem;
-      cursor: pointer;
     }
 
     &-text {
@@ -686,31 +695,18 @@
       font-size: 1.2rem;
       line-height: 1.33;
       color: var(--white);
-      // opacity: 0;
-      // transform: translateY(20px);
-      // transition: all 0.5s ease;
-    }
-
-    .accordion__item-body {
-      padding: 0 3rem;
     }
 
     &.accordion__item--active {
       background-color: transparent;
 
-      .accordion__item-btn--icon {
+      .accordion__item-icon {
         color: var(--primary);
       }
 
-      .accordion__item-body {
-        // padding: 0 2rem 2rem;
-        padding: 0 3rem 2rem;
-      }
+      .accordion__item-body {}
 
-      .faq__item-text {
-        // opacity: 1;
-        // transform: translateY(0);
-      }
+      .faq__item-text {}
     }
   }
 
@@ -916,10 +912,12 @@
     .accordion__item-btn {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 1rem;
       width: 100%;
       height: 3rem;
+    }
+
+    .accordion__item-icon {
+      margin: 0;
     }
   }
 
