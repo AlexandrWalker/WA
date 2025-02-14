@@ -65,6 +65,7 @@
       spaceBetween: 10,
       slidesPerView: "auto",
       // slidesPerView: 9,
+      speed: 600,
       freeMode: true,
       loop: true,
       navigation: {
@@ -77,6 +78,7 @@
       spaceBetween: 10,
       slidesPerView: 2,
       // freeMode: true,
+      speed: 600,
       grabCursor: true,
       pagination: {
         el: ".swiper-pagination",
@@ -103,6 +105,7 @@
       slidesPerView: 2,
       // freeMode: true,
       grabCursor: true,
+      speed: 600,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -129,6 +132,7 @@
       spaceBetween: 10,
       // freeMode: true,
       grabCursor: true,
+      speed: 600,
       loop: true,
       pagination: {
         el: ".swiper-pagination",
@@ -274,11 +278,11 @@
       });
     };
 
+    /**
+     * Обрабатывает поведение выпадающих элементов на странице.
+     * Управляет открытием и закрытием dropdown-меню при клике по триггеру или кнопке закрытия.
+     */
     function dropdownFunc() {
-      /**
-       * Обрабатывает поведение выпадающих элементов на странице.
-       * Управляет открытием и закрытием dropdown-меню при клике по триггеру или кнопке закрытия.
-       */
       const toggleDropdown = (dropdown, isOpen) => {
         dropdown.classList[isOpen ? 'add' : 'remove']('dropdown--opened');
       };
@@ -300,12 +304,93 @@
             .forEach((dropdown) => toggleDropdown(dropdown, false));
         }
       });
+
+      const dropdown = document.querySelector('.dropdown');
+      const menu = document.querySelector('.menu');
+      const overlay = document.querySelector('.menu__overlay');
+      const closeButton = document.querySelector('.dropdown__trigger');
+
+      const closeMenu = () => {
+        dropdown.classList.remove('dropdown--opened');
+        document.body.classList.remove('no-scroll');
+      };
+
+      // Закрытие меню по клику на кнопку закрытия или на overlay
+      [closeButton, overlay].forEach((element) => element.addEventListener('click', closeMenu));
+
+      // Закрытие меню при скролле
+      window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 0) {
+          closeMenu();
+        }
+      });
     };
+
+    /**
+     * Управляет переключением кнопки в избранное на карточке товара.
+     * Добавляет и удаляет классы активности для кнопок в избранное.
+     */
+    function favFunc() {
+
+      document.querySelectorAll('.card').forEach((cardContainer) => {
+        cardContainer.addEventListener('click', (events) => {
+          const cardBtn = events.target.closest('.card__fav');
+          if (!cardBtn || !cardContainer.contains(cardBtn)) return;
+
+          events.stopPropagation();
+
+          // Ищем ближайший контейнер, к которому принадлежит нажатая кнопка
+          const currentCardContainer = cardBtn.closest('.card');
+          if (!currentCardContainer) return;
+
+          // Сбрасываем активные состояния кнопок
+          const cardBtns = Array.from(currentCardContainer.querySelectorAll('.card__fav'));
+
+          cardBtns.forEach((btns) => {
+            if (btns.closest('.card') === currentCardContainer) {
+              btns.classList.toggle('card__fav--active');
+            }
+          });
+
+        });
+      });
+    };
+
+    /**
+     * Инициализация плавного скролла
+     */
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+    let smoother = ScrollSmoother.create({
+      smooth: 1,
+      effects: true
+    });
+
+    /**
+     * Активация занели для моб. версии при скролле
+     */
+    function panelFunc() {
+      const panel = document.querySelector('.panel');
+
+      const openPanel = () => {
+        panel.classList.add('panel--active');
+      };
+
+      window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 0) {
+          openPanel();
+        }
+      });
+    }
 
     switchFunc();
     accordionFunc();
     tabsFunc();
     dropdownFunc();
+    favFunc();
+    panelFunc();
 
   });
 })();
