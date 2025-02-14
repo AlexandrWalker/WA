@@ -220,10 +220,26 @@
         // Обработчик клика по элементам аккордеона
         accordionContainer.addEventListener('click', (event) => {
           const btn = event.target.closest('.accordion__item-btn');
+          const btnActive = event.target.closest('.accordion__item-btn--active');
+
           if (btn) {
             btn.closest('.accordion__item').classList.toggle('accordion__item--active');
             btn.classList.toggle('accordion__item-btn--active');
           }
+          
+          // if (btnActive) {
+          //   btnActive.closest('.accordion__item').classList.remove('accordion__item--active');
+          //   btnActive.classList.remove('accordion__item-btn--active');
+          // } else {
+          //   document.querySelectorAll('.accordion__item--active').forEach((item) => {
+          //     item.classList.remove('accordion__item--active');
+          //   });
+          //   document.querySelectorAll('.accordion__item-btn--active').forEach((item) => {
+          //     item.classList.remove('accordion__item-btn--active');
+          //   });
+          //   btn.closest('.accordion__item').classList.add('accordion__item--active');
+          //   btn.classList.add('accordion__item-btn--active');
+          // }
         });
       });
 

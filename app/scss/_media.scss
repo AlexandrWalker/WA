@@ -945,6 +945,13 @@
     order: unset !important;
   }
 
+  .person::after {
+    top: 0.225rem;
+    right: 0.525rem;
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+
   .burger,
   .loupe {
     display: none;
@@ -993,6 +1000,7 @@
 
   .menu__inner {
     padding: 0;
+    position: relative;
   }
 
   .menu .close,
@@ -1002,6 +1010,28 @@
 
   .menu__item {
     // column-count: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 4rem;
+  }
+
+  .menu .menu__item .accordion__item-body {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(66% - 2rem);
+    padding: 0;
+  }
+
+  .menu .accordion__list .accordion__item-body {
+    width: calc(50% - 2rem);
+  }
+
+  .menu__item .accordion__list .accordion__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
   }
 
   /* hero */

@@ -24,6 +24,7 @@
   --bg: #2C2C2E;
   --grey: #666666;
   --green: #29B24A;
+  --green-sec: #35E264;
   --yellow: #FFC107;
   --border-c: #272729;
   --border-c-20: #9f9fa520;
@@ -281,7 +282,7 @@ body {
 
 .no-scroll {
   overflow: hidden;
-  height: 100vh;
+  height: 100vh !important;
 }
 
 section {
@@ -635,7 +636,8 @@ input[type=text] {
   height: 100%;
   color: var(--white-60);
   /* - */
-  font-size: 2.5rem;
+  font-size: 2.15rem;
+  position: relative;
 }
 .panel__link-img {
   width: auto;
@@ -648,6 +650,26 @@ input[type=text] {
   font-size: 8px;
   line-height: 11px;
   color: var(--white-60);
+}
+.panel__link-item {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1;
+  color: var(--white-main);
+  background-color: var(--primary);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+.panel__link[class*=" icon-"] .panel__link-item {
+  font-family: "Manrope", serif;
 }
 
 .title {
@@ -1024,6 +1046,26 @@ input[type=text] {
 .dropdown--opened .menu__overlay {
   opacity: 1;
   visibility: visible;
+}
+
+.favorite--active::before {
+  color: var(--primary);
+}
+.favorite .panel__link-item {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.person::after {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--green-sec);
+  position: absolute;
+  top: 0.01rem;
+  right: 1.2rem;
 }
 
 .header__top {
@@ -2736,6 +2778,12 @@ input[type=text] {
   .panel__item {
     order: unset !important;
   }
+  .person::after {
+    top: 0.225rem;
+    right: 0.525rem;
+    width: 0.375rem;
+    height: 0.375rem;
+  }
   .burger,
   .loupe {
     display: none;
@@ -2775,10 +2823,32 @@ input[type=text] {
   }
   .menu__inner {
     padding: 0;
+    position: relative;
   }
   .menu .close,
   .menu__title {
     display: none;
+  }
+  .menu__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 4rem;
+  }
+  .menu .menu__item .accordion__item-body {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(66% - 2rem);
+    padding: 0;
+  }
+  .menu .accordion__list .accordion__item-body {
+    width: calc(50% - 2rem);
+  }
+  .menu__item .accordion__list .accordion__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
   }
   /* hero */
   .hero__slider-item {
