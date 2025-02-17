@@ -3029,7 +3029,7 @@ input[type=text] {
   .menu .accordion__list li:not(:last-child) {
     margin-bottom: 2.5rem;
   }
-  .tabs__btn {
+  .menu .tabs__btn {
     border-top: 0;
     border-right: 0;
     border-left: 0;

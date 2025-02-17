@@ -15,791 +15,1778 @@
 </head>
 
 <body>
-  <div id="smooth-wrapper" class="wrapper dropdown">
-    <div id="smooth-content">
-      <!-- Шапка сайта -->
-      <header class="header">
-        <div class="header__top">
-          <div class="container header__container">
-            <!-- Кнопка вызова поисковика -->
-            <button class="loupe btn btn--icon">
+  <div class="wrapper dropdown">
+    <!-- id="smooth-wrapper" -->
+    <!-- <div id="smooth-content"> -->
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header__top">
+        <div class="container header__container">
+          <!-- Кнопка вызова поисковика -->
+          <button class="loupe btn btn--icon">
+            <i class="icon-loupe"></i>
+          </button>
+          <!-- Логотип с ссылкой на главную страницу -->
+          <a class="header__logo" href="/">
+            <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
+          </a>
+          <!-- Кнопка каталога -->
+          <button class="header__btn btn btn--red dropdown__trigger">
+            <i class="header__btn-icon icon-catalogs"></i>
+            Каталог
+          </button>
+          <!-- Форма поиска -->
+          <form class="search__form" action="">
+            <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
+            <i class="search__form-icon icon-shine"></i>
+            <button class="search__form-btn">
               <i class="icon-loupe"></i>
             </button>
-            <!-- Логотип с ссылкой на главную страницу -->
-            <a class="header__logo" href="/">
-              <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
-            </a>
-            <!-- Кнопка каталога -->
-            <button class="header__btn btn btn--red dropdown__trigger">
-              <i class="header__btn-icon icon-catalogs"></i>
-              Каталог
-            </button>
-            <!-- Форма поиска -->
-            <form class="search__form" action="">
-              <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
-              <i class="search__form-icon icon-shine"></i>
-              <button class="search__form-btn">
-                <i class="icon-loupe"></i>
-              </button>
-            </form>
-            <!-- Кнопка для бизнеса -->
-            <a class="header__btn btn--business btn btn--outline" href="/">
-              Для бизнеса
-            </a>
-            <!-- Смена темы -->
-            <button class="switch__btn">
-              <span class="switch__btn-item light-mode">
-                <i class="icon-sun"></i>
-              </span>
-              <span class="switch__btn-circle"></span>
-              <span class="switch__btn-item dark-mode">
-                <i class="icon-moon"></i>
-              </span>
-            </button>
-            <!-- Панель для дэкстопа и моб. версии -->
-            <div class="header__panel panel">
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
-                    <span class="panel__link-text">Каталог</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-person" href="#!">
-                    <span class="panel__link-text">Войти</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-connection" href="#!">
-                    <span class="panel__link-text">Связаться</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="favorite panel__link icon-favorite" href="#!">
-                    <span class="panel__link-item">20</span>
-                    <span class="panel__link-text">Избранное</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-basket" href="#!">
-                    <span class="panel__link-item">143</span>
-                    <span class="panel__link-text">Корзина</span>
-                  </a>
-                </div>
+          </form>
+          <!-- Кнопка для бизнеса -->
+          <a class="header__btn btn--business btn btn--outline" href="/">
+            Для бизнеса
+          </a>
+          <!-- Смена темы -->
+          <button class="switch__btn">
+            <span class="switch__btn-item light-mode">
+              <i class="icon-sun"></i>
+            </span>
+            <span class="switch__btn-circle"></span>
+            <span class="switch__btn-item dark-mode">
+              <i class="icon-moon"></i>
+            </span>
+          </button>
+          <!-- Панель для дэкстопа и моб. версии -->
+          <div class="header__panel panel panel--active">
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
+                  <span class="panel__link-text">Каталог</span>
+                </a>
               </div>
             </div>
-            <!-- Кнопка бургер -->
-            <button class="burger">
-            </button>
-          </div>
-        </div>
-        <div class="header__bottom">
-          <div class="container header__container">
-            <!-- Геопозиция -->
-            <div class="header__geo">
-              <a class="header__geo-link" href="#!">
-                <img class="header__geo-img" src="images/icons/geo.svg" alt="">
-                Новосибирск
-              </a>
-            </div>
-            <!-- Навигация по сайту -->
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    iPhone
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Watch
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    AirPods
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    iPad
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Mac
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Vision
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Гаджеты
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Ремонт
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Trade-in
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Гарантия
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Блог
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Привилегия
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <!-- Кнопка телефона -->
-            <div class="header__phone">
-              <a class="header__phone-link" href="tel:+73832052355">
-                <i class="header__phone-icon icon-phone"></i>
-                8 (383) 205 23 55
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-<!-- Содержимое сайта -->
-<main class="main">
-  <!-- Каталог товаров -->
-  <div class="menu dropdown__content">
-    <div class="container menu__container">
-      <div class="menu__inner">
-        <h2 class="menu__title block-title">
-          Каталог товаров
-        </h2>
-        <span class="close dropdown__close"></span>
-  
-        <div class="menu__items accordion">
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Apple
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-person" href="#!">
+                  <span class="panel__link-text">Войти</span>
+                </a>
               </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        iPhone
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        iPod
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Mac
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        AirPods
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Watch
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        TV
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Vision
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Аксессуары
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+            </div>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-connection" href="#!">
+                  <span class="panel__link-text">Связаться</span>
+                </a>
+              </div>
+            </div>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="favorite panel__link icon-favorite" href="#!">
+                  <span class="panel__link-item">20</span>
+                  <span class="panel__link-text">Избранное</span>
+                </a>
+              </div>
+            </div>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-basket" href="#!">
+                  <span class="panel__link-item">143</span>
+                  <span class="panel__link-text">Корзина</span>
+                </a>
               </div>
             </div>
           </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Игры и развлечения
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Sony PlayStation 5
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Sony PlayStation 5
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Игры для Sony PlayStation 5
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары для PlayStation 5
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Microsoft Xbox
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Xbox Series S
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Xbox Series X
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Игры для Xbox
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары для Xbox
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Nintendo Switch
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Switch
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Switch 2
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Switch Lite
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары для Nintendo Switch
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Игры для Nintendo Switch
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Valve Steamdeck
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Steamdeck
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Steamdeck OLED
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары для Steamdeck
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Дом и красота
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Dyson
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Стайлеры
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Фены
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Пылесосы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Щипцы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Dreame
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Роботы-пылесосы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Пылесосы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Фото- и видеосъемка
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        DJI
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Дроны
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Камеры
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Стабилизаторы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Камеры
-                      </a>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        GoPro
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Экшн камеры
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Акустика
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Яндекс.Станция
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        HomePod
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        HermanKardon
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Аксессуары
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Спорт и здоровье
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Garmin
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Спортивные часы
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Аксессуары
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="menu__wrap">
-            <div class="menu__item accordion__item">
-              <div class="accordion__item-btn">
-                <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="menu__item-title">
-                  Аксессуары
-                </h6>
-                <i class="accordion__item-icon icon-chevron-right-wide"></i>
-              </div>
-              <div class="accordion__item-body">
-                <div class="accordion__item-content">
-                  <ul class="accordion__list">
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Для Apple
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для iPhone
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для iPad
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для Mac
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Кабели
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Зарядные устройства
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Powerbank
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Для Dyson
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для стайлеров
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для пылесосов
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для фенов
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для щипцов
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Для игровых консолей
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для PlayStation
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для XBOX
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для Nintendo
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для Steamdeck
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="accordion__item">
-                      <div class="accordion__item-btn">
-                        Для съемки
-                        <i class="accordion__item-icon icon-chevron-right-wide"></i>
-                      </div>
-                      <div class="accordion__item-body">
-                        <div class="accordion__item-content">
-                          <ul>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для DJI
-                              </a>
-                            </li>
-                            <li>
-                              <a class="accordion__list-link" href="">
-                                Для GoPro
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Для Акустики
-                      </a>
-                    </li>
-                    <li>
-                      <a class="accordion__list-link" href="">
-                        Для Garmin
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-  
+          <!-- Кнопка бургер -->
+          <button class="burger">
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="menu__overlay"></div>
+      <div class="header__bottom">
+        <div class="container header__container">
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <a class="header__geo-link" href="#!">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+            </a>
+          </div>
+          <!-- Навигация по сайту -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  iPhone
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Watch
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  AirPods
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  iPad
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Mac
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Vision
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Гаджеты
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Ремонт
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Trade-in
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Гарантия
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Блог
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Привилегия
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Кнопка телефона -->
+          <div class="header__phone">
+            <a class="header__phone-link" href="tel:+73832052355">
+              <i class="header__phone-icon icon-phone"></i>
+              8 (383) 205 23 55
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Каталог товаров -->
+
+      <div class="menu dropdown__content">
+
+        <div class="container menu__container tabs">
+
+          <div class="menu__inner">
+
+            <h2 class="menu__title block-title">
+
+              Каталог товаров
+
+            </h2>
+
+            <span class="close dropdown__close"></span>
+
+      
+
+            <div class="menu__items accordion tabs__btns">
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn tabs__btn--active" data-tab="popular-1">
+
+                    <img class="menu__item-img" src="./images/icons/icon-apple.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Apple
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            iPhone
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            iPod
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Mac
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            AirPods
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Watch
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            TV
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Vision
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Аксессуары
+
+                          </a>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-2">
+
+                    <img class="menu__item-img" src="./images/icons/icon-game.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Игры и развлечения
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Sony PlayStation 5
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Sony PlayStation 5
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Игры для Sony PlayStation 5
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары для PlayStation 5
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Microsoft Xbox
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Xbox Series S
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Xbox Series X
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Игры для Xbox
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары для Xbox
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Nintendo Switch
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Switch
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Switch 2
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Switch Lite
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары для Nintendo Switch
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Игры для Nintendo Switch
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Valve Steamdeck
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Steamdeck
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Steamdeck OLED
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары для Steamdeck
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-3">
+
+                    <img class="menu__item-img" src="./images/icons/icon-home.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Дом и красота
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Dyson
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Стайлеры
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Фены
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Пылесосы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Щипцы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Dreame
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Роботы-пылесосы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Пылесосы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-4">
+
+                    <img class="menu__item-img" src="./images/icons/icon-photo.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Фото и видеосъемка
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            DJI
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Дроны
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Камеры
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Стабилизаторы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Камеры
+
+                          </a>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            GoPro
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Экшн камеры
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-5">
+
+                    <img class="menu__item-img" src="./images/icons/icon-acoustics.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Акустика
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Яндекс.Станция
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            HomePod
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            HermanKardon
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Аксессуары
+
+                          </a>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-6">
+
+                    <img class="menu__item-img" src="./images/icons/icon-watch.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Спорт и здоровье
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Garmin
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Спортивные часы
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Аксессуары
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+              <div class="menu__wrap">
+
+                <div class="menu__item accordion__item">
+
+                  <div class="accordion__item-btn tabs__btn" data-tab="popular-7">
+
+                    <img class="menu__item-img" src="./images/icons/icon-accessories.svg" alt="">
+
+                    <h6 class="menu__item-title">
+
+                      Аксессуары
+
+                    </h6>
+
+                    <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                  </div>
+
+                  <div class="accordion__item-body">
+
+                    <div class="accordion__item-content">
+
+                      <ul class="accordion__list">
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Для Apple
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для iPhone
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для iPad
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для Mac
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Кабели
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Зарядные устройства
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Powerbank
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Для Dyson
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для стайлеров
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для пылесосов
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для фенов
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для щипцов
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Для игровых консолей
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для PlayStation
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для XBOX
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для Nintendo
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для Steamdeck
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li class="accordion__item">
+
+                          <div class="accordion__item-btn">
+
+                            Для съемки
+
+                            <i class="accordion__item-icon icon-chevron-right-wide"></i>
+
+                          </div>
+
+                          <div class="accordion__item-body">
+
+                            <div class="accordion__item-content">
+
+                              <ul>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для DJI
+
+                                  </a>
+
+                                </li>
+
+                                <li>
+
+                                  <a class="accordion__list-link" href="">
+
+                                    Для GoPro
+
+                                  </a>
+
+                                </li>
+
+                              </ul>
+
+                            </div>
+
+                          </div>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Для Акустики
+
+                          </a>
+
+                        </li>
+
+                        <li>
+
+                          <a class="accordion__list-link" href="">
+
+                            Для Garmin
+
+                          </a>
+
+                        </li>
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+      
+
+            </div>
+
+          </div>
+
+          <div class="popular__inner">
+
+            <h2 class="popular__title block-title">
+
+              Популярные товары в этой категории
+
+            </h2>
+
+            <div class="tabs__panels">
+
+              <div class="popular__items tabs__panel tabs__panel--active" data-tab="popular-1">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-2">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-3">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-4">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-5">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-6">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+              <div class="popular__items tabs__panel" data-tab="popular-7">
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+                <a class="popular__item" href="/">
+
+                  <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+
+                  <p class="popular__item-text">
+
+                    Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+
+                  </p>
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="menu__overlay"></div>
+    </header>
+<!-- Содержимое сайта -->
+<main class="main">
   <!-- Первый главный блок -->
   <section class="hero">
     <div class="container hero__container">
