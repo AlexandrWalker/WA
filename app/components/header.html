@@ -15,176 +15,179 @@
 </head>
 
 <body>
-  <div id="smooth-wrapper" class="wrapper dropdown">
-    <div id="smooth-content">
-      <!-- Шапка сайта -->
-      <header class="header">
-        <div class="header__top">
-          <div class="container header__container">
-            <!-- Кнопка вызова поисковика -->
-            <button class="loupe btn btn--icon">
+  <div class="wrapper dropdown">
+    <!-- id="smooth-wrapper" -->
+    <!-- <div id="smooth-content"> -->
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header__top">
+        <div class="container header__container">
+          <!-- Кнопка вызова поисковика -->
+          <button class="loupe btn btn--icon">
+            <i class="icon-loupe"></i>
+          </button>
+          <!-- Логотип с ссылкой на главную страницу -->
+          <a class="header__logo" href="/">
+            <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
+          </a>
+          <!-- Кнопка каталога -->
+          <button class="header__btn btn btn--red dropdown__trigger">
+            <i class="header__btn-icon icon-catalogs"></i>
+            Каталог
+          </button>
+          <!-- Форма поиска -->
+          <form class="search__form" action="">
+            <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
+            <i class="search__form-icon icon-shine"></i>
+            <button class="search__form-btn">
               <i class="icon-loupe"></i>
             </button>
-            <!-- Логотип с ссылкой на главную страницу -->
-            <a class="header__logo" href="/">
-              <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
-            </a>
-            <!-- Кнопка каталога -->
-            <button class="header__btn btn btn--red dropdown__trigger">
-              <i class="header__btn-icon icon-catalogs"></i>
-              Каталог
-            </button>
-            <!-- Форма поиска -->
-            <form class="search__form" action="">
-              <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
-              <i class="search__form-icon icon-shine"></i>
-              <button class="search__form-btn">
-                <i class="icon-loupe"></i>
-              </button>
-            </form>
-            <!-- Кнопка для бизнеса -->
-            <a class="header__btn btn btn--outline" href="/">
-              Для бизнеса
-            </a>
-            <!-- Смена темы -->
-            <button class="switch__btn">
-              <span class="switch__btn-item light-mode">
-                <i class="icon-sun"></i>
-              </span>
-              <span class="switch__btn-circle"></span>
-              <span class="switch__btn-item dark-mode">
-                <i class="icon-moon"></i>
-              </span>
-            </button>
-            <!-- Панель для дэкстопа и моб. версии -->
-            <div class="header__panel panel">
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
-                    <span class="panel__link-text">Каталог</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-person" href="#!">
-                    <span class="panel__link-text">Войти</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-connection" href="#!">
-                    <span class="panel__link-text">Связаться</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-favorite" href="#!">
-                    <span class="panel__link-text">Избранное</span>
-                  </a>
-                </div>
-              </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="panel__link icon-basket" href="#!">
-                    <span class="panel__link-text">Корзина</span>
-                  </a>
-                </div>
+          </form>
+          <!-- Кнопка для бизнеса -->
+          <a class="header__btn btn--business btn btn--outline" href="/">
+            Для бизнеса
+          </a>
+          <!-- Смена темы -->
+          <button class="switch__btn">
+            <span class="switch__btn-item light-mode">
+              <i class="icon-sun"></i>
+            </span>
+            <span class="switch__btn-circle"></span>
+            <span class="switch__btn-item dark-mode">
+              <i class="icon-moon"></i>
+            </span>
+          </button>
+          <!-- Панель для дэкстопа и моб. версии -->
+          <div class="header__panel panel panel--active">
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
+                  <span class="panel__link-text">Каталог</span>
+                </a>
               </div>
             </div>
-            <!-- Кнопка бургер -->
-            <button class="burger">
-            </button>
-          </div>
-        </div>
-        <div class="header__bottom">
-          <div class="container header__container">
-            <!-- Геопозиция -->
-            <div class="header__geo">
-              <a class="header__geo-link" href="#!">
-                <img class="header__geo-img" src="images/icons/geo.svg" alt="">
-                Новосибирск
-              </a>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-person" href="#!">
+                  <span class="panel__link-text">Войти</span>
+                </a>
+              </div>
             </div>
-            <!-- Навигация по сайту -->
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    iPhone
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Watch
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    AirPods
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    iPad
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Mac
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Vision
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Гаджеты
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Ремонт
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Trade-in
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Гарантия
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Блог
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Привилегия
-                  </a>
-                </li>
-                <li class="nav__list-item">
-                  <a class="nav__list-link" href="/">
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <!-- Кнопка телефона -->
-            <div class="header__phone">
-              <a class="header__phone-link" href="tel:+73832052355">
-                <i class="header__phone-icon icon-phone"></i>
-                8 (383) 205 23 55
-              </a>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-connection" href="#!">
+                  <span class="panel__link-text">Связаться</span>
+                </a>
+              </div>
+            </div>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-favorite" href="#!">
+                  <span class="panel__link-text">Избранное</span>
+                </a>
+              </div>
+            </div>
+            <div class="panel__item">
+              <div class="panel__wrap">
+                <a class="panel__link icon-basket" href="#!">
+                  <span class="panel__link-text">Корзина</span>
+                </a>
+              </div>
             </div>
           </div>
+          <!-- Кнопка бургер -->
+          <button class="burger">
+          </button>
         </div>
-      </header>
+      </div>
+      <div class="header__bottom">
+        <div class="container header__container">
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <a class="header__geo-link" href="#!">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+            </a>
+          </div>
+          <!-- Навигация по сайту -->
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  iPhone
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Watch
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  AirPods
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  iPad
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Mac
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Vision
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Гаджеты
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Ремонт
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Trade-in
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Гарантия
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Блог
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Привилегия
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Кнопка телефона -->
+          <div class="header__phone">
+            <a class="header__phone-link" href="tel:+73832052355">
+              <i class="header__phone-icon icon-phone"></i>
+              8 (383) 205 23 55
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--=include popup.html-->
+    </header>

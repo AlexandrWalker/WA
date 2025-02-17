@@ -1,6 +1,8 @@
 (() => {
   document.addEventListener('DOMContentLoaded', () => {
 
+
+    
     /**
      * Инициализирует аккордеоны для каталога в моб версии.
      */
@@ -38,6 +40,8 @@
         item.classList.add('accordion__item-content');
       });
     }
+
+
 
     /**
      * Инициализация слайдера swiper.
@@ -106,7 +110,7 @@
       // freeMode: true,
       grabCursor: true,
       speed: 600,
-      loop: true,
+      // loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -155,7 +159,7 @@
       slidesPerView: 2,
       // freeMode: true,
       grabCursor: true,
-      loop: true,
+      // loop: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -167,6 +171,8 @@
         },
       },
     });
+
+
 
     /**
      * Смена темы.
@@ -210,6 +216,8 @@
       })
     };
 
+
+
     /**
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
@@ -231,6 +239,8 @@
       //   item.classList.remove('accordion__item--active');
       // });
     };
+
+
 
     /**
      * Управляет переключением вкладок на странице.
@@ -278,6 +288,8 @@
       });
     };
 
+
+
     /**
      * Обрабатывает поведение выпадающих элементов на странице.
      * Управляет открытием и закрытием dropdown-меню при клике по триггеру или кнопке закрытия.
@@ -301,12 +313,12 @@
         if (!target.closest('.dropdown')) {
           document
             .querySelectorAll('.dropdown--opened')
-            .forEach((dropdown) => toggleDropdown(dropdown, false));
+            .forEach((dropdown) => toggleDropdown(dropdown, false), document.body.classList.toggle('no-scroll'));
         }
       });
 
       const dropdown = document.querySelector('.dropdown');
-      const menu = document.querySelector('.menu');
+      // const menu = document.querySelector('.menu');
       const overlay = document.querySelector('.menu__overlay');
       const closeButton = document.querySelector('.dropdown__trigger');
 
@@ -317,15 +329,9 @@
 
       // Закрытие меню по клику на кнопку закрытия или на overlay
       [closeButton, overlay].forEach((element) => element.addEventListener('click', closeMenu));
-
-      // Закрытие меню при скролле
-      window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 0) {
-          closeMenu();
-        }
-      });
     };
+
+
 
     /**
      * Управляет переключением кнопки в избранное на карточке товара.
@@ -357,15 +363,20 @@
       });
     };
 
+
+
     /**
      * Инициализация плавного скролла
      */
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    let smoother = ScrollSmoother.create({
-      smooth: 1,
-      effects: true
-    });
+    // let smoother = ScrollSmoother.create({
+    //   smooth: 1,
+    //   effects: true,
+    //   smoothTouch: 0.1,
+    // });
+
+
 
     /**
      * Активация занели для моб. версии при скролле
@@ -377,20 +388,28 @@
         panel.classList.add('panel--active');
       };
 
-      window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 0) {
+      const closePanel = () => {
+        panel.classList.remove('panel--active');
+      };
+
+      window.addEventListener('scroll', function (e) {
+
+        let scrollPosition = window.scrollY;
+
+        if (scrollPosition != 0) {
           openPanel();
+        } else {
+          closePanel();
         }
       });
-    }
+    };
 
+    panelFunc();
     switchFunc();
     accordionFunc();
     tabsFunc();
     dropdownFunc();
     favFunc();
-    panelFunc();
 
   });
 })();

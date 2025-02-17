@@ -88,6 +88,10 @@
   animation-fill-mode: forwards;
 }
 
+.swiper-slide {
+  height: auto;
+}
+
 .brand__slider {
 
   .swiper-wrapper {}
@@ -106,3 +110,8 @@
     width: 100%;
   }
 }
+
+// #smooth-content {
+//   border-top: 1px solid transparent;
+//   border-bottom: 1px solid transparent;
+// }

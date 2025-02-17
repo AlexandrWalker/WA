@@ -4,6 +4,7 @@ html {
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 
 body {
@@ -90,7 +91,7 @@ p {}
   line-height: 143%;
   text-align: center;
   white-space: nowrap;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 
   padding: var(--button-padding-y) var(--button-padding-x);
   border: var(--button-border-width) solid var(--button-border-color);
@@ -197,6 +198,12 @@ p {}
   font-size: 1.8rem;
   line-height: 100%;
   text-align: center;
+}
+
+.btn--business {
+  --button-font-size: 1.2rem;
+  max-width: 16.7rem;
+  width: 100%;
 }
 
 /* inputs */
@@ -423,6 +430,7 @@ input[type=text] {
     color: var(--white-60);
     /* - */
     font-size: 2.5rem;
+    transition: all 0.3s ease;
 
     &-img {
       width: auto;
@@ -436,6 +444,15 @@ input[type=text] {
       font-size: 8px;
       line-height: 11px;
       color: var(--white-60);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      color: var(--white);
+
+      .panel__link-text {
+        color: var(--white);
+      }
     }
   }
 }
@@ -483,7 +500,7 @@ input[type=text] {
     height: 0.12rem;
     border-radius: 0.06rem;
     background-color: var(--white);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     position: absolute;
     top: calc(50% - .35rem);
     right: 50%;
@@ -497,7 +514,7 @@ input[type=text] {
     height: 0.12rem;
     border-radius: 0.06rem;
     background-color: var(--white);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     position: absolute;
     top: calc(50% + .35rem);
     right: 50%;
@@ -523,38 +540,45 @@ input[type=text] {
 }
 
 /* accordion */
-.accordion__item {
-  overflow: hidden;
-}
+.accordion {
 
-.accordion__item-btn {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 1rem;
-  overflow: hidden;
-  cursor: pointer;
-}
+  &__item {
+    overflow: hidden;
 
-.accordion__item-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 0 0 auto;
-  transform: rotate(90deg);
-  transition: all 0.2s ease;
-}
+    &-btn {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+    }
 
-.accordion__item-body {
-  display: grid;
-  grid-template-rows: 0fr;
-  max-width: 100%;
-  padding: 0 2rem;
-  transition: 0.3s ease;
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 0 auto;
+      transform: rotate(90deg);
+      transition: all 0.3s ease;
+    }
 
-  p {
-    font-size: 1.4rem;
-    color: var(--white-60);
+    &-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      max-width: 100%;
+      padding: 0 2rem;
+      transition: 0.5s linear;
+
+      p {
+        font-size: 1.4rem;
+        color: var(--white-60);
+      }
+    }
+
+    &-content {
+      overflow: hidden;
+    }
   }
 }
 
@@ -567,12 +591,27 @@ input[type=text] {
   transform: rotate(-90deg);
 }
 
-.accordion__item-content {
-  overflow: hidden;
-}
-
 .accordion__list {
   margin: 0 0 0 15%;
+
+  &-link {
+    color: inherit;
+    position: relative;
+    padding: 0 0 0 2.4rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0.3rem;
+      height: 0.3rem;
+      border-radius: 50%;
+      background-color: var(--white);
+      position: absolute;
+      top: 50%;
+      left: 0.55rem;
+      transform: translateY(-50%);
+    }
+  }
 
   li:not(:last-child) {
     margin-bottom: 1.5rem;
@@ -585,11 +624,11 @@ input[type=text] {
     font-size: 1.4rem;
     line-height: 1;
     color: var(--white-60);
-    transition: all 0.2s linear;
-  }
+    transition: all 0.3s linear;
 
-  .accordion__item-btn.accordion__item-btn--active {
-    color: var(--primary);
+    &.accordion__item-btn--active {
+      color: var(--primary);
+    }
   }
 
   .accordion__item-icon {
@@ -598,25 +637,6 @@ input[type=text] {
 
   .accordion__item-body {
     padding: 1.5rem 0;
-  }
-}
-
-.accordion__list-link {
-  color: inherit;
-  position: relative;
-  padding: 0 0 0 2.4rem;
-
-  &::before {
-    content: "";
-    display: block;
-    width: 0.3rem;
-    height: 0.3rem;
-    border-radius: 50%;
-    background-color: var(--white);
-    position: absolute;
-    top: 50%;
-    left: 0.55rem;
-    transform: translateY(-50%);
   }
 }
 
@@ -645,7 +665,7 @@ input[type=text] {
     background-color: transparent;
     border: 1px solid var(--bg);
     border-radius: var(--border-r-4);
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 
     &--active {
       background-color: var(--primary);
@@ -660,7 +680,7 @@ input[type=text] {
     pointer-events: none;
     visibility: hidden;
     height: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.3s ease;
 
     &--active {
       // display: block;
@@ -678,7 +698,7 @@ input[type=text] {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 1001;
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
@@ -707,7 +727,7 @@ input[type=text] {
   }
 
   &__inner {
-    padding: 1rem 0;
+    padding: 1.2rem 0;
   }
 
   &__title {
@@ -739,8 +759,8 @@ input[type=text] {
     &>.accordion__item-btn {
       padding-bottom: 1.5rem;
       border-bottom: 0.1rem solid var(--bg);
-      transition: border-bottom 0.2s ease;
-      transition-delay: 0.2s;
+      transition: border-bottom 0.3s ease;
+      transition-delay: 0.3s;
 
       &.accordion__item-btn--active {
         border-bottom: 0;
@@ -796,6 +816,29 @@ input[type=text] {
       left: 1.1rem;
     }
   }
+
+  .tabs {
+
+    &__btns {
+      display: grid;
+      justify-content: unset;
+      margin: 0;
+    }
+
+    &__btn {
+      background: unset;
+      color: inherit;
+      width: unset;
+      height: unset;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+      max-width: 100%;
+    }
+
+    &__panel {}
+  }
 }
 
 .close {
@@ -840,6 +883,8 @@ input[type=text] {
 /* dropdown */
 .dropdown {
   position: relative;
+
+  &--opened {}
 }
 
 .dropdown__content {
@@ -850,7 +895,7 @@ input[type=text] {
   right: 0;
   width: 100vw;
   height: 0;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .dropdown--opened .dropdown__content {

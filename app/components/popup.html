@@ -1,18 +1,18 @@
 <!-- Каталог товаров -->
 <div class="menu dropdown__content">
-  <div class="container menu__container">
+  <div class="container menu__container tabs">
     <div class="menu__inner">
       <h2 class="menu__title block-title">
         Каталог товаров
       </h2>
       <span class="close dropdown__close"></span>
 
-      <div class="menu__items accordion">
+      <div class="menu__items accordion tabs__btns">
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn tabs__btn--active" data-tab="popular-1">
+              <img class="menu__item-img" src="./images/icons/icon-apple.svg" alt="">
               <h6 class="menu__item-title">
                 Apple
               </h6>
@@ -69,8 +69,8 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-2">
+              <img class="menu__item-img" src="./images/icons/icon-game.svg" alt="">
               <h6 class="menu__item-title">
                 Игры и развлечения
               </h6>
@@ -210,8 +210,8 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-3">
+              <img class="menu__item-img" src="./images/icons/icon-home.svg" alt="">
               <h6 class="menu__item-title">
                 Дом и красота
               </h6>
@@ -292,10 +292,10 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-4">
+              <img class="menu__item-img" src="./images/icons/icon-photo.svg" alt="">
               <h6 class="menu__item-title">
-                Фото- и видеосъемка
+                Фото и видеосъемка
               </h6>
               <i class="accordion__item-icon icon-chevron-right-wide"></i>
             </div>
@@ -369,8 +369,8 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-5">
+              <img class="menu__item-img" src="./images/icons/icon-acoustics.svg" alt="">
               <h6 class="menu__item-title">
                 Акустика
               </h6>
@@ -407,8 +407,8 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-6">
+              <img class="menu__item-img" src="./images/icons/icon-watch.svg" alt="">
               <h6 class="menu__item-title">
                 Спорт и здоровье
               </h6>
@@ -447,8 +447,8 @@
 
         <div class="menu__wrap">
           <div class="menu__item accordion__item">
-            <div class="accordion__item-btn">
-              <img class="menu__item-img" src="images/catalog/catalog-1.svg" alt="">
+            <div class="accordion__item-btn tabs__btn" data-tab="popular-7">
+              <img class="menu__item-img" src="./images/icons/icon-accessories.svg" alt="">
               <h6 class="menu__item-title">
                 Аксессуары
               </h6>
@@ -601,6 +601,195 @@
           </div>
         </div>
 
+      </div>
+    </div>
+    <div class="popular__inner">
+      <h2 class="popular__title block-title">
+        Популярные товары в этой категории
+      </h2>
+      <div class="tabs__panels">
+        <div class="popular__items tabs__panel tabs__panel--active" data-tab="popular-1">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-2">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-3">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-4">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-5">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-6">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
+        <div class="popular__items tabs__panel" data-tab="popular-7">
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-1.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+          <a class="popular__item" href="/">
+            <img class="popular__item-img" src="./images/product/p-2.webp" alt="">
+            <p class="popular__item-text">
+              Apple iPhone 15 Pro Max, 512 ГБ, «Натуральный титан»
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   </div>

@@ -22,6 +22,7 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center;
+      aspect-ratio: 2.6/1;
     }
   }
 
@@ -206,12 +207,22 @@
       flex-direction: column;
       align-items: center;
       height: 100%;
-      padding: 4rem 2rem;
+      padding: 2rem 1rem;
       border-radius: var(--border-r-13);
       background-image: url(./../images/offer/o-1.webp);
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
+
+      .block-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-btn {
+      white-space: normal;
+      height: fit-content;
     }
   }
 
@@ -229,9 +240,6 @@
     margin: 1.7rem 0 0;
   }*/
 
-  .swiper-slide {
-    height: auto;
-  }
 }
 
 .card {
