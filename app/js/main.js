@@ -304,8 +304,10 @@
           const trigger = target.closest('.dropdown__trigger');
           const closeBtn = target.closest('.dropdown__close');
 
-          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'), document.body.classList.toggle('no-scroll'));
-          if (closeBtn) toggleDropdown(dropdown, false, document.body.classList.toggle('no-scroll'));
+          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'));
+          // , document.body.classList.toggle('no-scroll')
+          if (closeBtn) toggleDropdown(dropdown, false);
+          // , document.body.classList.toggle('no-scroll')
         });
       });
 
@@ -313,7 +315,8 @@
         if (!target.closest('.dropdown')) {
           document
             .querySelectorAll('.dropdown--opened')
-            .forEach((dropdown) => toggleDropdown(dropdown, false), document.body.classList.toggle('no-scroll'));
+            .forEach((dropdown) => toggleDropdown(dropdown, false));
+            // , document.body.classList.toggle('no-scroll')
         }
       });
 
@@ -324,7 +327,7 @@
 
       const closeMenu = () => {
         dropdown.classList.remove('dropdown--opened');
-        document.body.classList.remove('no-scroll');
+        // document.body.classList.remove('no-scroll');
       };
 
       // Закрытие меню по клику на кнопку закрытия или на overlay
