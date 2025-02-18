@@ -54,11 +54,11 @@
       fadeEffect: {
         crossFade: true
       },
-      speed: 600,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-      },
+      // speed: 600,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false
+      // },
       pagination: {
         el: ".swiper-pagination",
         clickable: true

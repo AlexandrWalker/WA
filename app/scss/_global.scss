@@ -201,9 +201,14 @@ p {}
 }
 
 .btn--business {
-  --button-font-size: 1.2rem;
-  max-width: 16.7rem;
+  --button-padding-x: 0.5rem;
+  --button-padding-y: 0.5rem;
+  --button-font-size: 1rem;
+  --button-line-height: 200%;
+  max-width: 11%;
   width: 100%;
+  min-width: fit-content;
+  line-height: var(--button-line-height);
 }
 
 /* inputs */
@@ -213,7 +218,7 @@ input[type=text] {
   padding: 0.8rem 3.4rem;
   border-radius: var(--border-r-7);
   background: var(--white-main-05);
-  border: inset 0.1rem solid var(--bg);
+  border: 0.1rem solid var(--bg);
   box-shadow: inset 0px 0px 11.1px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(0.42rem);
   font-size: 1rem;
@@ -431,6 +436,7 @@ input[type=text] {
     /* - */
     font-size: 2.5rem;
     transition: all 0.3s ease;
+    position: relative;
 
     &-img {
       width: auto;
