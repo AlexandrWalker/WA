@@ -52,7 +52,7 @@
     gap: 0.5rem;
 
     &:not(.btn--outline) {
-      border: 0;
+      border-color: var(--black);
     }
 
     &-icon {

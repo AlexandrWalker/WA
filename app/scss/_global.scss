@@ -119,8 +119,8 @@ p {}
   --button-border-width: 0.1rem;
   --button-border-color: var(--primary);
   --button-border-radius: 0.5rem;
-  --button-hover-bgcolor: var(--primary-90);
-  --button-hover-border-color: transparent;
+  --button-hover-bgcolor: var(--white-main);
+  --button-hover-border-color: var(--white-main);
 
   padding: var(--button-padding-y) var(--button-padding-x);
   border: var(--button-border-width) solid var(--button-border-color);
@@ -134,6 +134,7 @@ p {}
 }
 
 .btn--red:hover {
+  --button-color: var(--black-main);
   background-color: var(--button-hover-bgcolor);
   border-color: var(--button-hover-border-color);
 }
@@ -241,6 +242,11 @@ input[type=text] {
     &-input {
       padding: 0.8rem 3.6rem;
       position: relative;
+
+      &:hover {
+        border-color: var(--white-30);
+        background: var(--white-main-15);
+      }
     }
 
     &-icon {
@@ -458,30 +464,6 @@ input[type=text] {
 
       .panel__link-text {
         color: var(--white);
-      }
-    }
-
-    &-item {
-      position: absolute;
-      top: 0.1rem;
-      right: 0.4rem;
-      text-align: center;
-      font-size: 0.8rem;
-      line-height: 1;
-      color: var(--white-main);
-      background-color: var(--primary);
-      border-radius: 50%;
-      aspect-ratio: 1/1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 1.7rem;
-      height: 1.7rem;
-    }
-
-    &[class*=" icon-"] {
-      .panel__link-item {
-        font-family: 'Manrope', serif;
       }
     }
 
