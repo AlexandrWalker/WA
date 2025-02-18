@@ -71,7 +71,7 @@
       // slidesPerView: 9,
       speed: 600,
       freeMode: true,
-      loop: true,
+      // loop: true,
       navigation: {
         nextEl: ".brand__slider-btn--next",
         prevEl: ".brand__slider-btn--prev",
@@ -81,7 +81,7 @@
     var offer__slider = new Swiper(".offer__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      // freeMode: true,
+      freeMode: true,
       speed: 600,
       grabCursor: true,
       pagination: {
@@ -107,7 +107,7 @@
     var trade_in__slider = new Swiper(".trade-in__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      // freeMode: true,
+      freeMode: true,
       grabCursor: true,
       speed: 600,
       // loop: true,
@@ -134,7 +134,7 @@
     var review__slider = new Swiper(".review__slider-init", {
       slidesPerView: 1,
       spaceBetween: 10,
-      // freeMode: true,
+      freeMode: true,
       grabCursor: true,
       speed: 600,
       loop: true,
@@ -157,7 +157,7 @@
     var info__slider = new Swiper(".info__slider-init", {
       spaceBetween: 10,
       slidesPerView: 2,
-      // freeMode: true,
+      freeMode: true,
       grabCursor: true,
       // loop: true,
       pagination: {
@@ -321,9 +321,7 @@
           const closeBtn = target.closest('.dropdown__close');
 
           if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'));
-          // , document.body.classList.toggle('no-scroll')
           if (closeBtn) toggleDropdown(dropdown, false);
-          // , document.body.classList.toggle('no-scroll')
         });
       });
 
@@ -332,18 +330,15 @@
           document
             .querySelectorAll('.dropdown--opened')
             .forEach((dropdown) => toggleDropdown(dropdown, false));
-            // , document.body.classList.toggle('no-scroll')
         }
       });
 
       const dropdown = document.querySelector('.dropdown');
-      // const menu = document.querySelector('.menu');
       const overlay = document.querySelector('.menu__overlay');
       const closeButton = document.querySelector('.dropdown__trigger');
 
       const closeMenu = () => {
         dropdown.classList.remove('dropdown--opened');
-        // document.body.classList.remove('no-scroll');
       };
 
       // Закрытие меню по клику на кнопку закрытия или на overlay
@@ -400,30 +395,30 @@
     /**
      * Активация занели для моб. версии при скролле
      */
-    function panelFunc() {
-      const panel = document.querySelector('.panel');
+    // function panelFunc() {
+    //   const panel = document.querySelector('.panel');
 
-      const openPanel = () => {
-        panel.classList.add('panel--active');
-      };
+    //   const openPanel = () => {
+    //     panel.classList.add('panel--active');
+    //   };
 
-      const closePanel = () => {
-        panel.classList.remove('panel--active');
-      };
+    //   const closePanel = () => {
+    //     panel.classList.remove('panel--active');
+    //   };
 
-      window.addEventListener('scroll', function (e) {
+    //   window.addEventListener('scroll', function (e) {
 
-        let scrollPosition = window.scrollY;
+    //     let scrollPosition = window.scrollY;
 
-        if (scrollPosition != 0) {
-          openPanel();
-        } else {
-          closePanel();
-        }
-      });
-    };
+    //     if (scrollPosition != 0) {
+    //       openPanel();
+    //     } else {
+    //       closePanel();
+    //     }
+    //   });
+    // };
 
-    panelFunc();
+    // panelFunc();
     switchFunc();
     accordionFunc();
     tabsFunc();
