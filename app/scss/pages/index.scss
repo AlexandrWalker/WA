@@ -272,7 +272,8 @@
     &--active {
 
       .card__fav-icon {
-        fill: var(--white-60);
+        fill: var(--primary);
+        stroke: var(--primary);
       }
     }
 
@@ -284,8 +285,8 @@
       transition: all 0.2s ease;
 
       &:hover {
-        fill: var(--white);
-        stroke: var(--white);
+        fill: var(--primary);
+        stroke: transparent;
       }
     }
   }

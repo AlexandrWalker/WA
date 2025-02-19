@@ -116,6 +116,10 @@
     height: calc(4rem - 0.4rem);
   }
 
+  .menu__container {
+    max-width: 1520px;
+  }
+
   /* hero */
   .hero__title {
     margin-bottom: 3rem;
@@ -456,6 +460,10 @@
 
   .nav {
     padding: 1rem 0;
+  }
+
+  .menu {
+    padding: 4rem;
   }
 
   .service__content-icon {
@@ -834,6 +842,18 @@
     padding: 0.7rem 0;
   }
 
+  .popular__item {
+    width: calc(33% - 1.333rem);
+  }
+
+  .popular__item:last-child {
+    display: none;
+  }
+
+  .popular__item-text {
+    font-size: 1.4rem;
+  }
+
   .catalog__item-link {
     gap: 0.3rem;
     padding: 2rem 0.5rem 3rem;
@@ -906,6 +926,10 @@
   .hero__slider-item {
     padding: 3.6rem 2rem 3.5rem;
   }
+
+  .menu {
+    padding: 3rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -945,6 +969,10 @@
 
   .container {
     max-width: calc(1140px + 4rem);
+  }
+
+  .menu__container {
+    max-width: 1140px;
   }
 
   .btn--business {
@@ -995,6 +1023,10 @@
 
   .hero__slider-item {
     background-size: 100% auto;
+  }
+
+  .menu {
+    padding: 3rem 5rem;
   }
 
   .programm__text {
@@ -1215,9 +1247,9 @@
     right: 50%;
     bottom: unset;
     transform: translateX(50%);
-    max-width: 1520px;
+    // max-width: 1520px;
     width: 100%;
-    max-height: 90vh;
+    // max-height: 90vh;
     overflow-y: hidden;
     border-radius: var(--border-r-18);
   }
@@ -1225,10 +1257,6 @@
   .dropdown--opened .dropdown__content {
     height: fit-content;
     top: 6.4rem;
-  }
-
-  .menu__container {
-    padding: 4rem;
   }
 
   .menu__inner {
@@ -1255,6 +1283,7 @@
 
   .menu__item-title {
     font-size: 1.6rem;
+    text-align: left;
   }
 
   .accordion__list .accordion__item {
@@ -1326,7 +1355,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 33.33333%;
+    right: calc(33.33333% - 2rem);
+    // right: 33.33333%;
   }
 
   .menu__wrap:first-child .menu__item::after {
@@ -1338,13 +1368,15 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 33.33333%;
+    left: calc(33.33333% + 2rem);
+    // left: 33.33333%;
   }
 
   .menu .accordion__item-icon {
     transform: rotate(0deg);
   }
 
+  .menu .tabs__btn--active,
   .menu .accordion__item-btn--active {
     color: var(--primary);
   }
@@ -1357,6 +1389,10 @@
     border-top: 0;
     border-right: 0;
     border-left: 0;
+  }
+
+  .tabs__btn--active+.accordion__item-body {
+    grid-template-rows: 1fr;
   }
 
   /* popular */
