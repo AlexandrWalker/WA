@@ -2,7 +2,7 @@
   document.addEventListener('DOMContentLoaded', () => {
 
 
-    
+
     /**
      * Инициализирует аккордеоны для каталога в моб версии.
      */
@@ -39,6 +39,40 @@
       document.querySelectorAll('.catalog__item-content').forEach((item) => {
         item.classList.add('accordion__item-content');
       });
+
+      function accordionFunc() {
+        // Получаем все контейнеры аккордеонов на странице
+        document.querySelectorAll('.accordion').forEach((accordionContainer) => {
+          // Обработчик клика по элементам аккордеона
+          accordionContainer.addEventListener('click', (event) => {
+            const btn = event.target.closest('.accordion__item-btn');
+            const btnActive = event.target.closest('.accordion__item-btn--active');
+
+            if (btn) {
+              btn.closest('.accordion__item').classList.toggle('accordion__item--active');
+              btn.classList.toggle('accordion__item-btn--active');
+            }
+          });
+        });
+      };
+    }
+
+    if ((window.innerWidth >= 601)) {
+      function accordionFunc() {
+        var menuLink = document.querySelectorAll('.accordion__item-btn'),
+          active = document.getElementsByClassName('accordion__item-btn--active');
+
+        Array.from(menuLink).forEach(function (item, i, menuLink) {
+          item.addEventListener('click', function (e) {
+            if (active.length > 0 && active[0] !== this) {
+              active[0].parentNode.classList.remove('accordion__item--active');
+              active[0].classList.remove('accordion__item-btn--active');
+            }
+            this.parentNode.classList.toggle('accordion__item--active');
+            this.classList.toggle('accordion__item-btn--active');
+          });
+        });
+      };
     }
 
 
@@ -72,6 +106,9 @@
       speed: 600,
       freeMode: true,
       // loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       navigation: {
         nextEl: ".brand__slider-btn--next",
         prevEl: ".brand__slider-btn--prev",
@@ -84,6 +121,9 @@
       freeMode: true,
       speed: 600,
       grabCursor: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -111,6 +151,9 @@
       grabCursor: true,
       speed: 600,
       // loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -138,6 +181,9 @@
       grabCursor: true,
       speed: 600,
       loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -160,6 +206,9 @@
       freeMode: true,
       grabCursor: true,
       // loop: true,
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true
@@ -222,39 +271,59 @@
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
      */
-    function accordionFunc() {
-      // Получаем все контейнеры аккордеонов на странице
-      document.querySelectorAll('.accordion').forEach((accordionContainer) => {
-        // Обработчик клика по элементам аккордеона
-        accordionContainer.addEventListener('click', (event) => {
-          const btn = event.target.closest('.accordion__item-btn');
-          const btnActive = event.target.closest('.accordion__item-btn--active');
+    // function accordionFunc() {
+    //   /* --- */
+    //   // Получаем все контейнеры аккордеонов на странице
+    //   document.querySelectorAll('.accordion').forEach((accordionContainer) => {
+    //     // Обработчик клика по элементам аккордеона
+    //     accordionContainer.addEventListener('click', (event) => {
+    //       const btn = event.target.closest('.accordion__item-btn');
+    //       const btnActive = event.target.closest('.accordion__item-btn--active');
 
-          if (btn) {
-            btn.closest('.accordion__item').classList.toggle('accordion__item--active');
-            btn.classList.toggle('accordion__item-btn--active');
-          }
-          
-          // if (btnActive) {
-          //   btnActive.closest('.accordion__item').classList.remove('accordion__item--active');
-          //   btnActive.classList.remove('accordion__item-btn--active');
-          // } else {
-          //   document.querySelectorAll('.accordion__item--active').forEach((item) => {
-          //     item.classList.remove('accordion__item--active');
-          //   });
-          //   document.querySelectorAll('.accordion__item-btn--active').forEach((item) => {
-          //     item.classList.remove('accordion__item-btn--active');
-          //   });
-          //   btn.closest('.accordion__item').classList.add('accordion__item--active');
-          //   btn.classList.add('accordion__item-btn--active');
-          // }
-        });
-      });
+    //       if (btn) {
+    //         btn.closest('.accordion__item').classList.toggle('accordion__item--active');
+    //         btn.classList.toggle('accordion__item-btn--active');
+    //       }
+    //       /* --- */
 
-      // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-      //   item.classList.remove('accordion__item--active');
-      // });
-    };
+    //       // if (btnActive) {
+    //       //   btnActive.closest('.accordion__item').classList.remove('accordion__item--active');
+    //       //   btnActive.classList.remove('accordion__item-btn--active');
+    //       // } else {
+    //       //   document.querySelectorAll('.accordion__item--active').forEach((item) => {
+    //       //     item.classList.remove('accordion__item--active');
+    //       //   });
+    //       //   document.querySelectorAll('.accordion__item-btn--active').forEach((item) => {
+    //       //     item.classList.remove('accordion__item-btn--active');
+    //       //   });
+    //       //   btn.closest('.accordion__item').classList.add('accordion__item--active');
+    //       //   btn.classList.add('accordion__item-btn--active');
+    //       // }
+    //       /* --- */
+    //     });
+    //   });
+    //   /* --- */
+
+    //   // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
+    //   //   item.classList.remove('accordion__item--active');
+    //   // });
+
+    //   /* HACK */
+    //   // var menuLink = document.querySelectorAll('.accordion__item-btn'),
+    //   //   active = document.getElementsByClassName('accordion__item-btn--active');
+
+    //   // Array.from(menuLink).forEach(function (item, i, menuLink) {
+    //   //   item.addEventListener('click', function (e) {
+    //   //     if (active.length > 0 && active[0] !== this) {
+    //   //       active[0].parentNode.classList.remove('accordion__item--active');
+    //   //       active[0].classList.remove('accordion__item-btn--active');
+    //   //     }
+    //   //     this.parentNode.classList.toggle('accordion__item--active');
+    //   //     this.classList.toggle('accordion__item-btn--active');
+    //   //   });
+    //   // });
+
+    // };
 
 
 
@@ -298,6 +367,7 @@
             `.tabs__panel[data-tab="${tabsBtn.dataset.tab}"]`,
           );
           if (targetPanel) {
+            /* HACK */
             targetPanel.classList.add('tabs__panel--active');
           }
         });
@@ -320,8 +390,8 @@
           const trigger = target.closest('.dropdown__trigger');
           const closeBtn = target.closest('.dropdown__close');
 
-          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'));
-          if (closeBtn) toggleDropdown(dropdown, false);
+          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'), document.body.classList.add('no-scroll'));
+          if (closeBtn) toggleDropdown(dropdown, false, document.body.classList.remove('no-scroll'));
         });
       });
 
@@ -329,7 +399,7 @@
         if (!target.closest('.dropdown')) {
           document
             .querySelectorAll('.dropdown--opened')
-            .forEach((dropdown) => toggleDropdown(dropdown, false));
+            .forEach((dropdown) => toggleDropdown(dropdown, false, document.body.classList.remove('no-scroll')));
         }
       });
 
@@ -339,6 +409,7 @@
 
       const closeMenu = () => {
         dropdown.classList.remove('dropdown--opened');
+        document.body.classList.remove('no-scroll');
       };
 
       // Закрытие меню по клику на кнопку закрытия или на overlay
