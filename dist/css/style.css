@@ -852,6 +852,7 @@ input[type=text]:hover {
   line-height: 1;
   color: var(--white-60);
   transition: all 0.3s linear;
+  cursor: pointer;
 }
 .accordion__list-head--active {
   color: var(--primary);

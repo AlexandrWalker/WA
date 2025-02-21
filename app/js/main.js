@@ -184,8 +184,8 @@
     });
 
     var info__slider = new Swiper(".info__slider-init", {
+      slidesPerView: 1,
       spaceBetween: 10,
-      slidesPerView: 2,
       mousewheel: {
         forceToAxis: true,
       },
@@ -195,8 +195,8 @@
       },
       breakpoints: {
         321: {
-          slidesPerView: 3,
-          spaceBetween: 20,
+          slidesPerView: 2,
+          spaceBetween: 10,
         },
         769: {
           slidesPerView: 3,

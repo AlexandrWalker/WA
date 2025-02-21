@@ -660,6 +660,7 @@ input[type=text] {
       line-height: 1;
       color: var(--white-60);
       transition: all 0.3s linear;
+      cursor: pointer;
 
       &--active {
         color: var(--primary);
@@ -903,10 +904,6 @@ input[type=text] {
         // &::before {
         //   left: 1.1rem;
         // }
-      }
-
-      &-head {
-
       }
 
       li:not([class]) {
