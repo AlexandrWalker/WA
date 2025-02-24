@@ -1254,11 +1254,15 @@
     // max-height: 90vh;
     overflow-y: hidden;
     border-radius: var(--border-r-18);
+    visibility: hidden;
+    opacity: 0;
   }
 
   .dropdown--opened .dropdown__content {
     height: fit-content;
     top: 6.4rem;
+    visibility: visible;
+    opacity: 1;
   }
 
   .menu__inner {

@@ -99,7 +99,7 @@
       },
       speed: 600,
       autoplay: {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false
       },
       pagination: {
@@ -111,6 +111,7 @@
     var brand__slider = new Swiper(".brand__slider-init", {
       spaceBetween: 10,
       slidesPerView: "auto",
+      slidesPerGroup: 3,
       // slidesPerView: 9,
       speed: 600,
       freeMode: true,
@@ -159,7 +160,6 @@
       slidesPerView: 1,
       spaceBetween: 10,
       speed: 600,
-      loop: true,
       mousewheel: {
         forceToAxis: true,
       },
@@ -411,8 +411,8 @@
           const trigger = target.closest('.dropdown__trigger');
           const closeBtn = target.closest('.dropdown__close');
 
-          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'), document.body.classList.add('no-scroll'));
-          if (closeBtn) toggleDropdown(dropdown, false, document.body.classList.remove('no-scroll'));
+          if (trigger) toggleDropdown(dropdown, !dropdown.classList.contains('dropdown--opened'), document.body.classList.toggle('no-scroll'));
+          if (closeBtn) toggleDropdown(dropdown, false, document.body.classList.toggle('no-scroll'));
         });
       });
 
@@ -420,7 +420,7 @@
         if (!target.closest('.dropdown')) {
           document
             .querySelectorAll('.dropdown--opened')
-            .forEach((dropdown) => toggleDropdown(dropdown, false, document.body.classList.remove('no-scroll')));
+            .forEach((dropdown) => toggleDropdown(dropdown, false, document.body.classList.toggle('no-scroll')));
         }
       });
 
@@ -430,7 +430,7 @@
 
       const closeMenu = () => {
         dropdown.classList.remove('dropdown--opened');
-        document.body.classList.remove('no-scroll');
+        document.body.classList.toggle('no-scroll');
       };
 
       // Закрытие меню по клику на кнопку закрытия или на overlay
@@ -468,6 +468,10 @@
         });
       });
     };
+
+
+
+
 
 
 

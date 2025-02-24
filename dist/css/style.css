@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
   background-color: var(--primary);
   animation-name: timeline;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -1109,8 +1109,6 @@ input[type=text]:hover {
   position: relative;
 }
 .dropdown--opened .dropdown__content {
-  visibility: visible;
-  opacity: 1;
   pointer-events: all;
   top: 0;
   height: 100vh;
@@ -1120,8 +1118,6 @@ input[type=text]:hover {
   visibility: visible;
 }
 .dropdown__content {
-  visibility: hidden;
-  opacity: 0;
   pointer-events: none;
   top: 100%;
   right: 0;
@@ -2137,7 +2133,7 @@ input[type=text]:hover {
   max-width: 19.8rem;
   width: 100%;
 }
-.contact__content .accordion__item-btn {
+.contact__content .accordion__item-head {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -3172,10 +3168,14 @@ input[type=text]:hover {
     width: 100%;
     overflow-y: hidden;
     border-radius: var(--border-r-18);
+    visibility: hidden;
+    opacity: 0;
   }
   .dropdown--opened .dropdown__content {
     height: fit-content;
     top: 6.4rem;
+    visibility: visible;
+    opacity: 1;
   }
   .menu__inner {
     padding: 0 0 3.6rem;

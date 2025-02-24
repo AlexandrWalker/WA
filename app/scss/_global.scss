@@ -987,8 +987,8 @@ input[type=text] {
   &--opened {
 
     .dropdown__content {
-      visibility: visible;
-      opacity: 1;
+      // visibility: visible;
+      // opacity: 1;
       pointer-events: all;
       top: 0;
       height: 100vh;
@@ -1001,8 +1001,8 @@ input[type=text] {
   }
 
   &__content {
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
     pointer-events: none;
     top: 100%;
     right: 0;
