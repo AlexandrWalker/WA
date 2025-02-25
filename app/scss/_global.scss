@@ -10,6 +10,7 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
+  min-height: 100vh;
   font-family: 'Manrope', sans-serif;
   font-style: normal;
   color: var(--white);
@@ -806,7 +807,7 @@ input[type=text] {
   }
 
   &__inner {
-    padding: 1.2rem 0;
+    padding: 1.2rem 0 8rem;
   }
 
   &__title {

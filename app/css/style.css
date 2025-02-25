@@ -293,6 +293,7 @@ html {
 body {
   overflow-x: hidden;
   min-width: 320px;
+  min-height: 100vh;
   font-family: "Manrope", sans-serif;
   font-style: normal;
   color: var(--white);
@@ -976,7 +977,7 @@ input[type=text]:hover {
   padding: 0 1rem;
 }
 .menu__inner {
-  padding: 1.2rem 0;
+  padding: 1.2rem 0 8rem;
 }
 .menu__title {
   text-align: left;
