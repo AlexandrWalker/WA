@@ -760,7 +760,6 @@ input[type=text] {
     pointer-events: none;
     visibility: hidden;
     height: 0;
-    transition: opacity 0.3s ease;
 
     &--active {
       // display: block;
@@ -768,6 +767,7 @@ input[type=text] {
       pointer-events: all;
       visibility: visible;
       height: auto;
+      transition: opacity 0.3s ease;
     }
   }
 }
