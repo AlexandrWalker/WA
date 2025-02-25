@@ -1072,10 +1072,8 @@ input[type=text]:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 0 0 0 var(--border-r-7);
-  background-color: var(--bg);
+  width: 4rem;
+  height: 4rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -1086,7 +1084,7 @@ input[type=text]:hover {
   width: 1.4rem;
   height: 0.2rem;
   border-radius: 0.1rem;
-  background-color: var(--white);
+  background-color: var(--white-60);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1098,11 +1096,14 @@ input[type=text]:hover {
   width: 1.4rem;
   height: 0.2rem;
   border-radius: 0.1rem;
-  background-color: var(--white);
+  background-color: var(--white-60);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-134.64deg);
+}
+.close:hover::before, .close:hover::after {
+  background-color: var(--white);
 }
 
 /* dropdown */
@@ -1145,6 +1146,82 @@ input[type=text]:hover {
   position: absolute;
   top: 0.01rem;
   right: 1.2rem;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0.42rem);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.modal__box {
+  position: relative;
+  max-width: 1200px;
+  width: 90vw;
+  max-height: calc(100% - 6rem);
+  height: fit-content;
+  overflow: hidden;
+  padding: 2rem;
+  z-index: 1;
+  margin: 3rem 1.5rem;
+  background-color: var(--bg);
+  box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform 0.2s;
+  border-radius: var(--border-r-13);
+}
+.modal__close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.modal__slider {
+  width: auto;
+  height: 100%;
+}
+.modal__item {
+  width: 100%;
+  height: 100%;
+}
+.modal__item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+.modal.open .modal__box {
+  transform: scale(1);
+}
+.modal .swiper-slide {
+  max-width: 80%;
+  width: fit-content;
+  border-radius: var(--border-r-13);
+  overflow: hidden;
+}
+.modal__inner-img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
 }
 
 .header {
