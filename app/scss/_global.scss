@@ -1063,6 +1063,15 @@ input[type=text] {
   opacity: 0;
   transition: opacity .2s, visibility .2s;
 
+  &.gallery {
+    overflow-x: hidden;
+
+    .modal__box {
+      background-color: transparent;
+      overflow: visible;
+    }
+  }
+
   &__box {
     position: relative;
     max-width: 1200px;
@@ -1089,6 +1098,8 @@ input[type=text] {
       border: none;
       background-color: transparent;
       cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 
