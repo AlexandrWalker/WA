@@ -480,6 +480,7 @@ h1 {
   font-size: 1.8rem;
   text-align: center;
   position: relative;
+  cursor: pointer;
 }
 
 .btn--resize {
@@ -487,6 +488,7 @@ h1 {
   font-size: 1.8rem;
   line-height: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn--business {
@@ -1179,10 +1181,9 @@ input[type=text]:hover {
   max-height: calc(100% - 6rem);
   height: fit-content;
   overflow: hidden;
-  padding: 2rem;
   z-index: 1;
   margin: 3rem 1.5rem;
-  background-color: var(--bg);
+  background-color: transparent;
   box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
   transform: scale(0);
   transition: transform 0.2s;
@@ -1224,11 +1225,10 @@ input[type=text]:hover {
   border-radius: var(--border-r-13);
   overflow: hidden;
 }
-.modal__inner-img {
+.modal__video {
   display: block;
-  max-width: 600px;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   margin: 0 auto;
 }

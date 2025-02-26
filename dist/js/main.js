@@ -112,10 +112,7 @@
       spaceBetween: 10,
       slidesPerView: "auto",
       slidesPerGroup: 3,
-      // slidesPerView: 9,
       speed: 600,
-      freeMode: true,
-      // loop: true,
       mousewheel: {
         forceToAxis: true,
       },
