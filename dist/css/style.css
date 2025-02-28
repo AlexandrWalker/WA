@@ -1487,7 +1487,7 @@ input[type=text]:hover {
   height: 100%;
 }
 .hero__slider-2 {
-  background-image: url(./../../images/hero/bg-2-desktop.png);
+  background-image: url(./../images/hero/bg-2-desktop.png);
 }
 .hero__slider-2 .hero__pic {
   width: 80%;
@@ -1497,7 +1497,7 @@ input[type=text]:hover {
   transform: unset;
 }
 .hero__slider-3 {
-  background-image: url(./../../images/hero/bg-3-desktop.png);
+  background-image: url(./../images/hero/bg-3-desktop.png);
 }
 .hero__slider-3 .hero__pic {
   width: 12rem;

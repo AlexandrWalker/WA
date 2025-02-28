@@ -53,38 +53,7 @@
       // };
     }
 
-    // if ((window.innerWidth >= 601)) {
-    //   function accordionFunc() {
-    //     var menuLink = document.querySelectorAll('.accordion__item-btn');
-    //     var active = document.getElementsByClassName('accordion__item-btn--active');
-    //     var menuListLink = document.querySelectorAll('.accordion__list-btn');
-    //     var menuListActive = document.getElementsByClassName('accordion__list-btn--active');
-
-    //     Array.from(menuLink).forEach(function (item, i, menuLink) {
-    //       item.addEventListener('click', function (e) {
-    //         if (active.length > 0 && active[0] !== this) {
-    //           active[0].parentNode.classList.remove('accordion__item--active');
-    //           active[0].classList.remove('accordion__item-btn--active');
-    //         }
-    //         this.parentNode.classList.toggle('accordion__item--active');
-    //         this.classList.toggle('accordion__item-btn--active');
-    //       });
-    //     });
-
-    //     Array.from(menuListLink).forEach(function (item, i, menuListLink) {
-    //       item.addEventListener('click', function (e) {
-    //         if (menuListActive.length > 0 && menuListActive[0] !== this) {
-    //           menuListActive[0].parentNode.classList.remove('accordion__list-item--active');
-    //           menuListActive[0].classList.remove('accordion__list-btn--active');
-    //         }
-    //         this.parentNode.classList.toggle('accordion__list-item--active');
-    //         this.classList.toggle('accordion__list-btn--active');
-    //       });
-    //     });
-    //   };
-    // }
-
-
+    
 
     /**
      * Инициализация слайдера swiper.
@@ -233,6 +202,8 @@
       },
     });
 
+
+
     /**
      * Смена темы.
      */
@@ -281,59 +252,6 @@
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
      */
-    // function accordionFunc() {
-    //   /* --- */
-    //   // Получаем все контейнеры аккордеонов на странице
-    //   document.querySelectorAll('.accordion').forEach((accordionContainer) => {
-    //     // Обработчик клика по элементам аккордеона
-    //     accordionContainer.addEventListener('click', (event) => {
-    //       const btn = event.target.closest('.accordion__item-btn');
-    //       const btnActive = event.target.closest('.accordion__item-btn--active');
-
-    //       if (btn) {
-    //         btn.closest('.accordion__item').classList.toggle('accordion__item--active');
-    //         btn.classList.toggle('accordion__item-btn--active');
-    //       }
-    //       /* --- */
-
-    //       // if (btnActive) {
-    //       //   btnActive.closest('.accordion__item').classList.remove('accordion__item--active');
-    //       //   btnActive.classList.remove('accordion__item-btn--active');
-    //       // } else {
-    //       //   document.querySelectorAll('.accordion__item--active').forEach((item) => {
-    //       //     item.classList.remove('accordion__item--active');
-    //       //   });
-    //       //   document.querySelectorAll('.accordion__item-btn--active').forEach((item) => {
-    //       //     item.classList.remove('accordion__item-btn--active');
-    //       //   });
-    //       //   btn.closest('.accordion__item').classList.add('accordion__item--active');
-    //       //   btn.classList.add('accordion__item-btn--active');
-    //       // }
-    //       /* --- */
-    //     });
-    //   });
-    //   /* --- */
-
-    //   // accordionContainer.querySelectorAll('.accordion__item--active').forEach((item) => {
-    //   //   item.classList.remove('accordion__item--active');
-    //   // });
-
-    //   /* HACK */
-    //   // var menuLink = document.querySelectorAll('.accordion__item-btn'),
-    //   //   active = document.getElementsByClassName('accordion__item-btn--active');
-
-    //   // Array.from(menuLink).forEach(function (item, i, menuLink) {
-    //   //   item.addEventListener('click', function (e) {
-    //   //     if (active.length > 0 && active[0] !== this) {
-    //   //       active[0].parentNode.classList.remove('accordion__item--active');
-    //   //       active[0].classList.remove('accordion__item-btn--active');
-    //   //     }
-    //   //     this.parentNode.classList.toggle('accordion__item--active');
-    //   //     this.classList.toggle('accordion__item-btn--active');
-    //   //   });
-    //   // });
-
-    // };
     function accordionFunc() {
       var accLink = document.querySelectorAll('.accordion__item-head'),
         accListLink = document.querySelectorAll('.accordion__list-head'),
@@ -493,6 +411,9 @@
 
 
 
+    /**
+     * Активация любого количества модальных окон
+     */
     function modalFunc() {
       var modal__btn = document.querySelector('.modal__btn');
 
@@ -541,19 +462,6 @@
 
 
     /**
-     * Инициализация плавного скролла
-     */
-    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-    // let smoother = ScrollSmoother.create({
-    //   smooth: 1,
-    //   effects: true,
-    //   smoothTouch: 0.1,
-    // });
-
-
-
-    /**
      * Активация занели для моб. версии при скролле
      */
     // function panelFunc() {
@@ -580,6 +488,7 @@
     // };
 
     // panelFunc();
+    
     switchFunc();
     accordionFunc();
     tabsFunc();
