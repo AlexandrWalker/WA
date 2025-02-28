@@ -91,6 +91,7 @@
      */
     var hero__slider = new Swiper(".hero__slider-init", {
       spaceBetween: 30,
+      slidesPerView: 1,
       centeredSlides: true,
       loop: true,
       effect: 'fade',
@@ -112,6 +113,7 @@
       spaceBetween: 10,
       slidesPerView: "auto",
       slidesPerGroup: 3,
+      loop: true,
       speed: 600,
       mousewheel: {
         forceToAxis: true,
@@ -208,6 +210,7 @@
 
     var modal__slider = new Swiper(".modal__slider-init", {
       slidesPerView: "auto",
+      spaceBetween: 10,
       centeredSlides: true,
       grabCursor: true,
       zoom: true,
@@ -215,9 +218,9 @@
       speed: 600,
       effect: "coverflow",
       coverflowEffect: {
-        rotate: 50,
+        rotate: 0,
         stretch: 0,
-        depth: 100,
+        depth: 0,
         modifier: 1,
         slideShadows: false,
       },
