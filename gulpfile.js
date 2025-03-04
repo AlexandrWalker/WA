@@ -100,6 +100,8 @@ function building() {
     '!app/images/src/**/*.*',
     '!app/images/src/*.*',
     
+    'app/videos/*.*',
+    
     'app/fonts/*.*',
     'app/fonts/icomoon/*.*',
 

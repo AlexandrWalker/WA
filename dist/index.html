@@ -3678,21 +3678,21 @@
         </div>
         <div class="fact__blocks">
           <div class="fact__block">
-            <span class="fact__block-btn btn--resize icon-resize modal__btn" data-id="modal-1"></span>
+            <span class="fact__block-btn btn--resize icon-resize modal__btn" data-id="modal-gallery"></span>
             <p class="fact__block-text block-text">
               Фото магазина
               <span>Белое Яблоко</span>
             </p>
           </div>
           <div class="fact__block">
-            <span class="fact__block-btn btn--yt icon-play modal__btn" data-id="modal-2"></span>
+            <span class="fact__block-btn btn--yt icon-play modal__btn" data-id="modal-video"></span>
             <p class="fact__block-text block-text">
               Видео о магазине
               <span>Белое Яблоко</span>
             </p>
           </div>
           <div class="fact__block">
-            <span class="fact__block-btn btn--yt icon-play modal__btn" data-id="modal-3"></span>
+            <span class="fact__block-btn btn--yt icon-play modal__btn" data-id="modal-movie"></span>
             <p class="fact__block-text block-text">
               Фильм
               <span>о Белом Яблоке</span>
@@ -4553,7 +4553,7 @@
   <!-- Модальные окна -->
   <div class="modals">
     <!-- Галерея попап -->
-    <div class="modal gallery" id="modal-1">
+    <div class="modal gallery" id="modal-gallery">
       <div class="modal__box">
         <button class="modal__close-btn close">
         </button>
@@ -4613,19 +4613,25 @@
       </div>
     </div>
     <!-- Видео попап -->
-    <div class="modal" id="modal-2">
+    <div class="modal" id="modal-video">
       <div class="modal__box">
         <button class="modal__close-btn close">
         </button>
-        <img class="modal__video" src="https://fakeimg.pl/1200x800" alt="">
+        <div class="video">
+          <video class="video__item" src="./videos/video.mp4" controls></video>
+        </div>
       </div>
     </div>
-    <!-- Видео попап -->
-    <div class="modal" id="modal-3">
+    <!-- Фильм попап -->
+    <div class="modal" id="modal-movie">
       <div class="modal__box">
         <button class="modal__close-btn close">
         </button>
-        <img class="modal__video" src="https://fakeimg.pl/1200x800" alt="">
+        <div class="video">
+          <iframe class="modal__iframe" src="https://vk.com/video_ext.php?oid=-170242143&id=456242112&hd=3&autoplay=1"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     <!-- Видео попап -->
