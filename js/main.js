@@ -53,7 +53,7 @@
       // };
     }
 
-    
+
 
     /**
      * Инициализация слайдера swiper.
@@ -423,6 +423,8 @@
 
         var close = document.querySelectorAll('.modal__close-btn');
         var openBtn = document.querySelectorAll('.modal__btn');
+        var vid = document.querySelector('.video__item');
+        var iframe = document.querySelector('.modal__iframe');
 
         Array.from(openBtn, openButton => {
           openButton.addEventListener('click', e => {
@@ -430,16 +432,43 @@
             document.getElementById(modalId).classList.add("open");
             document.body.classList.add('no-scroll');
 
+            if (document.getElementById(modalId).contains(vid))
+              vid.play();
+
+            if (document.getElementById(modalId).contains(iframe))
+              iframe.src = "https://vk.com/video_ext.php?oid=-170242143&id=456242112&hd=3&autoplay=1";
+
+            // if (document.getElementById(modalId).contains(iframe))
+            //   iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+
             Array.from(close, closeButton => {
               closeButton.addEventListener('click', e => {
                 document.getElementById(modalId).classList.remove("open");
                 document.body.classList.remove('no-scroll');
+
+                if (document.getElementById(modalId).contains(vid))
+                  vid.pause();
+
+                if (document.getElementById(modalId).contains(iframe))
+                  iframe.src = "not.found/404";
+
+                // if (document.getElementById(modalId).contains(iframe))
+                //   iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
               });
 
               window.addEventListener('keydown', (e) => {
                 if (e.key === "Escape") {
                   document.getElementById(modalId).classList.remove("open")
                   document.body.classList.remove('no-scroll');
+
+                  if (document.getElementById(modalId).contains(vid))
+                    vid.pause();
+
+                  if (document.getElementById(modalId).contains(iframe))
+                    iframe.src = "not.found/404";
+
+                  // if (document.getElementById(modalId).contains(iframe))
+                  //   iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
                 }
               });
 
@@ -451,8 +480,28 @@
                 if (event._isClickWithInModal) return;
                 event.currentTarget.classList.remove('open');
                 document.body.classList.remove('no-scroll');
+
+                if (document.getElementById(modalId).contains(vid))
+                  vid.pause();
+
+                if (document.getElementById(modalId).contains(iframe))
+                  iframe.src = "not.found/404";
+
+                // if (document.getElementById(modalId).contains(iframe))
+                //   iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
               });
             });
+
+            /* -------------------------- */
+            // var video = document.getElementById(modalId).getElementsByTagName('iframe');
+            // if (document.getElementById(modalId).classList.contains('open')) {
+            //   video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            //   console.log(video);
+            // }
+            // else {
+            //   video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            // }
+            /* -------------------------- */
           });
         });
 
@@ -488,7 +537,7 @@
     // };
 
     // panelFunc();
-    
+
     switchFunc();
     accordionFunc();
     tabsFunc();

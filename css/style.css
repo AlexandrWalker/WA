@@ -1261,6 +1261,22 @@ input[type=text]:hover {
   object-fit: cover;
   margin: 0 auto;
 }
+.modal iframe {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1200/675;
+}
+.modal .video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.modal .video video {
+  width: 100%;
+  height: auto;
+}
 
 .header {
   position: sticky;
