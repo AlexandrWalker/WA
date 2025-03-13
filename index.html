@@ -38,6 +38,7 @@
             <a class="header__geo-link" href="#!">
               <img class="header__geo-img" src="images/icons/geo.svg" alt="">
               Новосибирск
+              <i class="header__geo-icon icon-chevron-right"></i>
             </a>
           </div>
           <!-- Форма поиска -->
@@ -63,42 +64,44 @@
             </span>
           </button>
           <!-- Панель для дэкстопа и моб. версии -->
-          <div class="header__panel panel panel--active">
-            <div class="panel__item">
-              <div class="panel__wrap">
-                <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
-                  <span class="panel__link-text">Каталог</span>
-                </a>
+          <div class="header__panel">
+            <div class="panel panel--active">
+              <div class="panel__item">
+                <div class="panel__wrap">
+                  <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
+                    <span class="panel__link-text">Каталог</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="panel__item">
-              <div class="panel__wrap">
-                <a class="person panel__link icon-person" href="#!">
-                  <span class="panel__link-text">Войти</span>
-                </a>
+              <div class="panel__item">
+                <div class="panel__wrap">
+                  <a class="panel__link icon-connection" href="#!">
+                    <span class="panel__link-text">Связаться</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="panel__item">
-              <div class="panel__wrap">
-                <a class="panel__link icon-connection" href="#!">
-                  <span class="panel__link-text">Связаться</span>
-                </a>
+              <div class="panel__item">
+                <div class="panel__wrap">
+                  <a class="favorite panel__link icon-favorite" href="#!">
+                    <span class="panel__link-item">20</span>
+                    <span class="panel__link-text">Избранное</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="panel__item">
-              <div class="panel__wrap">
-                <a class="favorite panel__link icon-favorite" href="#!">
-                  <span class="panel__link-item">20</span>
-                  <span class="panel__link-text">Избранное</span>
-                </a>
+              <div class="panel__item">
+                <div class="panel__wrap">
+                  <a class="panel__link icon-basket" href="#!">
+                    <span class="panel__link-item">143</span>
+                    <span class="panel__link-text">Корзина</span>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="panel__item">
-              <div class="panel__wrap">
-                <a class="panel__link icon-basket" href="#!">
-                  <span class="panel__link-item">143</span>
-                  <span class="panel__link-text">Корзина</span>
-                </a>
+              <div class="panel__item">
+                <div class="panel__wrap">
+                  <a class="person panel__link icon-person" href="#!">
+                    <span class="panel__link-text">Войти</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -110,9 +113,9 @@
       <div class="header__bottom">
         <div class="container header__container">
           <!-- Кнопка каталога -->
-          <button class="header__btn btn btn--red dropdown__trigger">
-            <i class="header__btn-icon icon-catalogs"></i>
+          <button class="header__catalog header__btn btn btn--red dropdown__trigger">
             Каталог
+            <i class="header__btn-icon icon-chevron-right"></i>
           </button>
           <!-- Навигация по сайту -->
           <nav class="nav">
@@ -190,12 +193,12 @@
             </ul>
           </nav>
           <!-- Кнопка телефона -->
-          <div class="header__phone hidden">
+          <!-- <div class="header__phone hidden">
             <a class="header__phone-link" href="tel:+73832052355">
               <i class="header__phone-icon icon-phone"></i>
               8 (383) 205 23 55
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -1841,6 +1844,27 @@
                 <div class="hero__wrap">
                   <div class="hero__content">
                     <h1 class="hero__title title">
+                      iPhone 16 Pro Max
+                    </h1>
+                    <p class="hero__subtitle text">
+                      примерный текст который тут будет написан о товаре
+                    </p>
+                    <a class="hero__btn btn btn--blue" href="#!">
+                      Перейти в каталог
+                    </a>
+                  </div>
+                  <picture class="hero__pic hero__pic-2">
+                    <source srcset="./images/hero/hero-2-desktop.png" type="image/png">
+                    <img class="hero__pic-img" src="./images/hero/hero-2-desktop.png" alt="">
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-slide">
+              <div class="hero__slider-item hero__slider-2">
+                <div class="hero__wrap">
+                  <div class="hero__content">
+                    <h1 class="hero__title title">
                       iPhone 16
                     </h1>
                     <p class="hero__subtitle text">
@@ -1879,7 +1903,7 @@
                   </picture>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="swiper-pagination"></div>
