@@ -29,7 +29,6 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
     padding: 0.1rem 0.1rem 0.1rem 1.8rem;
@@ -60,6 +59,20 @@
     }
   }
 
+  &__catalog {
+    display: flex;
+    gap: 3rem;
+    min-width: 14.7rem;
+
+    i {
+      transform: rotate(90deg);
+    }
+
+    i::before {
+      font-size: 1.1rem;
+    }
+  }
+
   &__geo {
     display: none;
     align-items: center;
@@ -78,6 +91,10 @@
 
     &-img {
       font-size: 1.2rem;
+    }
+
+    &-icon {
+      transform: rotate(90deg);
     }
   }
 
@@ -100,6 +117,9 @@
     &-icon {
       font-size: 2rem;
     }
+
+    &__panel {}
+
   }
 
   .btn {

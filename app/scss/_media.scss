@@ -131,6 +131,10 @@
     margin: 0;
   }
 
+  .hero__slider-item {
+    min-height: 60.4rem;
+  }
+
   .hero__title {
     margin-bottom: 3rem;
   }
@@ -511,6 +515,15 @@
 
   .hero .swiper-pagination-bullet-active {
     background: var(--black-main-60);
+  }
+
+  .hero__pic {
+    width: 50%;
+    height: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    right: unset;
+    bottom: unset;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -952,7 +965,7 @@
 
 @media (max-width: 991px) and (min-width: 601px) {
   .title {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .block-title {
@@ -966,6 +979,13 @@
 
   .hero__slider {
     height: 41.5rem;
+  }
+
+  .hero__pic {
+    width: 48.3rem;
+    height: auto;
+    right: -7.8rem;
+    bottom: -6.8rem;
   }
 
   .popular__item {
@@ -1093,26 +1113,14 @@
     padding: 0 1.8rem;
   }
 
-  .hero__slider-item {
-    background-image: url(./../images/hero/bg-desktop.webp);
-  }
-
-  .hero__slider-2 {
-    background-image: url(./../images/hero/bg-2-desktop.webp);
-  }
-
-  .hero__slider-3 {
-    background-image: url(./../images/hero/bg-3-desktop.webp);
-  }
-
   .hero__pic {
     //   top: 50%;
     //   right: 2rem;
-    width: 30%;
+    // width: 30%;
   }
 
   .hero__slider-1 .hero__pic {
-    right: 4vw;
+    right: -3rem;
   }
 
   .hero__slider-2 .hero__pic {
@@ -1590,6 +1598,20 @@
     // height: auto;
   }
 
+  .hero__slider-item {
+    background-image: url(./../images/hero/bg-desktop.webp);
+    background-size: cover;
+    background-position-x: 40%;
+  }
+
+  .hero__slider-2 {
+    background-image: url(./../images/hero/bg-2-desktop.webp);
+  }
+
+  .hero__slider-3 {
+    background-image: url(./../images/hero/bg-3-desktop.webp);
+  }
+
   .hero__wrap {
     // background-image: url(./../images/hero/bg-desktop.webp);
     // padding: 7.6rem 1.8rem 8.9rem;
@@ -1600,27 +1622,29 @@
   .hero__content {
     align-items: flex-start;
     width: 50%;
+    min-width: 32.1rem;
     text-align: left;
   }
 
   .hero__title {
     text-transform: lowercase;
     margin-bottom: 2rem;
+    min-width: 36rem;
   }
 
   .hero__subtitle {
-    width: min-content;
+    // width: min-content;
     color: var(--white);
     white-space: normal;
   }
 
-  .hero__pic {
-    position: absolute;
-    top: 50%;
-    right: 2rem;
-    transform: translateY(-50%);
-    margin-bottom: 0;
-  }
+  // .hero__pic {
+  //   position: absolute;
+  //   top: 50%;
+  //   right: 2rem;
+  //   transform: translateY(-50%);
+  //   margin-bottom: 0;
+  // }
 
   .hero__slider-2 .hero__pic {
     top: unset;

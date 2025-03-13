@@ -431,7 +431,7 @@ input[type=text] {
 .panel {
   display: flex;
   flex-direction: row;
-  padding: 0 0.5rem;
+  padding: 0.5rem;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -439,9 +439,9 @@ input[type=text] {
   width: calc(100% - 2rem);
   height: 6rem;
   background: rgba(0, 0, 0, 0.75);
-  border: 0.1rem solid rgba(159, 159, 165, 0.2);
+  // border: 0.1rem solid #9f9fa533;
   backdrop-filter: blur(8.5px);
-  border-radius: var(--border-r-13);
+  border-radius: var(--border-r-8);
 
   position: fixed;
   right: 1rem;
