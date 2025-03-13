@@ -1,7 +1,7 @@
 .hero {
   overflow: hidden;
-  background-color: var(--black-main);
-  margin-bottom: 2rem;
+  // background-color: var(--black-main);
+  margin-bottom: 1.5rem;
 
   &__container {
     padding: 0;
@@ -12,16 +12,20 @@
   &__wrap {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
+    align-items: flex-start;
     gap: 0.6rem;
     height: 100%;
     margin: 0 auto;
-    padding: 2rem 1.6rem 1rem;
+    padding: 3rem 2rem;
     position: relative;
   }
 
   &__slider {
-    height: 35.1rem;
+    // height: 35.1rem;
+
+    height: 36.6rem;
+    padding: 0 0 1.5rem;
 
     &-item {
       background-image: url(./../images/hero/bg-mob.webp);
@@ -38,8 +42,10 @@
 
       .hero__pic {
         // width: 60%;
-        width: 80%;
+        width: 70%;
+        height: auto;
         margin: auto 0 -2rem;
+        bottom: -1rem;
 
         .hero__pic-img {
           transform: unset;
@@ -65,11 +71,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: min-content;
+    align-items: flex-start;
+    // width: min-content;
     position: relative;
     z-index: 1;
-    text-align: center;
   }
 
   &__title {
@@ -79,37 +84,58 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     // text-overflow: ellipsis;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     align-content: end;
     letter-spacing: 0.03em;
+    text-transform: lowercase;
   }
 
   &__subtitle {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     width: auto;
-    font-size: 1.2rem;
-    color: var(--white-60);
+    font-size: 1.4rem;
+    line-height: 120%;
+    // color: var(--white-60);
+    color: var(--white);
     white-space: nowrap;
   }
 
   &__btn {
-    padding: 1.2rem 2.2rem;
-    border-radius: var(--border-r-7);
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--border-r-4);
+    height: 4rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.43;
     // font-size: 1.2rem;
   }
 
   &__pic {
-    width: 18rem;
-    height: auto;
+    // width: 18rem;
+    // height: auto;
+    width: 25.1rem;
+    height: 25.1rem;
     object-fit: cover;
     // margin-bottom: -5rem;
+    position: absolute;
+    right: 0;
+    bottom: -3rem;
 
     &-img {
       width: 100%;
       height: auto;
       object-fit: cover;
-      transform: rotate(26.78deg);
+      // transform: rotate(26.78deg);
+      transform: rotate(30deg);
     }
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: -0.5rem;
+    margin: 0;
   }
 }
 
@@ -134,10 +160,23 @@
     }
 
     &-title {
-      font-size: 1.4rem;
-      font-weight: 800;
+      font-size: 1.6rem;
+      font-weight: 600;
       line-height: 1;
       color: var(--white-60);
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.16;
+      color: var(--primary);
+    }
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
     &-link {
@@ -146,7 +185,7 @@
       color: var(--white-60);
       border-radius: var(--border-r-13);
       background-color: var(--bg);
-      padding: 0;
+      padding: 0.5rem 0;
     }
 
     &-body {
@@ -186,10 +225,10 @@
   &__inner {
     display: none;
     align-items: center;
-    gap: 2.4rem;
+    gap: 3.4rem;
     background-color: var(--bg);
     border-radius: var(--border-r-18);
-    padding: 1.5rem 1rem;
+    padding: 2rem 4rem;
   }
 
   &__slider {
@@ -293,6 +332,8 @@
   padding: 1rem;
   border-radius: var(--border-r-13);
   background-color: var(--bg);
+  overflow: hidden;
+  position: relative;
 
   &__fav {
     position: absolute;
@@ -331,8 +372,8 @@
 
   &__img {
     width: auto;
-    height: 7.7rem;
-    margin: 1.8rem auto 1.2rem;
+    height: 8.2rem;
+    margin: 2rem auto;
     flex-shrink: 0;
 
     img {
@@ -347,27 +388,28 @@
   }
 
   &__tags {
-    margin-bottom: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     &-item {
-      font-weight: 800;
+      display: block;
+      font-weight: 600;
       font-size: 1rem;
       line-height: 120%;
-      color: var(--primary);
+      color: var(--white);
+      border-bottom-right-radius: var(--border-r-13);
+      background-color: var(--primary);
+      padding: 0.7rem 1.1rem 0.9rem;
     }
   }
 
   &__name {
-    font-weight: 800;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
     line-height: 120%;
     color: var(--white-60);
-    margin-bottom: 1.3rem;
-    -webkit-line-clamp: 2;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: 1rem;
     transition: color 0.2s ease;
 
     &:hover {
@@ -378,23 +420,24 @@
   &__grid {
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: center;
     gap: 0.7rem 0.4rem;
     width: fit-content;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   &__price {
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-weight: 500;
+    font-size: 1.6rem;
     line-height: 100%;
     color: var(--white);
     width: fit-content;
   }
 
   &__discount {
-    font-weight: 400;
-    font-size: 0.8rem;
-    line-height: 100%;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 200%;
     text-decoration-line: line-through;
     color: var(--white-60);
     align-content: flex-end;
@@ -409,6 +452,7 @@
 
     &-text {
       font-weight: 400;
+      font-size: 1rem;
       color: var(--grey);
     }
   }
@@ -442,7 +486,13 @@
       object-fit: cover;
     }
   }
+
+  &__btn {
+    text-transform: lowercase;
+  }
 }
+
+
 
 .programm {
 
@@ -450,6 +500,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-bottom: 1rem;
   }
 
   &__content {
@@ -902,11 +953,31 @@
     font-weight: 700;
     color: var(--primary);
   }
+
+  // .swiper-wrapper {
+  //   transition-timing-function: linear;
+  // }
 }
 
 .info {
 
   &__inner {}
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .block-title {
+    margin-bottom: 0;
+  }
+
+  .tabs__btns {
+    margin: 0;
+  }
 
   &__slider {
     overflow: hidden;
@@ -1058,6 +1129,14 @@
     }
 
     &-text {
+      font-size: 1.4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--white);
+      width: fit-content;
+    }
+
+    &-link {
       font-size: 1.4rem;
       font-weight: 800;
       line-height: 1.1;

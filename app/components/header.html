@@ -26,20 +26,22 @@
       <div class="header__top">
         <div class="container header__container">
           <!-- Кнопка вызова поисковика -->
-          <button class="loupe btn btn--icon">
+          <button class="loupe btn btn--icon modal__btn" data-id="modal-search">
             <i class="icon-loupe"></i>
           </button>
           <!-- Логотип с ссылкой на главную страницу -->
           <a class="header__logo" href="/">
             <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
           </a>
-          <!-- Кнопка каталога -->
-          <button class="header__btn btn btn--red dropdown__trigger">
-            <i class="header__btn-icon icon-catalogs"></i>
-            Каталог
-          </button>
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <a class="header__geo-link" href="#!">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+            </a>
+          </div>
           <!-- Форма поиска -->
-          <form class="search__form" action="">
+          <form id="modal-search" class="search__form" action="">
             <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
             <i class="search__form-icon icon-shine"></i>
             <button class="search__form-btn">
@@ -47,7 +49,7 @@
             </button>
           </form>
           <!-- Кнопка для бизнеса -->
-          <a class="header__btn btn--business btn btn--outline" href="/">
+          <a class="header__btn btn--business btn btn--outline hidden" href="/">
             Для бизнеса
           </a>
           <!-- Смена темы -->
@@ -107,13 +109,11 @@
       </div>
       <div class="header__bottom">
         <div class="container header__container">
-          <!-- Геопозиция -->
-          <div class="header__geo">
-            <a class="header__geo-link" href="#!">
-              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
-              Новосибирск
-            </a>
-          </div>
+          <!-- Кнопка каталога -->
+          <button class="header__btn btn btn--red dropdown__trigger">
+            <i class="header__btn-icon icon-catalogs"></i>
+            Каталог
+          </button>
           <!-- Навигация по сайту -->
           <nav class="nav">
             <ul class="nav__list">
@@ -164,6 +164,11 @@
               </li>
               <li class="nav__list-item">
                 <a class="nav__list-link" href="/">
+                  Для бизнеса
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
                   Гарантия
                 </a>
               </li>
@@ -185,7 +190,7 @@
             </ul>
           </nav>
           <!-- Кнопка телефона -->
-          <div class="header__phone">
+          <div class="header__phone hidden">
             <a class="header__phone-link" href="tel:+73832052355">
               <i class="header__phone-icon icon-phone"></i>
               8 (383) 205 23 55

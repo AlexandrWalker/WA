@@ -26,20 +26,22 @@
       <div class="header__top">
         <div class="container header__container">
           <!-- Кнопка вызова поисковика -->
-          <button class="loupe btn btn--icon">
+          <button class="loupe btn btn--icon modal__btn" data-id="modal-search">
             <i class="icon-loupe"></i>
           </button>
           <!-- Логотип с ссылкой на главную страницу -->
           <a class="header__logo" href="/">
             <img class="header__logo-img" src="images/logo/logo-white.svg" alt="">
           </a>
-          <!-- Кнопка каталога -->
-          <button class="header__btn btn btn--red dropdown__trigger">
-            <i class="header__btn-icon icon-catalogs"></i>
-            Каталог
-          </button>
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <a class="header__geo-link" href="#!">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+            </a>
+          </div>
           <!-- Форма поиска -->
-          <form class="search__form" action="">
+          <form id="modal-search" class="search__form" action="">
             <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
             <i class="search__form-icon icon-shine"></i>
             <button class="search__form-btn">
@@ -47,7 +49,7 @@
             </button>
           </form>
           <!-- Кнопка для бизнеса -->
-          <a class="header__btn btn--business btn btn--outline" href="/">
+          <a class="header__btn btn--business btn btn--outline hidden" href="/">
             Для бизнеса
           </a>
           <!-- Смена темы -->
@@ -107,13 +109,11 @@
       </div>
       <div class="header__bottom">
         <div class="container header__container">
-          <!-- Геопозиция -->
-          <div class="header__geo">
-            <a class="header__geo-link" href="#!">
-              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
-              Новосибирск
-            </a>
-          </div>
+          <!-- Кнопка каталога -->
+          <button class="header__btn btn btn--red dropdown__trigger">
+            <i class="header__btn-icon icon-catalogs"></i>
+            Каталог
+          </button>
           <!-- Навигация по сайту -->
           <nav class="nav">
             <ul class="nav__list">
@@ -164,6 +164,11 @@
               </li>
               <li class="nav__list-item">
                 <a class="nav__list-link" href="/">
+                  Для бизнеса
+                </a>
+              </li>
+              <li class="nav__list-item">
+                <a class="nav__list-link" href="/">
                   Гарантия
                 </a>
               </li>
@@ -185,7 +190,7 @@
             </ul>
           </nav>
           <!-- Кнопка телефона -->
-          <div class="header__phone">
+          <div class="header__phone hidden">
             <a class="header__phone-link" href="tel:+73832052355">
               <i class="header__phone-icon icon-phone"></i>
               8 (383) 205 23 55
@@ -1814,12 +1819,12 @@
                 <div class="hero__wrap">
                   <div class="hero__content">
                     <h1 class="hero__title title">
-                      Белая полоса начинается
+                      белая полоса начинается
                     </h1>
                     <p class="hero__subtitle text">
                       с&nbspновинок с&nbspпокупок с&nbspэмоций
                     </p>
-                    <a class="hero__btn btn btn--red" href="#!">
+                    <a class="hero__btn btn btn--blue" href="#!">
                       Перейти в каталог
                     </a>
                   </div>
@@ -1841,7 +1846,7 @@
                     <p class="hero__subtitle text">
                       Примерный&nbspтекст&nbspкоторый тут&nbspнаписан
                     </p>
-                    <a class="hero__btn btn btn--red" href="#!">
+                    <a class="hero__btn btn btn--blue" href="#!">
                       Перейти в каталог
                     </a>
                   </div>
@@ -1863,7 +1868,7 @@
                     <p class="hero__subtitle text">
                       Примерный&nbspтекст&nbspкоторый тут&nbspнаписан
                     </p>
-                    <a class="hero__btn btn btn--red" href="#!">
+                    <a class="hero__btn btn btn--blue" href="#!">
                       Перейти в каталог
                     </a>
                   </div>
@@ -1893,9 +1898,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-1.svg" alt="">
-                <h6 class="catalog__item-title">
-                  iPhone
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    iPhone
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2040,9 +2048,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-2.svg" alt="">
-                <h6 class="catalog__item-title">
-                  Dyson
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    Dyson
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2187,9 +2198,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-3.svg" alt="">
-                <h6 class="catalog__item-title">
-                  DJI
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    DJI
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2334,9 +2348,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-4.svg" alt="">
-                <h6 class="catalog__item-title">
-                  GoPro
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    GoPro
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2481,9 +2498,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-5.svg" alt="">
-                <h6 class="catalog__item-title">
-                  PlayStation
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    PlayStation
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2628,9 +2648,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-6.svg" alt="">
-                <h6 class="catalog__item-title">
-                  Garmin
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    Garmin
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2775,9 +2798,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-7.svg" alt="">
-                <h6 class="catalog__item-title">
-                  Гаджеты
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    Гаджеты
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -2922,9 +2948,12 @@
             <div class="catalog__item">
               <a class="catalog__item-link" href="#!">
                 <img class="catalog__item-img" src="images/catalog/catalog-8.svg" alt="">
-                <h6 class="catalog__item-title">
-                  Аксессуары
-                </h6>
+                <div class="catalog__item-wrap">
+                  <h6 class="catalog__item-title">
+                    Аксессуары
+                  </h6>
+                  <p class="catalog__item-text">от ₽ <span>39. 990</span></p>
+                </div>
                 <i class="catalog__item-icon icon-chevron-right-wide"></i>
               </a>
               <div class="catalog__item-body">
@@ -3243,7 +3272,7 @@
     <div class="container offer__container">
       <div class="offer__inner">
         <h2 class="offer__title block-title">
-          Лучшие предложения
+          лучшие предложения
         </h2>
         <div class="offer__slider main__slider-init">
           <div class="swiper-wrapper">
@@ -3433,34 +3462,6 @@
           <div class="swiper-pagination"></div>
         </div>
       </div>
-      <div class="programm__inner">
-        <div class="programm__content">
-          <h2 class="block-title programm__title">
-            Программа trade-in
-          </h2>
-          <p class="text programm__text">
-            Программа трейд-ин — это умный, удобный и экологичный способ продажи старых устройств и покупки новых.
-            Теперь вам есть куда принести свои устройства Apple, которые вы решили обновить, получить при этом выгоду
-            себе и принести пользу окружающей среде.
-          </p>
-          <a class="btn btn--red" href="/">
-            Подробнее
-          </a>
-        </div>
-        <div class="programm__block">
-          <span class="programm__block-btn btn--yt icon-play modal__btn" data-id="modal-4">
-          </span>
-          <p class="programm__block-text text">
-            Обменяйте свои старые устройства
-          </p>
-
-          <picture class="programm__block-pic">
-            <source media="(min-width: 601px)" srcset="images/programm/ti-1.webp" type="image/webp">
-            <source media="(max-width: 600px)" srcset="images/programm/ti-2.webp" type="image/webp">
-            <img class="programm__block-img" src="images/programm/ti-1.webp" alt="" loading="lazy">
-          </picture>
-        </div>
-      </div>
     </div>
   </section>
   <!-- Слайдер с карточками трейд-ин товаров -->
@@ -3468,8 +3469,35 @@
     <div class="container">
       <div class="trade-in__inner">
         <h2 class="trade-in__title block-title">
-          Товары принятые по trade-in
+          товары принятые по trade-in
         </h2>
+        <div class="programm__inner">
+          <div class="programm__content">
+            <h2 class="block-title programm__title">
+              Программа trade-in
+            </h2>
+            <p class="text programm__text">
+              Программа трейд-ин — это умный, удобный и экологичный способ продажи старых устройств и покупки новых.
+              Теперь вам есть куда принести свои устройства Apple, которые вы решили обновить, получить при этом выгоду
+              себе и принести пользу окружающей среде.
+            </p>
+            <a class="btn btn--red" href="/">
+              Подробнее
+            </a>
+          </div>
+          <div class="programm__block">
+            <span class="programm__block-btn btn--yt icon-play modal__btn" data-id="modal-4">
+            </span>
+            <p class="programm__block-text text">
+              Обменяйте свои старые устройства
+            </p>
+            <picture class="programm__block-pic">
+              <source media="(min-width: 601px)" srcset="images/programm/ti-1.webp" type="image/webp">
+              <source media="(max-width: 600px)" srcset="images/programm/ti-2.webp" type="image/webp">
+              <img class="programm__block-img" src="images/programm/ti-1.webp" alt="" loading="lazy">
+            </picture>
+          </div>
+        </div>
         <div class="trade-in__slider main__slider-init">
           <div class="swiper-wrapper">
 
@@ -3620,7 +3648,7 @@
     <div class="container fact__container">
       <div class="fact__inner">
         <h2 class="fact__title block-title">
-          Важные факты о Белом Яблоке
+          важные факты о Белом Яблоке
         </h2>
         <div class="fact__items">
           <div class="fact__item">
@@ -3707,7 +3735,7 @@
     <div class="container service__container">
       <div class="service__inner">
         <h2 class="service__title block-title">
-          Сервисный центр
+          сервисный центр
         </h2>
         <div class="service__items">
           <a class="service__item" href="#!">
@@ -3779,7 +3807,7 @@
     <div class="container uslugi__container">
       <div class="uslugi__inner">
         <h2 class="uslugi__title block-title">
-          Услуги, которые мы оказываем
+          услуги, которые мы оказываем
         </h2>
         <div class="uslugi__items">
           <div class="uslugi__item">
@@ -3893,7 +3921,7 @@
     <div class="container review__container">
       <div class="review__inner">
         <h2 class="review__title block-title">
-          Клиенты о нас
+          клиенты о нас
         </h2>
         <div class="review__slider review__slider-init">
           <div class="swiper-wrapper">
@@ -4007,7 +4035,7 @@
     <div class="container faq__container">
       <div class="faq__inner">
         <h2 class="block-title">
-          Вопросы и ответы
+          ответы на вопросы
         </h2>
         <div class="faq__items">
           <div class="faq__item accordion__item">
@@ -4093,19 +4121,21 @@
   <section class="info">
     <div class="container info__container">
       <div class="info__inner">
-        <h2 class="info__title block-title">
-          Блог
-        </h2>
         <div class="tabs">
-          <div class="tabs__btns">
-            <div class="tabs__btn tabs__btn--active" data-tab="info-1">
-              Статьи
-            </div>
-            <div class="tabs__btn" data-tab="info-2">
-              Обзоры
-            </div>
-            <div class="tabs__btn" data-tab="info-3">
-              Новости
+          <div class="info__head">
+            <h2 class="info__title block-title">
+              блог
+            </h2>
+            <div class="tabs__btns">
+              <div class="tabs__btn tabs__btn--active" data-tab="info-1">
+                Статьи
+              </div>
+              <div class="tabs__btn" data-tab="info-2">
+                Обзоры
+              </div>
+              <div class="tabs__btn" data-tab="info-3">
+                Новости
+              </div>
             </div>
           </div>
           <div class="tabs__panels">
@@ -4399,11 +4429,14 @@
   <!-- Блок с контаками и с картой -->
   <section class="contact">
     <div class="container contact__container">
+      <h2 class="block-title">
+        контакты
+      </h2>
       <div class="contact__inner">
         <div class="contact__body">
           <div class="contact__content">
             <h3 class="contact__title">
-              Магазин
+              магазин
             </h3>
             <div class="contact__item">
               <div class="contact__item-title">
