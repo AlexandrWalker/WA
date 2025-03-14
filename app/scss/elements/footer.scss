@@ -1,6 +1,6 @@
 .footer {
   padding: 3rem 0 8.4rem;
-  background-color: var(--bg);
+  background-color: var(--primary-black);
 
   &__bottom {
     display: flex;
@@ -20,7 +20,7 @@
       font-weight: 400;
       font-size: 1rem;
       line-height: 1.4;
-      color: var(--white-50);
+      color: var(--primary-white-60);
       max-width: 40rem;
       text-align: center;
     }

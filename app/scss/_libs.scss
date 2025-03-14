@@ -25,7 +25,7 @@
   height: 0.6rem;
   border-radius: 0.8rem;
   overflow: hidden;
-  background-color: var(--white-60);
+  background-color: var(--primary-black);
   position: relative;
   transition: width 0.5s ease, background-color 0.2s ease;
   background-clip: padding-box;
@@ -33,12 +33,12 @@
   box-sizing: content-box;
 
   &:hover {
-    background-color: var(--white);
+    background-color: var(--primary-grey);
   }
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--white-60);
+  background: var(--primary-black);
   width: 3.6rem;
   position: relative;
 
@@ -73,7 +73,7 @@
 .hero .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
 
   &:hover {
-    background-color: var(--white);
+    background-color: var(--primary-grey);
   }
 }
 
@@ -100,7 +100,7 @@
   left: 0;
   right: 0;
   z-index: 1;
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   animation-name: timeline;
   animation-duration: 5s;
   animation-timing-function: linear;

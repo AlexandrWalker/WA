@@ -26,7 +26,7 @@
       <div class="header__top">
         <div class="container header__container">
           <!-- Кнопка вызова поисковика -->
-          <button class="loupe btn btn--icon modal__btn" data-id="modal-search">
+          <button class="loupe btn btn--icon">
             <i class="icon-loupe"></i>
           </button>
           <!-- Логотип с ссылкой на главную страницу -->
@@ -43,16 +43,12 @@
           </div>
           <!-- Форма поиска -->
           <form id="modal-search" class="search__form" action="">
-            <input class="search__form-input" type="text" placeholder="Интеллектуальный поиск">
+            <input class="search__form-input input" type="text" placeholder="Интеллектуальный поиск">
             <i class="search__form-icon icon-shine"></i>
             <button class="search__form-btn">
               <i class="icon-loupe"></i>
             </button>
           </form>
-          <!-- Кнопка для бизнеса -->
-          <a class="header__btn btn--business btn btn--outline hidden" href="/">
-            Для бизнеса
-          </a>
           <!-- Смена темы -->
           <button class="switch__btn">
             <span class="switch__btn-item light-mode">
@@ -64,44 +60,53 @@
             </span>
           </button>
           <!-- Панель для дэкстопа и моб. версии -->
-          <div class="header__panel">
-            <div class="panel panel--active">
+          <div class="panel panel--active">
+            <div class="panel__items">
               <div class="panel__item">
                 <div class="panel__wrap">
-                  <a class="panel__link icon-catalogs dropdown__trigger" href="#!">
+                  <a class="panel__link dropdown__trigger" href="#!">
+                    <i class="icon-catalogs"></i>
                     <span class="panel__link-text">Каталог</span>
                   </a>
                 </div>
               </div>
               <div class="panel__item">
                 <div class="panel__wrap">
-                  <a class="panel__link icon-connection" href="#!">
+                  <a class="panel__link" href="#!">
+                    <i class="icon-connection"></i>
                     <span class="panel__link-text">Связаться</span>
                   </a>
                 </div>
               </div>
-              <div class="panel__item">
+              <div class="panel__item favorite">
                 <div class="panel__wrap">
-                  <a class="favorite panel__link icon-favorite" href="#!">
+                  <a class="panel__link" href="#!">
+                    <i class="icon-favorite"></i>
                     <span class="panel__link-item">20</span>
                     <span class="panel__link-text">Избранное</span>
                   </a>
                 </div>
               </div>
-              <div class="panel__item">
+              <div class="panel__item basket">
                 <div class="panel__wrap">
-                  <a class="panel__link icon-basket" href="#!">
+                  <a class="panel__link" href="#!">
+                    <i class="icon-basket"></i>
                     <span class="panel__link-item">143</span>
                     <span class="panel__link-text">Корзина</span>
                   </a>
                 </div>
               </div>
-              <div class="panel__item">
-                <div class="panel__wrap">
-                  <a class="person panel__link icon-person" href="#!">
-                    <span class="panel__link-text">Войти</span>
-                  </a>
-                </div>
+            </div>
+            <div class="panel__item person">
+              <div class="panel__wrap">
+                <a class="panel__link" href="#!">
+                  <div class="panel__link-wrap">
+                    <i class="icon-person"></i>
+                    <img class="panel__link-img" src="./images/avatar.png" alt="">
+                  </div>
+                  <span class="panel__link-item"></span>
+                  <span class="panel__link-text">войти</span>
+                </a>
               </div>
             </div>
           </div>
@@ -113,7 +118,7 @@
       <div class="header__bottom">
         <div class="container header__container">
           <!-- Кнопка каталога -->
-          <button class="header__catalog header__btn btn btn--red dropdown__trigger">
+          <button class="header__catalog btn btn--red dropdown__trigger">
             Каталог
             <i class="header__btn-icon icon-chevron-right"></i>
           </button>
@@ -201,6 +206,5 @@
           </div> -->
         </div>
       </div>
-
       <!--=include popup.html-->
     </header>

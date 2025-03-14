@@ -109,15 +109,11 @@
           slidesPerView: 2,
           spaceBetween: 10,
         },
-        601: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
         769: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 20,
         },
-        1441: {
+        992: {
           slidesPerView: 4,
           spaceBetween: 20,
         },
@@ -361,7 +357,7 @@
           document
             .querySelectorAll('.dropdown--opened')
             .forEach((dropdown) => toggleDropdown(dropdown, false, document.body.classList.toggle('no-scroll')));
-        }
+        };
       });
 
       const dropdown = document.querySelector('.dropdown');
