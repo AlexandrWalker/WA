@@ -2594,14 +2594,11 @@ h1 {
   .catalog__item-img {
     height: 9.8rem;
   }
-  .brand__inner {
-    display: flex;
-  }
   .brand__slider {
     width: calc(100% - 10rem);
   }
   .brand__slider-item {
-    height: 7rem;
+    height: 6rem;
   }
   /* card */
   .card {
@@ -2884,6 +2881,9 @@ h1 {
     max-width: unset;
   }
   /* /header */
+  .brand__inner {
+    display: flex;
+  }
   .card__tags-item {
     font-size: 1.4rem;
   }
@@ -2978,6 +2978,9 @@ h1 {
   .hero .swiper-pagination-custom,
   .hero .swiper-pagination-fraction {
     bottom: 2rem;
+  }
+  .brand__inner {
+    padding: 1rem;
   }
   .catalog__item-link {
     gap: 1rem;
@@ -3144,7 +3147,7 @@ h1 {
     width: calc(100% - 5.6rem - 6rem);
   }
   .brand__slider-item {
-    height: 5rem;
+    height: 4rem;
   }
   /* card */
   .card {

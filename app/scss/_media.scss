@@ -169,16 +169,12 @@
     height: 9.8rem;
   }
 
-  .brand__inner {
-    display: flex;
-  }
-
   .brand__slider {
     width: calc(100% - 10rem);
   }
 
   .brand__slider-item {
-    height: 7rem;
+    height: 6rem;
   }
 
   /* card */
@@ -545,6 +541,10 @@
 
   /* /header */
 
+  .brand__inner {
+    display: flex;
+  }
+
   .card__tags-item {
     font-size: 1.4rem;
   }
@@ -664,6 +664,10 @@
   .hero .swiper-pagination-custom,
   .hero .swiper-pagination-fraction {
     bottom: 2rem;
+  }
+
+  .brand__inner {
+    padding: 1rem;
   }
 
   .catalog__item-link {
@@ -881,7 +885,7 @@
   }
 
   .brand__slider-item {
-    height: 5rem;
+    height: 4rem;
   }
 
   /* card */
