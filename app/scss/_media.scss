@@ -545,6 +545,10 @@
 
   /* /header */
 
+  .card__tags-item {
+    font-size: 1.4rem;
+  }
+
   .service__content-icon {
     height: 4.4rem;
   }
@@ -1852,8 +1856,17 @@
 @media (max-width: 480px) {}
 
 @media (max-width: 380px) {
+
   .panel,
   .panel__items {
     gap: 2rem;
+  }
+
+  .card__wrap-item {
+    flex-wrap: wrap;
+  }
+
+  .card__price {
+    width: 100%;
   }
 }

@@ -2029,12 +2029,6 @@ h1 {
 .trade-in__slider {
   overflow: hidden;
 }
-.trade-in .card__name {
-  margin-bottom: 1.3rem;
-}
-.trade-in .card__price {
-  margin-bottom: 1rem;
-}
 
 .fact__items {
   display: flex;
@@ -2890,6 +2884,9 @@ h1 {
     max-width: unset;
   }
   /* /header */
+  .card__tags-item {
+    font-size: 1.4rem;
+  }
   .service__content-icon {
     height: 4.4rem;
   }
@@ -3865,5 +3862,11 @@ h1 {
   .panel,
   .panel__items {
     gap: 2rem;
+  }
+  .card__wrap-item {
+    flex-wrap: wrap;
+  }
+  .card__price {
+    width: 100%;
   }
 }
