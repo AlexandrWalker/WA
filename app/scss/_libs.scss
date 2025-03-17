@@ -64,10 +64,11 @@
 
 .hero .swiper-pagination {
   padding: 0;
-  background-color: transparent;
   border-radius: 98rem;
   font-size: 0;
   line-height: unset;
+  background-color: var(--primary-black-10);
+  backdrop-filter: blur(4.2px);
 }
 
 .hero .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
