@@ -450,72 +450,82 @@
   }
 
   .service__item:nth-child(1) {
+    height: 34rem;
     gap: 1.5rem;
+  }
 
-    .service__item-title {
-      font-weight: 600;
-      font-size: 6rem;
-      line-height: 100%;
-    }
+  .service__item:nth-child(1) .service__item-title {
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 100%;
+  }
 
-    .service__item-text {
-      font-weight: 500;
-    }
+  .service__item:nth-child(1) .service__item-text {
+    font-weight: 500;
+  }
 
-    .service__item-img {}
+  .service__item:nth-child(1) .service__item-img {
+    height: 34.3rem;
   }
 
   .service__item:nth-child(2) {
-    .service__item-img {
-      height: 15.6rem;
-    }
+    height: 34rem;
+  }
+
+  .service__item:nth-child(2) .service__item-img {
+    height: 25.1rem;
   }
 
   .service__item:nth-child(3) {
+    height: 34rem;
     color: var(--white);
+  }
 
-    .service__item-img {
-      height: 24.4rem;
-      right: -12.963rem;
-      bottom: -7.754rem;
-
-    }
+  .service__item:nth-child(3) .service__item-img {
+    height: 32.4rem;
+    right: -17.05rem;
+    bottom: -8rem;
   }
 
   .service__item:nth-child(4) {
     height: 16.1rem;
+  }
 
-    .service__item-img {
-      height: 31rem;
-      right: -0.6rem;
-      bottom: -14.7rem;
-    }
+  .service__item:nth-child(4) .service__item-img {
+    height: 45.2rem;
+    right: -1.8rem;
+    bottom: -22.2rem;
   }
 
   .service__item:nth-child(5) {
     height: 16.1rem;
+  }
 
-    .service__item-img {
-      height: 13.8rem;
-      right: 0;
-      bottom: -0.9rem;
-    }
+  .service__item:nth-child(5) .service__item-img {
+    height: 20rem;
+    right: 0;
+    bottom: 0;
   }
 
   .service__item:nth-child(6) {
     height: 16.1rem;
+  }
 
-    .service__item-img {
-      height: 15rem;
-      right: -4.4rem;
-      bottom: -3.8rem;
-    }
+  .service__item:nth-child(6) .service__item-img {
+    height: 15rem;
+    right: -2rem;
+    bottom: -2.4rem;
   }
 
   /* review */
-  .review__item {
+  .uslugi__items {
     gap: 2rem;
+    flex-wrap: wrap;
     padding: 3rem 6.3rem 4rem 3rem;
+  }
+
+  .uslugi__item {
+    font-size: 1.6rem;
   }
 
   .review__item-rating {
@@ -531,6 +541,13 @@
   .review__item-date {
     font-size: 1.4rem;
   }
+
+  .review__item {
+    width: 25%;
+  }
+
+  /* uslugi */
+  .info__content {}
 
   /* faq */
   .faq__item-title {
@@ -615,9 +632,6 @@
   }
 
   /* uslugi */
-  .uslugi__content {
-    padding: 2rem;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -731,80 +745,61 @@
 
   .service__item:nth-child(1) {
     width: calc(50% - 0.66666rem);
-    height: 25.6rem;
     background-image: url(./../images/service/service-bg-desktop-1.png);
   }
 
   .service__item:nth-child(2) {
     width: calc(25% - 0.66666rem);
-    height: 25.6rem;
     background-image: url(./../images/service/service-bg-desktop-2.png);
   }
 
   .service__item:nth-child(3) {
     width: calc(25% - 0.66666rem);
-    height: 25.6rem;
     background-image: url(./../images/service/service-bg-desktop-3.png);
+  }
+
+  .service__item:nth-child(3) .service__item-text {
+    display: block;
+    color: var(--white);
   }
 
   .service__item:nth-child(4) {
     width: calc(33.333% - 0.66666rem);
-    height: 12.1rem;
   }
+
+  .service__item:nth-child(4) .service__item-text {
+    display: block;
+    color: var(--primary-black);
+  }
+
 
   .service__item:nth-child(5) {
     width: calc(33.333% - 0.66666rem);
-    height: 12.1rem;
   }
+
+  .service__item:nth-child(5) .service__item-text {
+    display: block;
+    color: var(--primary-black);
+  }
+
 
   .service__item:nth-child(6) {
     width: calc(33.333% - 0.66666rem);
-    height: 12.1rem;
     background-size: 100% 100%;
     background-image: unset;
   }
 
-  .service__item:nth-child(1) .service__item-img {
-    height: 25.858rem;
-    right: 0;
-    bottom: -2.458rem;
+  .service__item:nth-child(6) .service__item-title {
+    color: var(--primary-black);
   }
 
-  .service__item:nth-child(2) .service__item-img {
-    height: 1.56rem;
-    right: -1.3rem;
-    bottom: -2.1rem;
+  .service__item:nth-child(6) .service__item-text {
+    display: block;
+    color: var(--primary-black);
   }
-
-  .service__item:nth-child(3) .service__item-img {}
-
-  .service__item:nth-child(4) .service__item-img {}
-
-  .service__item:nth-child(5) .service__item-img {}
-
-  .service__item:nth-child(6) .service__item-img {}
 
   .info__head {
     margin-bottom: 3rem;
-  }
-
-  .uslugi__items {
-    gap: 2rem;
-  }
-
-  .uslugi__item {
-    width: calc(33.33333% - 1.33333rem);
-  }
-
-  .uslugi__item:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)) {
-    display: block;
-  }
-
-  .uslugi__btn {
-    width: fit-content;
-    min-width: 17.9rem;
-    height: 4rem;
-    margin: 0 auto;
   }
 }
 
@@ -1020,7 +1015,6 @@
   .service__item-title {
     font-weight: 600;
     font-size: 2.4rem;
-    line-height: 142%;
     width: auto;
   }
 
@@ -1032,6 +1026,7 @@
   }
 
   .service__item:nth-child(1) {
+    height: 25.6rem;
     gap: 1.5rem;
 
     .service__item-title {
@@ -1043,41 +1038,57 @@
     .service__item-text {
       font-weight: 500;
     }
+  }
 
-    .service__item-img {}
+  .service__item:nth-child(1) .service__item-img {
+    height: 25.858rem;
+    right: 0;
+    bottom: -2.458rem;
   }
 
   .service__item:nth-child(2) {
-    .service__item-img {
-      height: 15.6rem;
-    }
+    height: 25.6rem;
+  }
+
+  .service__item:nth-child(2) .service__item-img {
+    height: 1.56rem;
+    right: -1.3rem;
+    bottom: -2.1rem;
   }
 
   .service__item:nth-child(3) {
+    height: 25.6rem;
     color: var(--white);
+  }
 
-    .service__item-img {
-      height: 24.4rem;
-      right: -12.963rem;
-      bottom: -7.754rem;
-
-    }
+  .service__item:nth-child(3) .service__item-img {
+    height: 24.4rem;
+    right: -12.963rem;
+    bottom: -7.754rem;
   }
 
   .service__item:nth-child(4) {
-    .service__item-img {
-      height: 31rem;
-      right: -0.6rem;
-      bottom: -14.7rem;
-    }
+    height: 12.1rem;
+  }
+
+  .service__item:nth-child(4) .service__item-img {
+    height: 31rem;
+    right: -0.6rem;
+    bottom: -14.7rem;
   }
 
   .service__item:nth-child(5) {
-    .service__item-img {
-      height: 13.8rem;
-      right: 0;
-      bottom: -0.9rem;
-    }
+    height: 12.1rem;
+  }
+
+  .service__item:nth-child(5) .service__item-img {
+    height: 13.8rem;
+    right: 0;
+    bottom: -0.9rem;
+  }
+
+  .service__item:nth-child(6) {
+    height: 12.1rem;
   }
 
   .service__item:nth-child(6) {
@@ -1086,6 +1097,42 @@
       right: -4.4rem;
       bottom: -3.8rem;
     }
+  }
+
+  /* uslugi */
+  .uslugi__items {
+    flex-direction: row;
+  }
+
+  .uslugi__item {
+    height: 27.7rem;
+  }
+
+  .uslugi__content {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .uslugi__content-title {
+    font-size: 2rem;
+  }
+
+
+  .uslugi__content-btn {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .uslugi__banner {
+    height: 27.7rem;
+    position: relative;
+  }
+
+  .uslugi__banner-img {
+    height: 46.8rem;
+    right: -2.14rem;
+    bottom: -15rem;
   }
 
   .card__fav {
@@ -1158,10 +1205,6 @@
   .contact__item-link {
     color: var(--primary-black);
     font-weight: 700;
-  }
-
-  .uslugi__content {
-    padding: 1.5rem 2rem;
   }
 }
 
@@ -1621,12 +1664,67 @@
     }
   }
 
-  .info__head {
-    margin-bottom: 2rem;
-  }
-
+  /* uslugi */
   .uslugi__items {
     gap: 1rem;
+  }
+
+  .uslugi__item {
+    height: 12.8rem;
+  }
+
+  .uslugi__content {
+    justify-content: center;
+    gap: 3rem;
+    padding: 3rem 3.5rem;
+  }
+
+  .uslugi__content-icon {
+    font-size: 4.6rem;
+  }
+
+  .uslugi__content-wrap {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .uslugi__content-title {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 100%;
+  }
+
+  .uslugi__content-btn {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .uslugi__content-btn::before {
+    font-size: 1.2rem;
+  }
+
+  .uslugi__banner {
+    height: 12.8rem;
+    padding: 2.5rem 3rem;
+  }
+
+  .uslugi__banner-title {
+    font-size: 3.4rem;
+  }
+
+  .uslugi__banner-btn {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .uslugi__banner-img {
+    height: 46.8rem;
+    bottom: -25.7rem;
+    right: 0;
+  }
+
+  .info__head {
+    margin-bottom: 2rem;
   }
 
   .faq__item-title {
@@ -2242,10 +2340,6 @@
   /* service */
 
   /* uslugi */
-  .uslugi__btn {
-    height: 4rem;
-    font-size: 1.2rem;
-  }
 
   /* review */
   .review__item-rating {
