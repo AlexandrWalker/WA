@@ -1,0 +1,12 @@
+{
+ "name": "Белое Яблоко",
+ "short_name": "Белое Яблоко",
+ "start_url": "https://alexandrwalker.github.io/WA/#!",
+ "description": "",
+ "display": "standalone",
+ "orientation": "any",
+ "theme_color": "#ffff00",
+ "background_color": "#ffffff",
+ "icons": [],
+ "scope": "https://alexandrwalker.github.io/WA/#!"
+}

@@ -92,6 +92,9 @@ function building() {
     'app/css/style.css',
     'app/css/icomoon-style.css',
 
+    'app/*.js',
+    'app/*.json',
+
     'app/js/*.js',
     '!app/js/main.min.js',
 
