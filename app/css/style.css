@@ -1098,6 +1098,9 @@ h1 {
   color: var(--primary-black);
 }
 .reg__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--primary-color);
   border-radius: var(--b-radius-7);
   font-weight: 800;
