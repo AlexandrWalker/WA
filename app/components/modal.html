@@ -95,12 +95,12 @@
     <div class="modal__box">
       <button class="modal__close-btn close">
       </button>
-      <div class="reg__content">
-        <h2 class="reg__title">
+      <div class="modal__content">
+        <h2 class="modal__title">
           вход или регистрация
         </h2>
         <input class="input reg__input" type="text" placeholder="Телефон или почта">
-        <a class="reg__btn" href="#!">
+        <a class="reg__btn modal__btn" href="#!" data-id="modal-code">
           Получить код
         </a>
         <a class="reg__link yandex" href="/">
@@ -121,6 +121,33 @@
           Нажимая кнопку «Получить код», вы соглашаетесь с <a href="/">политикой конфиденциальности и условиями
             оферты</a>
         </p>
+      </div>
+    </div>
+  </div>
+  <!-- Код попап -->
+  <div class="modal code" id="modal-code">
+    <div class="modal__box">
+      <button class="modal__close-btn close">
+      </button>
+      <div class="modal__content code__content">
+        <h2 class="modal__title">
+          вход или регистрация
+        </h2>
+        <p class="code__subtitle">
+          Мы отправили код подтверждения на номер <span>+7(***) ***-12-45</span> <a href="/">изменить</a>
+        </p>
+        <div class="code__inputs">
+          <input class="code__input" type="text">
+          <input class="code__input" type="text">
+          <input class="code__input" type="text">
+          <input class="code__input" type="text">
+        </div>
+        <p class="code__text">
+          Проверка данных...
+        </p>
+        <a class="code__link" href="/">
+          Отправить код на электронную почту
+        </a>
       </div>
     </div>
   </div>

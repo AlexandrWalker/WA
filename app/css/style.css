@@ -962,6 +962,17 @@ h1 {
   background-color: transparent;
   overflow: visible;
 }
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.modal__title {
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 176%;
+  text-align: center;
+}
 .modal__btn {
   cursor: pointer;
 }
@@ -1076,17 +1087,6 @@ h1 {
   color: var(--primary-black);
   opacity: 0.8;
 }
-.reg__content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.reg__title {
-  font-weight: 500;
-  font-size: 3.4rem;
-  line-height: 176%;
-  text-align: center;
-}
 .reg__input {
   color: var(--primary-black);
   text-align: center;
@@ -1151,6 +1151,61 @@ h1 {
 }
 .reg__text a {
   color: var(--primary-color);
+}
+
+.code .modal__box {
+  background-color: var(--white);
+  border-radius: var(--b-radius-8);
+  padding: 3rem 3.7rem;
+  max-width: 49.4rem;
+}
+.code .modal__close-btn {
+  top: 1rem;
+  right: 1rem;
+  opacity: 1;
+  visibility: visible;
+}
+.code .close::before,
+.code .close::after {
+  width: 2.8rem;
+  height: 0.1rem;
+  color: var(--primary-black);
+  opacity: 0.8;
+}
+.code__content {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 125%;
+  text-align: center;
+}
+.code__subtitle a {
+  color: var(--primary-color);
+}
+.code__link {
+  color: var(--primary-color);
+}
+.code__inputs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.code__input {
+  width: 7rem;
+  height: 7rem;
+  border-radius: var(--b-radius-8);
+  background-color: var(--primary-black);
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 33px;
+  color: rgba(235, 235, 245, 0.4);
+  border: 0.5px solid #272729;
+  box-shadow: inset 0px 0px 11.1px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(4.2px);
+  padding: 0;
+}
+.code__input:active, .code__input:focus {
+  color: #EBEBF5;
 }
 
 .header {
@@ -1456,6 +1511,7 @@ h1 {
   object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
+  z-index: -1;
 }
 .panel .favorite .panel__link-item {
   color: var(--primary-white);

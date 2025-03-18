@@ -267,7 +267,7 @@
     };
 
 
-    
+
     /**
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
@@ -448,6 +448,13 @@
 
         Array.from(openBtn, openButton => {
           openButton.addEventListener('click', e => {
+
+            let open = document.getElementsByClassName('open');
+
+            if (open.length > 0 && open[0] !== this) {
+              open[0].classList.remove('open');
+            }
+
             let modalId = e.target.getAttribute('data-id');
             document.getElementById(modalId).classList.add('open');
             document.body.classList.add('no-scroll');
