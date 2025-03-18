@@ -67,9 +67,6 @@
       fadeEffect: {
         crossFade: false
       },
-      mousewheel: {
-        forceToAxis: true,
-      },
       speed: 600,
       autoplay: {
         delay: 5000,
@@ -123,30 +120,6 @@
       },
     });
 
-    // var fact__slider = new Swiper(".fact__slider-init", {
-    //   slidesPerView: 1,
-    //   slidesPerGroup: 1,
-    //   loop: true,
-    //   speed: 600,
-    //   mousewheel: {
-    //     forceToAxis: true,
-    //   },
-    //   pagination: {
-    //     el: ".fact__slider-pagination",
-    //     clickable: true
-    //   },
-    //   navigation: false,
-    //   breakpoints: {
-    //     601: {
-    //       pagination: false,
-    //       navigation: {
-    //         nextEl: ".swiper-button-next",
-    //         prevEl: ".swiper-button-prev",
-    //       },
-    //     },
-    //   },
-    // });
-
     var review__slider = new Swiper(".review__slider-init", {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -163,12 +136,12 @@
           slidesPerView: 2,
           spaceBetween: 10,
         },
-        769: {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
         992: {
-          slidesPerView: 4,
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1441: {
+          slidesPerView: 3,
           spaceBetween: 20,
         },
       },
@@ -225,6 +198,30 @@
       },
     });
 
+    var fact__slider = new Swiper(".fact__slider-init", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      loop: true,
+      speed: 600,
+      mousewheel: {
+        forceToAxis: true,
+      },
+      pagination: {
+        el: ".fact__slider-pagination",
+        clickable: true
+      },
+      breakpoints: {
+        601: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        },
+      },
+    });
+
 
 
     /**
@@ -270,7 +267,7 @@
     };
 
 
-
+    
     /**
      * Инициализирует аккордеоны на странице.
      * Обрабатывает переключение видимости элементов и кнопки закрытия.
