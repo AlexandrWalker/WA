@@ -2491,12 +2491,21 @@ h1 {
   border-radius: 50%;
   background-color: var(--white);
   flex-shrink: 0;
-  z-index: 2;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 .uslugi__banner-btn::before {
   font-size: 0.7rem;
   line-height: 100%;
   color: var(--primary-black);
+  transition: all 0.3s ease;
+}
+.uslugi__banner-btn:hover {
+  background-color: var(--primary-color);
+}
+.uslugi__banner-btn:hover::before {
+  color: var(--white);
 }
 .uslugi__banner-img {
   height: 33rem;

@@ -1160,12 +1160,23 @@
       border-radius: 50%;
       background-color: var(--white);
       flex-shrink: 0;
-      z-index: 2;
+      z-index: 5;
+      cursor: pointer;
+      transition: all 0.3s ease;
 
       &::before {
         font-size: 0.7rem;
         line-height: 100%;
         color: var(--primary-black);
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: var(--primary-color);
+
+        &::before  {
+          color: var(--white);
+        }
       }
     }
 
