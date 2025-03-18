@@ -1057,6 +1057,99 @@ h1 {
   content: "\e910";
 }
 
+.reg .modal__box {
+  background-color: var(--white);
+  border-radius: var(--b-radius-8);
+  padding: 3rem 3.7rem;
+  max-width: 49.4rem;
+}
+.reg .modal__close-btn {
+  top: 1rem;
+  right: 1rem;
+  opacity: 1;
+  visibility: visible;
+}
+.reg .close::before,
+.reg .close::after {
+  width: 2.8rem;
+  height: 0.1rem;
+  color: var(--primary-black);
+  opacity: 0.8;
+}
+.reg__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.reg__title {
+  font-weight: 500;
+  font-size: 3.4rem;
+  line-height: 176%;
+  text-align: center;
+}
+.reg__input {
+  color: var(--primary-black);
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.375;
+}
+.reg__input::placeholder {
+  color: var(--primary-black);
+}
+.reg__btn {
+  background-color: var(--primary-color);
+  border-radius: var(--b-radius-7);
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 143%;
+  text-align: center;
+  color: var(--primary-white);
+  width: 100%;
+  height: 5rem;
+}
+.reg__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--b-radius-7);
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 143%;
+  text-align: center;
+  color: var(--primary-white);
+  width: 100%;
+  height: 5rem;
+  padding: 0 2rem;
+}
+.reg__link-logo {
+  width: 3.4rem;
+  height: 3.4rem;
+  flex-shrink: 0;
+}
+.reg__link-avatar {
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.reg__link.yandex {
+  background-color: var(--primary-black);
+}
+.reg__link.vk {
+  background-color: #0077FF;
+}
+.reg__text {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 143%;
+  max-width: 34.1rem;
+  margin: 0 auto 0 0;
+}
+.reg__text a {
+  color: var(--primary-color);
+}
+
 .header {
   position: sticky;
   top: 0;

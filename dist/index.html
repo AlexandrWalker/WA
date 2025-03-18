@@ -99,7 +99,7 @@
             </div>
             <div class="panel__item person">
               <div class="panel__wrap">
-                <a class="panel__link" href="#!">
+                <a class="panel__link modal__btn" href="#!" data-id="modal-reg">
                   <div class="panel__link-wrap">
                     <i class="icon-person"></i>
                     <img class="panel__link-img" src="./images/avatar.png" alt="">
@@ -3836,31 +3836,37 @@
       </div>
     </div>
     <!-- Регистрация попап -->
-    <div class="modal" id="modal-reg">
+    <div class="modal reg" id="modal-reg">
       <div class="modal__box">
         <button class="modal__close-btn close">
         </button>
-        <h2>
-          вход или регистрация
-        </h2>
-        <input type="text">
-        <a href="#!">
-          Получить код
-        </a>
-        <a href="/">
-          <img src="" alt="">
-          <span>
-            Войти с Яндекс ID
-          </span>
-          <img src="" alt="">
-        </a>
-        <a href="/">
-          <img src="" alt="">
-          <span>
-            Войти через VK ID
-          </span>
-          <img src="" alt="">
-        </a>
+        <div class="reg__content">
+          <h2 class="reg__title">
+            вход или регистрация
+          </h2>
+          <input class="input reg__input" type="text" placeholder="Телефон или почта">
+          <a class="reg__btn" href="#!">
+            Получить код
+          </a>
+          <a class="reg__link yandex" href="/">
+            <img class="reg__link-logo" src="./../images/tmp/yandex.svg" alt="">
+            <span class="reg__link-text">
+              Войти с Яндекс ID
+            </span>
+            <img class="reg__link-avatar" src="./../images/tmp/avatar.svg" alt="">
+          </a>
+          <a class="reg__link vk" href="/">
+            <img class="reg__link-logo" src="./../images/tmp/vk.svg" alt="">
+            <span class="reg__link-text">
+              Войти через VK ID
+            </span>
+            <img class="reg__link-avatar" src="./../images/tmp/avatar.svg" alt="">
+          </a>
+          <p class="reg__text">
+            Нажимая кнопку «Получить код», вы соглашаетесь с <a href="/">политикой конфиденциальности и условиями
+              оферты</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
