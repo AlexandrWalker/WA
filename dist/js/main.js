@@ -400,6 +400,52 @@
 
 
     /**
+     * Управляет поведением меню-бургера.
+     */
+    function burgerNav() {
+      const burger = document.querySelector('.burger');
+      const menu = document.querySelector('.burger-menu');
+      const closeButton = document.querySelector('.burger-menu__close');
+      const overlay = document.querySelector('.burger-menu__overlay');
+      const elements = document.querySelectorAll('.menu__list-link');
+
+      /**
+       * Переключает видимость меню.
+       */
+      const toggleMenu = () => {
+        const isOpened = burger.classList.toggle('burger--opened');
+        menu.classList.toggle('burger-menu--opened', isOpened);
+        document.body.classList.toggle('no-scroll');
+      };
+
+      /**
+       * Закрывает меню.
+       */
+      const closeMenu = () => {
+        burger.classList.remove('burger--opened');
+        menu.classList.remove('burger-menu--opened');
+        document.body.classList.remove('no-scroll');
+      };
+
+      // Открытие/закрытие меню по клику на бургер
+      burger.addEventListener('click', toggleMenu);
+
+      // Закрытие меню по клику на кнопку закрытия или на overlay
+      [closeButton, overlay].forEach((element) => element.addEventListener('click', closeMenu), document.body.classList.remove('no-scroll'));
+
+      // Закрытие меню при клике вне области меню и бургера
+      document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target) && !burger.contains(event.target)) {
+          closeMenu();
+        }
+      });
+
+      document.querySelectorAll('.menu__list-link').forEach((element) => element.addEventListener('click', closeMenu));
+    };
+
+
+
+    /**
      * Управляет переключением кнопки в избранное на карточке товара.
      * Добавляет и удаляет классы активности для кнопок в избранное.
      */
@@ -432,6 +478,19 @@
 
 
     /**
+     * Добавил скрипт перехода фокуса у инпутов при введения кода на jQuery
+     */
+    $('.modal__code-input').keyup(function () {
+      if ($(this).val().match(/^\d{1}$/)) {
+        $(this).next('.modal__code-input').focus();
+      } else {
+        $(this).val('');
+      }
+    });
+
+
+
+    /**
      * Активация любого количества модальных окон
      */
     function modalFunc() {
@@ -456,6 +515,7 @@
             }
 
             let modalId = e.target.getAttribute('data-id');
+            console.log(modalId);
             document.getElementById(modalId).classList.add('open');
             document.body.classList.add('no-scroll');
 
@@ -537,38 +597,11 @@
 
 
 
-    /**
-     * Активация занели для моб. версии при скролле
-     */
-    // function panelFunc() {
-    //   const panel = document.querySelector('.panel');
-
-    //   const openPanel = () => {
-    //     panel.classList.add('panel--active');
-    //   };
-
-    //   const closePanel = () => {
-    //     panel.classList.remove('panel--active');
-    //   };
-
-    //   window.addEventListener('scroll', function (e) {
-
-    //     let scrollPosition = window.scrollY;
-
-    //     if (scrollPosition != 0) {
-    //       openPanel();
-    //     } else {
-    //       closePanel();
-    //     }
-    //   });
-    // };
-
-    // panelFunc();
-
     switchFunc();
     accordionFunc();
     tabsFunc();
     dropdownFunc();
+    burgerNav();
     favFunc();
     modalFunc();
 

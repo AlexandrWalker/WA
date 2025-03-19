@@ -36,11 +36,11 @@
           </a>
           <!-- Геопозиция -->
           <div class="header__geo">
-            <a class="header__geo-link" href="#!">
+            <span class="header__geo-link modal__btn" data-id="modal-city">
               <img class="header__geo-img" src="images/icons/geo.svg" alt="">
               Новосибирск
               <i class="header__geo-icon icon-chevron-right"></i>
-            </a>
+            </span>
           </div>
           <!-- Форма поиска -->
           <form id="modal-search" class="search__form" action="">
@@ -49,6 +49,41 @@
             <button class="search__form-btn">
               <i class="icon-loupe"></i>
             </button>
+            <div class="search__dropdown">
+              <img class="search__dropdown-icon" src="./images/icons/triangle.svg" alt="">
+              <div class="search__dropdown-head">
+                <p>История</p>
+                <a href="#!">
+                  Очистить
+                </a>
+              </div>
+              <ul class="search__dropdown-list">
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 Plus
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+              </ul>
+            </div>
           </form>
           <!-- Смена темы -->
           <button class="switch__btn">
@@ -71,12 +106,29 @@
                   </a>
                 </div>
               </div>
-              <div class="panel__item">
+              <div class="panel__item connection">
                 <div class="panel__wrap">
                   <a class="panel__link" href="#!">
                     <i class="icon-connection"></i>
                     <span class="panel__link-text">Связаться</span>
                   </a>
+                  <div class="panel__inner">
+                    <img class="panel__inner-icon" src="./images/icons/triangle.svg" alt="">
+                    <ul class="panel__list">
+                      <li>
+                        <a href="/">
+                          <img src="./images/icons/telegram.svg" alt="">
+                          Telegram
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          <img src="./images/icons/whatsapp.svg" alt="">
+                          WhatsApp
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="panel__item favorite">
@@ -107,6 +159,36 @@
                   </div>
                   <span class="panel__link-item"></span>
                   <span class="panel__link-text">войти</span>
+                  <div class="panel__inner">
+                    <img class="panel__inner-icon" src="./images/icons/triangle.svg" alt="">
+                    <ul class="panel__list">
+                      <li>
+                        <a href="/">
+                          ​Юлия
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Личный кабинет
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          История заказов
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Персональные предложения
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Выйти
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </span>
               </div>
             </div>
@@ -198,13 +280,6 @@
               </li>
             </ul>
           </nav>
-          <!-- Кнопка телефона -->
-          <!-- <div class="header__phone hidden">
-            <a class="header__phone-link" href="tel:+73832052355">
-              <i class="header__phone-icon icon-phone"></i>
-              8 (383) 205 23 55
-            </a>
-          </div> -->
         </div>
       </div>
       <!--=include popup.html-->

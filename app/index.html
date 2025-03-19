@@ -36,11 +36,11 @@
           </a>
           <!-- Геопозиция -->
           <div class="header__geo">
-            <a class="header__geo-link" href="#!">
+            <span class="header__geo-link modal__btn" data-id="modal-city">
               <img class="header__geo-img" src="images/icons/geo.svg" alt="">
               Новосибирск
               <i class="header__geo-icon icon-chevron-right"></i>
-            </a>
+            </span>
           </div>
           <!-- Форма поиска -->
           <form id="modal-search" class="search__form" action="">
@@ -49,6 +49,41 @@
             <button class="search__form-btn">
               <i class="icon-loupe"></i>
             </button>
+            <div class="search__dropdown">
+              <img class="search__dropdown-icon" src="./images/icons/triangle.svg" alt="">
+              <div class="search__dropdown-head">
+                <p>История</p>
+                <a href="#!">
+                  Очистить
+                </a>
+              </div>
+              <ul class="search__dropdown-list">
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 Plus
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+              </ul>
+            </div>
           </form>
           <!-- Смена темы -->
           <button class="switch__btn">
@@ -71,12 +106,29 @@
                   </a>
                 </div>
               </div>
-              <div class="panel__item">
+              <div class="panel__item connection">
                 <div class="panel__wrap">
                   <a class="panel__link" href="#!">
                     <i class="icon-connection"></i>
                     <span class="panel__link-text">Связаться</span>
                   </a>
+                  <div class="panel__inner">
+                    <img class="panel__inner-icon" src="./images/icons/triangle.svg" alt="">
+                    <ul class="panel__list">
+                      <li>
+                        <a href="/">
+                          <img src="./images/icons/telegram.svg" alt="">
+                          Telegram
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          <img src="./images/icons/whatsapp.svg" alt="">
+                          WhatsApp
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="panel__item favorite">
@@ -107,6 +159,36 @@
                   </div>
                   <span class="panel__link-item"></span>
                   <span class="panel__link-text">войти</span>
+                  <div class="panel__inner">
+                    <img class="panel__inner-icon" src="./images/icons/triangle.svg" alt="">
+                    <ul class="panel__list">
+                      <li>
+                        <a href="/">
+                          ​Юлия
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Личный кабинет
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          История заказов
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Персональные предложения
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/">
+                          Выйти
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </span>
               </div>
             </div>
@@ -198,24 +280,78 @@
               </li>
             </ul>
           </nav>
-          <!-- Кнопка телефона -->
-          <!-- <div class="header__phone hidden">
-            <a class="header__phone-link" href="tel:+73832052355">
-              <i class="header__phone-icon icon-phone"></i>
-              8 (383) 205 23 55
-            </a>
-          </div> -->
         </div>
       </div>
       <!-- Попап каталога товаров -->
       <div class="menu container menu__container tabs dropdown__content">
-        <div class="menu__inner">
-          <h2 class="menu__title block-title">
-          </h2>
+        <div class="menu__head">
+          <!-- Форма поиска -->
+          <form id="modal-search" class="search__form" action="">
+            <input class="search__form-input input" type="text" placeholder="Интеллектуальный поиск">
+            <i class="search__form-icon icon-shine"></i>
+            <button class="search__form-btn">
+              <i class="icon-loupe"></i>
+            </button>
+            <div class="search__dropdown">
+              <img class="search__dropdown-icon" src="./images/icons/triangle.svg" alt="">
+              <div class="search__dropdown-head">
+                <p>История</p>
+                <a href="#!">
+                  Очистить
+                </a>
+              </div>
+              <ul class="search__dropdown-list">
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 Plus
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <!-- Кнопка закрытия -->
           <span class="close dropdown__close"></span>
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <span class="header__geo-link modal__btn" data-id="modal-city">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+              <i class="header__geo-icon icon-chevron-right"></i>
+            </span>
+          </div>
+          <!-- Смена темы -->
+          <button class="switch__btn">
+            <span class="switch__btn-item light-mode">
+              <i class="icon-sun"></i>
+            </span>
+            <span class="switch__btn-circle"></span>
+            <span class="switch__btn-item dark-mode">
+              <i class="icon-moon"></i>
+            </span>
+          </button>
+        </div>
       
+        <div class="menu__inner">
           <div class="menu__items tabs__btns">
-      
             <div class="menu__wrap">
               <div class="menu__item accordion__item">
                 <div class="accordion__item-head tabs__btn" data-tab="popular-1">
@@ -815,9 +951,9 @@
                 </div>
               </div>
             </div>
-      
           </div>
         </div>
+      
         <div class="popular__inner">
           <h2 class="popular__title block-title">
             Популярные товары в этой категории
@@ -1009,6 +1145,131 @@
         </div>
       </div>
       <div class="menu__overlay"></div>
+      
+      <!-- Попап бургер -->
+      <div class="menu burger-menu container menu__container">
+        <div class="menu__head">
+          <!-- Форма поиска -->
+          <form id="modal-search" class="search__form" action="">
+            <input class="search__form-input input" type="text" placeholder="Интеллектуальный поиск">
+            <i class="search__form-icon icon-shine"></i>
+            <button class="search__form-btn">
+              <i class="icon-loupe"></i>
+            </button>
+            <div class="search__dropdown">
+              <img class="search__dropdown-icon" src="./images/icons/triangle.svg" alt="">
+              <div class="search__dropdown-head">
+                <p>История</p>
+                <a href="#!">
+                  Очистить
+                </a>
+              </div>
+              <ul class="search__dropdown-list">
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 Plus
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+                <li>
+                  <a href="/">
+                    iPhone 16 pro
+                  </a>
+                  <span class="search__dropdown-remove"></span>
+                </li>
+              </ul>
+            </div>
+          </form>
+          <!-- Кнопка закрытия -->
+          <span class="close burger-menu__close"></span>
+          <!-- Геопозиция -->
+          <div class="header__geo">
+            <span class="header__geo-link modal__btn" data-id="modal-city">
+              <img class="header__geo-img" src="images/icons/geo.svg" alt="">
+              Новосибирск
+              <i class="header__geo-icon icon-chevron-right"></i>
+            </span>
+          </div>
+          <!-- Смена темы -->
+          <button class="switch__btn">
+            <span class="switch__btn-item light-mode">
+              <i class="icon-sun"></i>
+            </span>
+            <span class="switch__btn-circle"></span>
+            <span class="switch__btn-item dark-mode">
+              <i class="icon-moon"></i>
+            </span>
+          </button>
+        </div>
+      
+        <div class="menu__inner">
+          <ul class="menu__list">
+            <li>
+              <a class="menu__list-link" href="/">
+                Каталог
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Для бизнеса
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Ремонт
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Trade-in
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Гарантия
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Блог
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Привилегия
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                О компании
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Оплата и доставка
+              </a>
+            </li>
+            <li>
+              <a class="menu__list-link" href="/">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="burger-menu__overlay"></div>
     </header>
 <!-- Содержимое сайта -->
 <main class="main">
@@ -3723,19 +3984,19 @@
         <!-- Способы оплаты -->
         <div class="footer__pay">
           <div class="footer__pay-item">
-            <img class="footer__pay-img" src="images/pay/mastercard.svg" alt="">
+            <img class="footer__pay-img" src="./images/pay/mastercard.svg" alt="">
           </div>
           <div class="footer__pay-item">
-            <img class="footer__pay-img" src="images/pay/mir.svg" alt="">
+            <img class="footer__pay-img" src="./images/pay/mir.svg" alt="">
           </div>
           <div class="footer__pay-item">
-            <img class="footer__pay-img" src="images/pay/visa.svg" alt="">
+            <img class="footer__pay-img" src="./images/pay/visa.svg" alt="">
           </div>
           <div class="footer__pay-item">
-            <img class="footer__pay-img" src="images/pay/yukassa.svg" alt="">
+            <img class="footer__pay-img" src="./images/pay/yukassa.svg" alt="">
           </div>
           <div class="footer__pay-item">
-            <img class="footer__pay-img" src="images/pay/sber.svg" alt="">
+            <img class="footer__pay-img" src="./images/pay/sber.svg" alt="">
           </div>
         </div>
       </div>
@@ -3809,8 +4070,6 @@
   <!-- Видео попап -->
   <div class="modal" id="modal-video">
     <div class="modal__box">
-      <button class="modal__close-btn close">
-      </button>
       <div class="video">
         <video class="video__item" src="./videos/video.mp4" controls></video>
       </div>
@@ -3819,8 +4078,6 @@
   <!-- Фильм попап -->
   <div class="modal" id="modal-movie">
     <div class="modal__box">
-      <button class="modal__close-btn close">
-      </button>
       <div class="video">
         <iframe class="modal__iframe" src="https://vk.com/video_ext.php?oid=-170242143&id=456242112&hd=3&autoplay=1"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"
@@ -3837,7 +4094,7 @@
     </div>
   </div>
   <!-- Регистрация попап -->
-  <div class="modal reg" id="modal-reg">
+  <div class="modal modal__reg" id="modal-reg">
     <div class="modal__box">
       <button class="modal__close-btn close">
       </button>
@@ -3845,25 +4102,25 @@
         <h2 class="modal__title">
           вход или регистрация
         </h2>
-        <input class="input reg__input" type="text" placeholder="Телефон или почта">
-        <a class="reg__btn modal__btn" href="#!" data-id="modal-code">
+        <input class="input modal__reg-input" type="text" placeholder="Телефон или почта">
+        <button class="modal__reg-btn modal__btn" href="#!" data-id="modal-code">
           Получить код
-        </a>
-        <a class="reg__link yandex" href="/">
-          <img class="reg__link-logo" src="./images/tmp/yandex.svg" alt="">
-          <span class="reg__link-text">
+        </button>
+        <a class="modal__reg-link yandex" href="/">
+          <img class="modal__reg-link--logo" src="./images/tmp/yandex.svg" alt="">
+          <span class="modal__reg-link--text">
             Войти с Яндекс ID
           </span>
-          <img class="reg__link-avatar" src="./images/tmp/avatar.svg" alt="">
+          <img class="modal__reg-link--avatar" src="./images/tmp/avatar.svg" alt="">
         </a>
-        <a class="reg__link vk" href="/">
-          <img class="reg__link-logo" src="./images/tmp/vk.svg" alt="">
-          <span class="reg__link-text">
+        <a class="modal__reg-link vk" href="/">
+          <img class="modal__reg-link--logo" src="./images/tmp/vk.svg" alt="">
+          <span class="modal__reg-link--text">
             Войти через VK ID
           </span>
-          <img class="reg__link-avatar" src="./images/tmp/avatar.svg" alt="">
+          <img class="modal__reg-link--avatar" src="./images/tmp/avatar.svg" alt="">
         </a>
-        <p class="reg__text">
+        <p class="modal__reg-text">
           Нажимая кнопку «Получить код», вы соглашаетесь с <a href="/">политикой конфиденциальности и условиями
             оферты</a>
         </p>
@@ -3871,7 +4128,7 @@
     </div>
   </div>
   <!-- Код попап -->
-  <div class="modal code" id="modal-code">
+  <div class="modal modal__reg modal__code" id="modal-code">
     <div class="modal__box">
       <button class="modal__close-btn close">
       </button>
@@ -3879,21 +4136,181 @@
         <h2 class="modal__title">
           вход или регистрация
         </h2>
-        <p class="code__subtitle">
-          Мы отправили код подтверждения на номер <span>+7(***) ***-12-45</span> <a href="/">изменить</a>
+        <p class="modal__code-subtitle">
+          Мы отправили код подтверждения на <br /> номер <span>+7(***) ***-12-45</span> <a href="/">изменить</a>
         </p>
-        <div class="code__inputs">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
+        <div class="modal__code-inputs">
+          <input class="modal__code-input" maxlength="1" type="text" autofocus>
+          <input class="modal__code-input" maxlength="1" type="text">
+          <input class="modal__code-input" maxlength="1" type="text">
+          <input class="modal__code-input" maxlength="1" type="text">
         </div>
-        <p class="code__text">
+        <p class="modal__code-text">
           Проверка данных...
         </p>
-        <a class="code__link" href="/">
+        <a class="modal__code-link" href="/">
           Отправить код на электронную почту
         </a>
+      </div>
+    </div>
+  </div>
+  <!-- Видео попап -->
+  <div class="modal modal__city" id="modal-city">
+    <div class="modal__box">
+      <button class="modal__close-btn close">
+      </button>
+      <div class="modal__content">
+        <h2 class="modal__title">
+          выберите свой город
+        </h2>
+        <div class="modal__wrap">
+          <input class="modal__city-input" type="text" placeholder="введите название своего города">
+          <button class="search__form-btn">
+            <i class="icon-loupe"></i>
+          </button>
+        </div>
+        <ul class="modal__city-list">
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -3903,6 +4320,7 @@
 <script src="./app.js"></script>
 <script src="./sw.js"></script>
 <script src="./libs/swiper/swiper-bundle.min.js" defer></script>
+<script src="./libs/jquery3.7.1.min.js"></script>
 <script src="./js/main.js" defer></script>
 </body>
 

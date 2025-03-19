@@ -1,4 +1,12 @@
 @media screen and (min-width: 1441px) {
+  .search__dropdown {
+    padding: 3rem 2rem 3rem 5rem;
+  }
+
+  .search__form-input {
+    padding: 1rem 6rem 1rem 5rem;
+  }
+
   .dropdown__content {
     top: 17.2rem !important;
   }
@@ -317,7 +325,7 @@
     bottom: -4.9rem;
   }
 
-  .fact__slider {
+  .fact__slider-item {
     height: 48.6rem;
   }
 
@@ -748,6 +756,13 @@
 }
 
 @media screen and (min-width: 992px) {
+  .burger-menu .menu__head {
+    display: none;
+  }
+
+  .modal__city-list {
+    column-count: 4;
+  }
 
   /* libs */
   .hero .swiper-pagination {
@@ -1065,7 +1080,7 @@
     bottom: -2rem;
   }
 
-  .fact__slider {
+  .fact__slider-item {
     height: 36.6rem;
   }
 
@@ -1560,6 +1575,11 @@
 }
 
 @media (max-width: 991px) and (min-width: 601px) {
+
+  .modal__city-list {
+    column-count: 3;
+  }
+
   .title {
     font-size: 5rem;
   }
@@ -1718,7 +1738,7 @@
     max-width: 14.9rem;
   }
 
-  .fact__slider {
+  .fact__slider-item {
     height: 41.7rem;
   }
 
@@ -1972,6 +1992,33 @@
   .tabs__btns {
     width: fit-content;
   }
+
+  .modal__reg .modal__box {
+    padding: 3rem 3.7rem;
+  }
+
+
+  .modal__city .modal__close-btn {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .modal__city .modal__box {
+    padding: 4rem 4rem 6rem;
+  }
+
+  .modal__city-input {
+    padding: 2rem 5rem 2rem 2rem;
+  }
+
+  .modal_-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .modal__title {
+    font-size: 3.4rem;
+    line-height: 176%;
+  }
 }
 
 @media (max-width: 1440px) and (min-width: 769px) {
@@ -2030,6 +2077,14 @@
 }
 
 @media screen and (min-width: 601px) {
+
+  .menu:not(.menu.burger-menu) .menu__head {
+    display: none;
+  }
+
+  .panel {
+    z-index: 100;
+  }
 
   .block-title {
     max-width: 50%;
@@ -2177,6 +2232,31 @@
   .panel__link-img {
     width: 4.8rem;
     height: 4.8rem;
+  }
+
+  .connection .panel__inner {
+    padding: 2rem;
+  }
+
+  .panel .connection .panel__inner-icon {
+    transform: translateX(50%);
+  }
+
+  .panel__inner {
+    padding: 3rem 2rem 3rem 3rem;
+    top: calc(100% + 1.7rem);
+    bottom: unset;
+  }
+
+  .panel__inner-icon {
+    top: -0.8rem;
+    right: 2.2rem;
+    transform: rotate(0);
+  }
+
+  .panel__inner::before {
+    bottom: 100%;
+    top: unset;
   }
 
   .loupe {
@@ -2637,5 +2717,13 @@
 
   .card__profit-text {
     width: 100%;
+  }
+
+  .modal__city .modal__box {
+    padding: 2rem;
+  }
+
+  .modal__city-list {
+    column-count: 2;
   }
 }

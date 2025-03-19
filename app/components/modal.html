@@ -63,8 +63,6 @@
   <!-- Видео попап -->
   <div class="modal" id="modal-video">
     <div class="modal__box">
-      <button class="modal__close-btn close">
-      </button>
       <div class="video">
         <video class="video__item" src="./videos/video.mp4" controls></video>
       </div>
@@ -73,8 +71,6 @@
   <!-- Фильм попап -->
   <div class="modal" id="modal-movie">
     <div class="modal__box">
-      <button class="modal__close-btn close">
-      </button>
       <div class="video">
         <iframe class="modal__iframe" src="https://vk.com/video_ext.php?oid=-170242143&id=456242112&hd=3&autoplay=1"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0"
@@ -91,7 +87,7 @@
     </div>
   </div>
   <!-- Регистрация попап -->
-  <div class="modal reg" id="modal-reg">
+  <div class="modal modal__reg" id="modal-reg">
     <div class="modal__box">
       <button class="modal__close-btn close">
       </button>
@@ -99,25 +95,25 @@
         <h2 class="modal__title">
           вход или регистрация
         </h2>
-        <input class="input reg__input" type="text" placeholder="Телефон или почта">
-        <a class="reg__btn modal__btn" href="#!" data-id="modal-code">
+        <input class="input modal__reg-input" type="text" placeholder="Телефон или почта">
+        <button class="modal__reg-btn modal__btn" href="#!" data-id="modal-code">
           Получить код
-        </a>
-        <a class="reg__link yandex" href="/">
-          <img class="reg__link-logo" src="./images/tmp/yandex.svg" alt="">
-          <span class="reg__link-text">
+        </button>
+        <a class="modal__reg-link yandex" href="/">
+          <img class="modal__reg-link--logo" src="./images/tmp/yandex.svg" alt="">
+          <span class="modal__reg-link--text">
             Войти с Яндекс ID
           </span>
-          <img class="reg__link-avatar" src="./images/tmp/avatar.svg" alt="">
+          <img class="modal__reg-link--avatar" src="./images/tmp/avatar.svg" alt="">
         </a>
-        <a class="reg__link vk" href="/">
-          <img class="reg__link-logo" src="./images/tmp/vk.svg" alt="">
-          <span class="reg__link-text">
+        <a class="modal__reg-link vk" href="/">
+          <img class="modal__reg-link--logo" src="./images/tmp/vk.svg" alt="">
+          <span class="modal__reg-link--text">
             Войти через VK ID
           </span>
-          <img class="reg__link-avatar" src="./images/tmp/avatar.svg" alt="">
+          <img class="modal__reg-link--avatar" src="./images/tmp/avatar.svg" alt="">
         </a>
-        <p class="reg__text">
+        <p class="modal__reg-text">
           Нажимая кнопку «Получить код», вы соглашаетесь с <a href="/">политикой конфиденциальности и условиями
             оферты</a>
         </p>
@@ -125,7 +121,7 @@
     </div>
   </div>
   <!-- Код попап -->
-  <div class="modal code" id="modal-code">
+  <div class="modal modal__reg modal__code" id="modal-code">
     <div class="modal__box">
       <button class="modal__close-btn close">
       </button>
@@ -133,21 +129,181 @@
         <h2 class="modal__title">
           вход или регистрация
         </h2>
-        <p class="code__subtitle">
-          Мы отправили код подтверждения на номер <span>+7(***) ***-12-45</span> <a href="/">изменить</a>
+        <p class="modal__code-subtitle">
+          Мы отправили код подтверждения на <br /> номер <span>+7(***) ***-12-45</span> <a href="/">изменить</a>
         </p>
-        <div class="code__inputs">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
-          <input class="code__input" type="text">
+        <div class="modal__code-inputs">
+          <input class="modal__code-input" maxlength="1" type="text" autofocus>
+          <input class="modal__code-input" maxlength="1" type="text">
+          <input class="modal__code-input" maxlength="1" type="text">
+          <input class="modal__code-input" maxlength="1" type="text">
         </div>
-        <p class="code__text">
+        <p class="modal__code-text">
           Проверка данных...
         </p>
-        <a class="code__link" href="/">
+        <a class="modal__code-link" href="/">
           Отправить код на электронную почту
         </a>
+      </div>
+    </div>
+  </div>
+  <!-- Видео попап -->
+  <div class="modal modal__city" id="modal-city">
+    <div class="modal__box">
+      <button class="modal__close-btn close">
+      </button>
+      <div class="modal__content">
+        <h2 class="modal__title">
+          выберите свой город
+        </h2>
+        <div class="modal__wrap">
+          <input class="modal__city-input" type="text" placeholder="введите название своего города">
+          <button class="search__form-btn">
+            <i class="icon-loupe"></i>
+          </button>
+        </div>
+        <ul class="modal__city-list">
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Новосибирск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Москва
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Барнаул
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Омск
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Владивосток
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              Еще город
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
